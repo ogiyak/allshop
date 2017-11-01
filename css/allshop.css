@@ -1,0 +1,199 @@
+*{
+	box-sizing: border-box !important;
+}
+body{
+	margin: 0;
+	font-size: 16px;
+	font-family: "karla", sans-serif;
+	-webkit-user-select: none;
+	user-select: none;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+}
+/*navigation*/
+nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 141px;
+	background-color: blue;
+	color: white;
+}
+nav > ul{
+	padding: 0;
+	margin: 15px 15px 0 15px;
+	display: flex;
+}
+nav > ul > li{
+	padding: 15px;
+	margin: 0 15px 0 0;
+	display: inline-block;
+	background-color: white;
+	color: black;
+	min-width: 48px;
+	height: 48px;
+	text-align: center;
+	border-radius: 5px;
+}
+/*search*/
+.searchwrap{
+	padding: 0;
+	display: flex;
+	height: inherit;
+	width: 100%;
+}
+.searchwrap > *{
+	margin: 0;
+	border: none;
+	padding: 15px;
+	background-color: white;
+	color: black;
+}
+.searchwrap input{
+	flex-grow: 3;
+	width: 100%;
+	padding: 2px 15px;
+	font-size: 1.75em;
+}
+.searchwrap i{
+	border-radius: inherit;
+	width: 48px;
+}
+#searchpulldown{
+	display: none;
+	position: absolute;
+	color: rgb(150, 150, 150);
+	margin-top: 48px;
+	border: 1px solid black;
+	text-align: left;
+	padding: 15px 63px;
+}
+#searchsug{
+	font-weight: bolder;
+	color: rgb(90, 90, 90);
+}
+.category{
+	overflow-y: hidden;
+	display: inline-block;
+	width: 100%;
+	white-space: nowrap;
+}
+.category > li{
+	color: white;
+	background-color: darkblue;
+	margin-right: 5px;
+}
+/*shadow effect*/
+#shadow{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.7);
+	width: 100vw;
+	height: 100vh;
+	display: none;
+	z-index: 1;
+}
+/*sidebar*/
+#sidenav{
+	position: fixed;
+	top: 0;
+	left: -70vw;
+	width: 70vw;
+	height: 100vh; 
+	z-index: 2;
+	overflow-x: hidden;
+	background-color: black;
+	padding: 2em 1em 2em 2em;
+	transition: left .2s;
+	color: white;
+}
+#sidenav a{
+	display: block;
+	padding: 15px 0;
+	margin: 3px 0;
+	text-decoration: none;
+	color: white;
+}
+#sidenav div.close{
+	text-align: right;
+}
+/*content*/
+.content{
+	margin-top: 141px;
+	padding: 15px;
+}
+.content header{
+	display: flex;
+	justify-content: space-between;
+}
+span.promo{
+	position: absolute;
+	background-color: red;
+	right: 0;
+	border-radius: 15px 0 0 15px;
+	padding: 15px !important;
+	box-shadow: 0 5px 0 rgba(0,0,0,.1);
+	color: white; 
+}
+.item{
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+	white-space: nowrap;
+	padding-bottom: 15px;
+}
+.item > li{
+	padding: 5px;
+	margin: 15px 15px 15px 0;
+	box-shadow: 0 5px 1em rgba(0,0,0,.2);
+	display: inline-block;
+	position: relative;
+}
+.item > li *{
+	padding: 0;
+	margin: 0
+}
+.item > li img{
+	max-width: 100%;
+}
+.landscape > li{
+	min-width: 300px;
+	max-width: 550px;
+}
+.landscape li ul{
+	margin: 0; padding: 0 10px;
+	display: flex;
+	align-items: center;
+}
+.landscape li ul li{
+	flex: 1;
+}
+.landscape li ul li:nth-child(2), .landscape ul li:nth-child(3){
+	text-align: right;
+	font-weight: bold;
+}
+.portrait > li{
+	min-width: 150px;
+	max-width: 225px;
+}
+.portrait li ul{
+	margin: 0; padding: 0 10px;
+	display: flex;
+	align-items: left;
+	flex-direction: column;
+}
+.portrait li ul li{
+	flex: 1;
+}
+.portrait li ul li:nth-child(2), .portrait ul li:nth-child(3){
+	font-weight: bold;
+}
+@media screen and (max-width: 500px){
+}
