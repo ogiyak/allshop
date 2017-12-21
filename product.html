@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>allshop - Belanja dimanapun kapanpun</title>
+	<meta http-equiv="Cache-control" content="no-cache">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="theme-color" content="#37c1a8">
+	<link rel="stylesheet" type="text/css" href="css/allshop.css">
+	<link rel="stylesheet" type="text/css" href="css/product.css">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<!-- handwriting -->
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<!-- logo -->
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+	<!-- default -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<!-- icon icon-48 in the highest resolution we need it for -->
+	<link rel="icon icon-48" sizes="192x192" href="img/icon.png">
+	<!-- reuse same icon icon-48 for Safari -->
+	<link rel="apple-touch-icon icon-48" href="img/ios-icon.png">
+	<!-- multiple icons for IE -->
+	<meta name="msapplication-square310x310logo" content="img/ie-icon.png">
+</head>
+<body>
+	<!-- header -->
+	<nav>
+		<ul>
+			<li class="icon icon-48" onclick="sidenavOpen()">
+				<i class="fa fa-bars"></i>
+			</li>
+			<!-- search -->
+			<li id="searchwrap">
+				<form action="">
+					<button><i class="fa fa-arrow-left"></i></button>
+					<input type="text" placeholder="Cari di sini..." onclick="searchOpen()">
+					<button type="submit"><i class="fa fa-search"></i></button>
+				</form>
+				<div id="searchpulldown">
+					<ul id="searchHis">
+						<b>Terakhir dicari</b>
+						<a href="search-result.html"><li>Jaket hitam</li></a>
+						<a href="search-result.html"><li>Jam tangan rolex</li></a>
+						<a href="search-result.html"><li>Sepatu sport</li></a>
+					</ul>
+					<ul id="searchSug">
+						<a href="search-result.html">
+							<li>
+								<span></span> - di Smartphone
+							</li>
+						</a>
+						<a href="search-result.html">
+							<li>
+								<span></span> - di Komputer
+							</li>
+						</a>
+						<a href="search-result.html">
+							<li>
+								<span></span> - di Hardware
+							</li>
+						</a>
+					</ul>
+				</div>
+			</li>
+			<div class="shadow" onclick="searchClose()"></div>
+			<li class="icon icon-48">
+				<a href="cart.html">
+					<i class="fa fa-shopping-cart"></i>
+					<span id="cartItems">0</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="category">
+			<a href="category.html"><li>Elektronik</li></a>
+			<a href="category.html"><li>Wanita</li></a>
+			<a href="category.html"><li>Pria</li></a>
+			<a href="category.html"><li>Anak-anak</li></a>
+			<a href="category.html"><li>Furnitur</li></a>
+			<a href="category.html"><li>Buku</li></a>
+			<a href="category.html"><li>Lainnya</li></a>
+		</ul>
+	</nav>
+	<!-- sidebar -->
+	<div id="sidenav">
+		<div onclick="sidenavClose()" class="icon icon-48 close">
+			<i class="fa fa-times" aria-hidden="true"></i>
+		</div>
+		<a href="index.html">
+			<div id="logo">
+				<img src="img/icon.png">
+				<h2>allshop</h2>
+			</div>
+		</a>
+		<div>
+			<a href=""><i class="fa fa-mobile-phone" aria-hidden="true"></i> ELEKTRONIK</a>
+			<a href=""><i class="fa fa-tv" aria-hidden="true"></i> PERKAKAS</a>
+			<a href=""><i class="fa fa-male" aria-hidden="true"></i> PRIA</a>
+			<a href=""><i class="fa fa-female" aria-hidden="true"></i> WANITA</a>
+			<a href=""><i class="fa fa-child" aria-hidden="true"></i> ANAK-ANAK</a>
+			<a href=""><i class="fa fa-shower" aria-hidden="true"></i> FURNITUR</a>
+			<a href=""><i class="fa fa-book" aria-hidden="true"></i> BUKU dll</a>
+		</div>
+		<div>
+			<hr>
+			<a href=""><i class="fa fa-user-o" aria-hidden="true"></i> AKUNKU</a>
+			<a href="order-status.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i> PESANANKU</a>
+			<a href=""><i class="fa fa-question-circle-o" aria-hidden="true"></i> BANTUAN</a>
+		</div>
+	</div>
+	<div class="shadow" onclick="sidenavClose()"></div>
+	<!-- content -->
+	<section class="content">
+		<!-- head of content -->
+		<ul class="wrapper detail">
+			<li onclick="popOpen(this)" id="popopenimg">
+				<ul>
+					<li><img src="img/iphone 128.jpg"></li>
+					<li>
+						<div class="sspan center">
+							<i class="fa fa-photo"></i>
+							<span>6</span>
+							<i class="fa fa-youtube-play"></i>
+							<span>1</span>
+						</div>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<ul>
+					<li class="truncate">
+						<h2>iPhone 7 - 32GB Red</h2>
+					</li>
+					<li class="price">
+						<div class="disc">
+							<span>-10%</span>
+							<span>Rp 11.500.000</span>
+						</div>
+						<div>
+							<span>Rp 10.350.000</span>
+						</div>
+					</li>
+					<li>
+						<ul class="sspan">
+							<li class="main-rate">
+								<span>4.5 <i class="fa fa-star"></i></span>
+							</li>
+							<span>999 Rating</span>
+							<span>&amp</span>
+							<span>99 Ulasan</span>
+						</li>
+					</ul>
+				</li>
+				<li class="sspan">
+					<span>999 Stok</span>
+					<span><i>Update</i> <b>2 hari</b> yg lalu</span>
+				</li>
+				<li class="sspan">
+					<i class="fa fa-truck fa-flip-horizontal"></i>
+					<span>Gratis kirim ke <b>Sleman</b></span>
+				</li>
+				<li>
+					<button class="btn btn-green-outer">Tambah <i class="fa fa-cart-plus"></i></button>
+					<a href="cart.html">
+						<button class="btn btn-green">Beli</button>
+					</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<!-- specification -->
+	<ul class="wrapper spec">
+		<li class="btn btn-top">
+			<span>Spesifikasi</span>
+			<span onclick="popOpen(this)" id="popopencompare">Bandingkan</span>
+		</li>
+		<li>
+			<ul class="thumb-view">
+				<li>
+					<i class="fa fa-camera"></i>
+					<span>CAMERA</span>
+					<span>12MP</span>
+				</li>
+				<li>
+					<i class="fa fa-microchip"></i>
+					<span>MEMORY</span>
+					<span>4GB</span>
+				</li>
+				<li>
+					<i class="fa fa-database"></i>
+					<span>STORAGE</span>
+					<span>32GB</span>
+				</li>
+				<li>
+					<i class="fa fa-battery-full"></i>
+					<span>BATTERY</span>
+					<span>2700mAh</span>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<div>
+				<header>Description</header>
+				<article>The iPhone 7, with its amazing features and drool-worthy design, looks every bit as efficient as it is. With a powerful processor and ample internal storage, this smartphone offers you a seamless performance.</article>
+			</div>
+			<ul>
+				<header>Display</header>
+				<li>
+					<ul>
+						<li>Display Size</li>
+						<li>4.7 inch</li>
+					</ul>
+					<ul>
+						<li>Resolution</li>
+						<li>1334 x 750 Pixels</li>
+					</ul>
+					<ul>
+						<li>Resolution Type</li>
+						<li>Retina HD Display</li>
+					</ul>
+					<ul>
+						<li>Display Type</li>
+						<li>LED-backlit IPS</li>
+					</ul>
+					<ul>
+						<li>Other Display Features</li>
+						<li>Multi-touch Display, 1400:1 Contrast Ratio, Wide Color Display (P3), 625 cd/m2 Maximum Brightness, Dual Domain Pixels for Wide Viewing Angles, Fingerprint Resistant Oleophobic Coating, Display of Multiple Languages and Characters Simultaneously, Display Zoom, Reachability</li>
+					</ul>
+				</li>
+				<header>Camera</header>
+				<li>
+					<ul>
+						<li>Primary Camera</li>
+						<li>12MP</li>
+					</ul>
+					<ul>
+						<li>Primary Camera Features</li>
+						<li>f/1.8 Aperture, Optical Image Stabilization, Six Element Lens, Panorama (Upto 63 MP), Sapphire Crystal Lens Cover, Backside Illumination Sensor, Hybrid IR Filter, Autofocus with Focus Pixels, Tap to Focus with Focus Pixels, Live Photos with Stabilization, Wide Color Capture for Photos and Live Photos, Improved Local Tone Mapping, Body and Face Detection, Exposure Control, Noise Reduction, Auto HDR for Photos, Auto Image Stabilization, Burst Mode, Timer Mode, Photo Geotagging, Time Lapse Video with Stabilization, Cinematic Video Stabilization (1080p and 720p), Continuous Auto Focus Video, Take 8 MP Still Photos While Recording 4K Video, Playback Zoom, Video Geotagging</li>
+					</ul>
+					<ul>
+						<li>Flash</li>
+						<li>Quad LED True Tone Flash</li>
+					</ul>
+					<ul>
+						<li>HD Recording</li>
+						<li>Yes</li>
+					</ul>
+					<ul>
+						<li>Frame Rate</li>
+						<li>1080p@30fps,1080p@60fps, 720p@30fps, Slow Motion Video Support for 1080p@120 fps and 720p@240fps fps</li>
+					</ul>
+				</li>
+				<header>Connectivity</header>
+				<li>
+					<ul>
+						<li>Network Type</li>
+						<li>4G VOLTE, 3G, 2G</li>
+					</ul>
+					<ul>
+						<li>Supported Networks</li>
+						<li>4G LTE</li>
+					</ul>
+					<ul>
+						<li>Wi-Fi Version</li>
+						<li>802.11 a/b/g/n/ac</li>
+					</ul>
+					<ul>
+						<li>Map Support</li>
+						<li>Maps</li>
+					</ul>
+					<ul>
+						<li>GPS Support</li>
+						<li>Yes</li>
+					</ul>
+				</li>
+				<header>Battery</header>
+				<li>
+					<ul>
+						<li>Battery Type</li>
+						<li>Li-Ion</li>
+					</ul>
+				</li>
+				<header>Dimensions</header>
+				<li>
+					<ul>
+						<li>Width</li>
+						<li>67.1 mm</li>
+					</ul>
+					<ul>
+						<li>Height</li>
+						<li>138.3 mm</li>
+					</ul>
+					<ul>
+						<li>Depth</li>
+						<li>7.1 mm</li>
+					</ul>
+					<ul>
+						<li>Weight</li>
+						<li>138 g</li>
+					</ul>
+				</li>
+				<header>Warranty</header>
+				<li>
+					<ul>
+						<li>Warranty Summary</li>
+						<li>Brand Warranty of 1 Year</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li class="btn btn-bot" onclick="showMore(this)"><i class='fa fa-angle-down'></i></li>
+	</ul>
+	<!-- seller -->
+	<div class="wrapper">
+		<div class="btn btn-top">
+			<span>Penjual</span>
+			<span class="icon icon-48">
+				<i class="fa fa-comment-o"></i>
+			</span>
+		</div>
+		<ul class="detail">
+			<li>
+				<ul>
+					<li>
+						<img src="img/toko.jpg">
+					</li>
+					<li>
+						<div class="sspan center">
+							<i class="fa fa-photo"></i>
+							<span>5</span>
+							<i class="fa fa-youtube-play"></i>
+							<span>1</span>
+						</div>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<ul>
+					<li>
+						<h4>
+							Toko Wijaya <i class="verified fa fa-check-circle"></i>
+						</h4>
+						<p class="small low">Aktif 4 jam yang lalu</p>
+					</li>
+					<li>
+						<ul class="sspan">
+							<div class="main-rate">
+								<span>4.5 <i class="fa fa-star"></i></span>
+							</div>
+							<span>999 Rating</span>
+							<span>&amp</span>
+							<span>99 Ulasan</span>
+						</ul>
+					</li>
+					<li class="sspan">
+						<i class="fa fa-map-o"></i> Yogyakarta, Sleman 55288
+					</li>
+					<li>
+						<button class="btn btn-green-outer">
+							999 Pelanggan
+						</button>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<header>Informasi Umum</header>
+				<ul class="thumb-view">
+					<li>
+						<i class="fa fa-handshake-o"></i>
+						<span>Transaksi Sukses</span>
+						<span>99</span>
+					</li>
+					<li>
+						<i class="fa fa-cart-arrow-down"></i>
+						<span>Produk Terjual</span>
+						<span>99</span>
+					</li>
+					<li>
+						<i class="fa fa-tags"></i>
+						<span>Total Produk</span>
+						<span>999</span>
+					</li>
+					<li>
+						<i class="fa fa-comments-o"></i>
+						<span>Respon Chat</span>
+						<span>99%</span>
+					</li>
+				</ul>
+				<header>Produk</header>
+				<ul class="items items-row portrait">
+					<a href="product.html">
+						<li>
+							<span class="promo">Bonus Case</span>
+							<img src="img/iphone 128 blue.jpg">
+							<ul>
+								<li>
+									<h4>iPhone 7 32 GB - Blue</h4>
+								</li>
+								<li class="price">
+									<div class="disc">
+										<span>-10%</span>
+										<span>Rp 11.500.000</span>
+									</div>
+									<div>
+										<span>Rp 10.350.000</span>
+									</div>
+								</li>
+								<li>
+									<div class="main-rate">
+										<span>4.5 <i class="fa fa-star"></i></span>
+									</div>
+									<div>
+										<span>312 <i class="fa fa-comment-o"></i></span>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</a>
+					<a href="product.html">
+						<li>
+							<span class="promo">Bonus Case</span>
+							<img src="img/iphone 128 blue.jpg">
+							<ul>
+								<li>
+									<h4>iPhone 7 32 GB - Blue</h4>
+								</li>
+								<li class="price">
+									<div class="disc">
+										<span>-10%</span>
+										<span>Rp 11.500.000</span>
+									</div>
+									<div>
+										<span>Rp 10.350.000</span>
+									</div>
+								</li>
+								<li>
+									<div class="main-rate">
+										<span>4.5 <i class="fa fa-star"></i></span>
+									</div>
+									<div>
+										<span>312 <i class="fa fa-comment-o"></i></span>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</a>
+					<a href="product.html">
+						<li>
+							<span class="promo">Bonus Case</span>
+							<img src="img/iphone 128 blue.jpg">
+							<ul>
+								<li>
+									<h4>iPhone 7 32 GB - Blue</h4>
+								</li>
+								<li class="price">
+									<div class="disc">
+										<span>-10%</span>
+										<span>Rp 11.500.000</span>
+									</div>
+									<div>
+										<span>Rp 10.350.000</span>
+									</div>
+								</li>
+								<li>
+									<div class="main-rate">
+										<span>4.5 <i class="fa fa-star"></i></span>
+									</div>
+									<div>
+										<span>312 <i class="fa fa-comment-o"></i></span>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</a>
+				</ul>
+				<header>Rating & Ulasan</header>
+				<ul class="rr rr-head">
+					<li>4.5</li>
+					<li>
+						<ul>
+							<li>
+								<i class="stars fa fa-star"></i>
+								<i class="stars fa fa-star"></i>
+								<i class="stars fa fa-star"></i>
+								<i class="stars fa fa-star"></i>
+								<i class="stars fa fa-star-half-empty"></i>
+							</li>
+							<li>
+								<i class="fa fa-user-o"></i>
+								<span>999 Rating</span>
+							</li>
+							<li>
+								<i class="fa fa-comment-o"></i>
+								<span>999 Ulasan</span>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>
+								<ul>
+									<li>5</li>
+									<li><i class="stars fa fa-star"></i></li>
+									<li class="bar"><div class="bar-5"></div></li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>4</li>
+									<li><i class="stars fa fa-star"></i></li>
+									<li class="bar"><div class="bar-4"></div></li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>3</li>
+									<li><i class="stars fa fa-star"></i></li>
+									<li class="bar"><div class="bar-3"></div></li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>2</li>
+									<li><i class="stars fa fa-star"></i></li>
+									<li class="bar"><div class="bar-2"></div></li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>1</li>
+									<li><i class="stars fa fa-star"></i></li>
+									<li class="bar"><div class="bar-1"></div></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="rr rr-body">
+					<li>
+						<ul>
+							<li>
+								<span>
+									<h4>Viviane Annisa <i class="verified fa fa-check-circle"></i></h4>
+								</span>
+								<span class="hidden">
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star-half-empty"></i>
+									<i class="stars fa fa-star-o"></i>
+								</span>
+								<span>3 November 2017</span>
+							</li>
+							<li class="com">
+								<p>Apakah <a href="" class="link">Google Pixel 2 XL 128 GB</a> masih ada?</p>
+							</li>
+							<li class="com com-rep">
+								<span>
+									<h4 class="toko">Toko Wijaya <i class="verified fa fa-check-circle"></i></h4>
+								</span>
+								<p>Masih sis silahkan order. Stok barang sudah diupdate.</p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>
+								<span>
+									<h4>Andri Nuryawan <i class="verified fa fa-check-circle"></i></h4>
+								</span>
+								<span><i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star-half-empty"></i>
+								</span>
+								<span>19 Oktober 2017</span>
+							</li>
+							<li class="com">
+								<p>Barang bagus. Sesuai gambar. Tidak mengecewakan. Harga pas. Ongkir gratis. :)</p>
+								<img src="img/handson.jpg">
+							</li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>
+								<span>
+									<h4>Nanda Nuradintyas <i class="hidden verified fa fa-check-circle"></i></h4>
+								</span>
+								<span>
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star-o"></i>
+									<i class="stars fa fa-star-o"></i>
+									<i class="stars fa fa-star-o"></i>
+									<i class="stars fa fa-star-o"></i>
+								</span>
+								<span>27 Juli 2017</span>
+							</li>
+							<li class="com">
+								<p><a href="" class="link">Holder HP City Car</a>  ada yang patah apakah bisa diganti?</p>
+								<img src="img/rusak.jpg">
+							</li>
+							<li class="com com-rep">
+								<span>
+									<h4 class="toko">Toko Wijaya <i class="verified fa fa-check-circle"></i></h4>
+								</span>
+								<p>Silahkan gunakan Garansi 3 Hari dari allshop, jika berhasil kami siap mengganti.</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="btn btn-bot" onclick="showMore(this)"><i class="fa fa-angle-down"></i></li>
+		</ul>
+	</div>
+	<!-- Rating -->
+	<div class="wrapper">
+		<div class="btn btn-top">
+			<span>Rating & Ulasan</span>
+			<span class="icon icon-48">
+				<i class="fa fa-plus"></i>
+			</span>
+		</div>
+		<ul>
+			<li>
+				<ul class="rr rr-head">
+					<li>4.5</li>
+					<li>
+						<ul>
+							<li>
+								<i class="stars fa fa-star"></i>
+								<i class="stars fa fa-star"></i>
+								<i class="stars fa fa-star"></i>
+								<i class="stars fa fa-star"></i>
+								<i class="stars fa fa-star-half-empty"></i>
+							</li>
+							<li>
+								<i class="fa fa-user-o"></i>
+								<span>999 Rating</span>
+							</li>
+							<li>
+								<i class="fa fa-comment-o"></i>
+								<span>999 Ulasan</span>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>
+								<ul>
+									<li>5</li>
+									<li><i class="stars fa fa-star"></i></li>
+									<li class="bar"><div class="bar-5"></div></li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>4</li>
+									<li><i class="stars fa fa-star"></i></li>
+									<li class="bar"><div class="bar-4"></div></li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>3</li>
+									<li><i class="stars fa fa-star"></i></li>
+									<li class="bar"><div class="bar-3"></div></li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>2</li>
+									<li><i class="stars fa fa-star"></i></li>
+									<li class="bar"><div class="bar-2"></div></li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>1</li>
+									<li><i class="stars fa fa-star"></i></li>
+									<li class="bar"><div class="bar-1"></div></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div class="btn btn-top small">
+					<span></span>
+					<span>5 dari 999 Ulasan</span>
+				</div>
+				<ul class="rr rr-body">
+					<li>
+						<ul>
+							<li>
+								<span>
+									<h4>Raisa Hamish <i class="verified fa fa-check-circle"></i></h4>
+								</span>
+								<span><i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star-half-empty"></i>
+								</span>
+								<span>7 Januari 2017</span>
+							</li>
+							<li>Barang bagus. Sesuai gambar. Tidak mengecewakan. Harga pas. Ongkir gratis.</li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>
+								<span>
+									<h4>Raisa Hamish <i class="verified fa fa-check-circle"></i></h4>
+								</span>
+								<span>
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star-half-empty"></i>
+								</span>
+								<span>7 Januari 2017</span>
+							</li>
+							<li>Barang bagus. Sesuai gambar. Tidak mengecewakan. Harga pas. Ongkir gratis.</li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>
+								<span>
+									<h4>Raisa Hamish <i class="verified fa fa-check-circle"></i></h4>
+								</span>
+								<span>
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star-half-empty"></i>
+								</span>
+								<span>7 Januari 2017</span>
+							</li>
+							<li>Barang bagus. Sesuai gambar. Tidak mengecewakan. Harga pas. Ongkir gratis.</li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>
+								<span>
+									<h4>Raisa Hamish <i class="verified fa fa-check-circle"></i></h4>
+								</span>
+								<span>
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star-half-empty"></i>
+								</span>
+								<span>7 Januari 2017</span>
+							</li>
+							<li>Barang bagus. Sesuai gambar. Tidak mengecewakan. Harga pas. Ongkir gratis.</li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>
+								<span><b>Raisa Hamish <i class="verified fa fa-check-circle"></i></b>
+								</span>
+								<span>
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star"></i>
+									<i class="stars fa fa-star-half-empty"></i>
+								</span>
+								<span>7 Januari 2017</span>
+							</li>
+							<li>Barang bagus. Sesuai gambar. Tidak mengecewakan. Harga pas. Ongkir gratis.</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="btn btn-bot"><i class="fa fa-angle-down"></i></li>
+		</ul>
+	</div>
+</section>
+<!-- pop up menu -->
+<section>
+	<!-- images -->
+	<ul class="popup" id="popimg">
+		<li class="btn btn-top" onclick="popClose()">
+			<div class="sspan center">
+				<span>Media</span>
+				<i class="fa fa-photo"></i>
+				<span>6</span>
+				<i class="fa fa-youtube-play"></i>
+				<span>1</span>
+			</div>
+			<span class="icon icon-48">
+				<i class="fa fa-close"></i>
+			</span>
+		</li>
+		<li>
+			<ul class="content-img">
+				<li>
+					<img src="img/iphone1.jpg">	
+				</li>
+				<li>
+					<img src="img/iphone2.jpg">	
+				</li>
+				<li>
+					<img src="img/iphone3.jpg">	
+				</li>
+				<li>
+					<img src="img/iphone4.jpg">	
+				</li>
+				<li>
+					<img src="img/iphone5.jpg">	
+				</li>
+				<li>
+					<img src="img/iphone6.png">	
+				</li>
+				<li>
+					<video width="304" height="192" controls>
+						<source src="img/iphone-vid.mp4" type="video/mp4">
+					</video>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<!-- compare -->
+	<ul class="popup" id="popcompare">
+		<li class="btn btn-top" onclick="popClose()">
+			<span>Bandingkan dengan...</span>
+			<span class="icon icon-48">
+				<i class="fa fa-close" style="color: black;"></i>
+			</span>
+		</li>
+		<li class="content-item">
+			<form action="compare-result.html">
+				<input type="text" placeholder="Cari di sini...">
+				<input class="btn btn-green" type="submit" value="Cari">
+			</form>
+			<span class="low">Terakhir dicari</span>
+			<ul class="items items-col portrait">
+				<a href="compare-result.html">
+					<li>
+						<div>
+							<span class="promo">Bonus Case</span>
+							<img src="img/iphone 128 blue.jpg">
+						</div>
+						<ul>
+							<li>
+								<h4>iPhone 7 32 GB - Blue</h4>
+							</li>
+							<li class="price">
+								<div class="disc">
+									<span>-10%</span>
+									<span>Rp 11.500.000</span>
+								</div>
+								<div>
+									<span>Rp 10.350.000</span>
+								</div>
+							</li>
+							<li>
+								<div class="main-rate">
+									<span>4.5 <i class="fa fa-star"></i></span>
+								</div>
+								<div>
+									<span>312 <i class="fa fa-comment-o"></i></span>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</a>
+				<a href="compare-result.html">
+					<li>
+						<div>
+							<span class="promo">Bonus Case</span>
+							<img src="img/iphone 128 blue.jpg">
+						</div>
+						<ul>
+							<li>
+								<h4>iPhone 7 32 GB - Blue</h4>
+							</li>
+							<li class="price">
+								<div class="disc">
+									<span>-10%</span>
+									<span>Rp 11.500.000</span>
+								</div>
+								<div>
+									<span>Rp 10.350.000</span>
+								</div>
+							</li>
+							<li>
+								<div class="main-rate">
+									<span>4.5 <i class="fa fa-star"></i></span>
+								</div>
+								<div>
+									<span>312 <i class="fa fa-comment-o"></i></span>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</a>
+				<a href="compare-result.html">
+					<li>
+						<div>
+							<span class="promo">Bonus Case</span>
+							<img src="img/iphone 128 blue.jpg">
+						</div>
+						<ul>
+							<li>
+								<h4>iPhone 7 32 GB - Blue</h4>
+							</li>
+							<li class="price">
+								<div class="disc">
+									<span>-10%</span>
+									<span>Rp 11.500.000</span>
+								</div>
+								<div>
+									<span>Rp 10.350.000</span>
+								</div>
+							</li>
+							<li>
+								<div class="main-rate">
+									<span>4.5 <i class="fa fa-star"></i></span>
+								</div>
+								<div>
+									<span>312 <i class="fa fa-comment-o"></i></span>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</a>
+				<a href="compare-result.html">
+					<li>
+						<div>
+							<span class="promo">Bonus Case</span>
+							<img src="img/iphone 128 blue.jpg">
+						</div>
+						<ul>
+							<li>
+								<h4>iPhone 7 32 GB - Blue</h4>
+							</li>
+							<li class="price">
+								<div class="disc">
+									<span>-10%</span>
+									<span>Rp 11.500.000</span>
+								</div>
+								<div>
+									<span>Rp 10.350.000</span>
+								</div>
+							</li>
+							<li>
+								<div class="main-rate">
+									<span>4.5 <i class="fa fa-star"></i></span>
+								</div>
+								<div>
+									<span>312 <i class="fa fa-comment-o"></i></span>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</a>
+				<a href="compare-result.html">
+					<li>
+						<div>
+							<span class="promo">Bonus Case</span>
+							<img src="img/iphone 128 blue.jpg">
+						</div>
+						<ul>
+							<li>
+								<h4>iPhone 7 32 GB - Blue</h4>
+							</li>
+							<li class="price">
+								<div class="disc">
+									<span>-10%</span>
+									<span>Rp 11.500.000</span>
+								</div>
+								<div>
+									<span>Rp 10.350.000</span>
+								</div>
+							</li>
+							<li>
+								<div class="main-rate">
+									<span>4.5 <i class="fa fa-star"></i></span>
+								</div>
+								<div>
+									<span>312 <i class="fa fa-comment-o"></i></span>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</a>
+				<a href="compare-result.html">
+					<li>
+						<div>
+							<span class="promo">Bonus Case</span>
+							<img src="img/iphone 128 blue.jpg">
+						</div>
+						<ul>
+							<li>
+								<h4>iPhone 7 32 GB - Blue</h4>
+							</li>
+							<li class="price">
+								<div class="disc">
+									<span>-10%</span>
+									<span>Rp 11.500.000</span>
+								</div>
+								<div>
+									<span>Rp 10.350.000</span>
+								</div>
+							</li>
+							<li>
+								<div class="main-rate">
+									<span>4.5 <i class="fa fa-star"></i></span>
+								</div>
+								<div>
+									<span>312 <i class="fa fa-comment-o"></i></span>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</a>
+			</ul>
+		</li>
+	</ul>
+</section>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/Clamp.js/clamp.min.js"></script>
+<script src="js/allshop.js"></script>
+</body>
+</html>

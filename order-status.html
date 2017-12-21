@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>allshop - Belanja dimanapun kapanpun</title>
+	<meta http-equiv="Cache-control" content="no-cache">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta charset="UTF-8">
+	<meta name="theme-color" content="#37c1a8">
+	<!-- icon icon-48 in the highest resolution we need it for -->
+	<link rel="icon icon-48" sizes="192x192" href="img/icon.png">
+	<!-- reuse same icon icon-48 for Safari -->
+	<link rel="apple-touch-icon icon-48" href="img/ios-icon.png">
+	<!-- multiple icons for IE -->
+	<meta name="msapplication-square310x310logo" content="img/ie-icon.png">
+	<!-- logo -->
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+	<!-- default -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<!-- handwriting -->
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/allshop.css">
+	<link rel="stylesheet" type="text/css" href="css/product.css">
+	<link rel="stylesheet" type="text/css" href="css/range-slider.css">
+</head>
+<body>
+	<section class="content content-full">
+		<div class="btn btn-top">
+			<span>Pesananku</span>
+			<a href="index.html" class="icon icon-48">
+				<i class="fa fa-close"></i>
+			</a>
+		</div>
+		<div class="advance-search">
+			<div>
+				<div class="btn btn-32" onclick="vanish(this)">Bulan<i class="fa fa-close"></i></div>
+			</div>
+			<div>
+				<div class="btn btn-32 btn-green" onclick="popOpen(this)" id="popopenfilter">Saring<i class="fa fa-filter"></i></div>
+				<div class="btn btn-32 btn-green">
+					<i class="fa fa-search"></i>
+				</div>
+			</div>
+		</div>
+		<ul class="wrapper">
+			<li class="btn btn-top">
+				<span>Pesanan 9191333</span>
+				<span class="gray small">Dipesan 13 November 2017</span>
+			</li>
+			<li class="timeline">
+				<div>
+					<span class="bold">Dikonfirmasi</span>
+					<span class="tl" id="stat1">
+						<div class="hidden"></div>
+						<div class="bg-green"></div>
+						<div class="bg-green"></div>
+					</span>
+					<span class="icon icon-48 gray"><i class="fa fa-comment"></i></span>
+				</div>
+				<div>
+					<span>Pengiriman</span>
+					<span class="tl" id="stat2">
+						<div class="bg-green"></div>
+						<div></div>
+						<div></div>
+					</span>
+					<span class="icon icon-48 blue"><i class="fa fa-truck fa-flip-horizontal"></i></span>
+				</div>
+				<div>
+					<span>Penerimaan</span>
+					<span class="tl" id="stat3">
+						<div></div>
+						<div></div>
+						<div class="hidden"></div>
+					</span>
+					<span class="icon icon-48 blue"><i class="fa fa-check"></i></span>
+				</div>
+			</li>
+			<li class="formal-view low">
+				<p>Diperkirakan sampai 18 November 2017</p>
+			</li>
+			<li class="list-item">
+				<div>
+					<img src="img/iphone 128.jpg">
+					<div>
+						<h4>iPhone 7 32 GB - Red</h4>
+						<div class="price">
+							<div class="disc">
+								<span>-10%</span>
+								<span>Rp 11.500.000</span>
+							</div>
+							<div>
+								<span>Rp 10.350.000</span>
+							</div>
+						</div>
+						<div class="sspan">
+							<span>1</span>
+							<span>Buah</span>
+							<span>-</span>
+							<span>Merah</span>
+							<div class="color-box"></div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="list-item">
+				<div>
+					<img src="img/pakaian wanita.jpg">
+					<div>
+						<h4>Jaket Zebra Casual - Special</h4>
+						<div class="price">
+							<span class="vanish"></span>
+							<span>
+								<p class="vanish"></p>
+								<p>Rp 99.000</p>
+							</span>
+						</div>
+						<div class="sspan">
+							<span>2</span>
+							<span>Buah</span>
+							<span>-</span>
+							<span>XL</span>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="list-item">
+				<div>
+					<img src="img/camera-dslr.jpg">
+					<div>
+						<h4>Nikon DSLR D3500</h4>
+						<div class="price">
+							<span class="vanish"></span>
+							<span>
+								<p class="vanish"></p>
+								<p>Rp 5.000.000</p>
+							</span>
+						</div>
+						<div class="sspan">
+							<span>1</span>
+							<span>Buah</span>
+							<span>-</span>
+							<span>Lensa 28nm</span>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<ul class="wrapper bg-gray">
+			<li class="btn btn-top">
+				<span>
+					<p>Pesanan 8181555</p>
+					<p class="green">Selesai</p>
+				</span>
+				<span class="gray small">Dipesan 13 November 2016</span>
+			</li>
+			<li class="timeline">
+				<div>
+					<span class="bold">Dikonfirmasi</span>
+					<span class="tl" id="stat1">
+						<div class="hidden"></div>
+						<div class="bg-green"></div>
+						<div class="bg-green"></div>
+					</span>
+					<span class="icon icon-48 gray"><i class="fa fa-comment"></i></span>
+				</div>
+				<div>
+					<span class="bold">Dikirim</span>
+					<span class="tl" id="stat2">
+						<div class="bg-green"></div>
+						<div class="bg-green"></div>
+						<div class="bg-green"></div>
+					</span>
+					<span class="icon icon-48 gray"><i class="fa fa-truck fa-flip-horizontal"></i></span>
+				</div>
+				<div>
+					<span class="bold">Diterima</span>
+					<span class="tl" id="stat3">
+						<div class="bg-green"></div>
+						<div class="bg-green"></div>
+						<div class="hidden"></div>
+					</span>
+					<span class="icon icon-48 gray"><i class="fa fa-check"></i></span>
+				</div>
+			</li>
+			<li class="formal-view low">
+				<p>Sampai 18 November 2017</p>
+			</li>
+			<li class="list-item">
+				<div>
+					<img src="img/iphone 128.jpg">
+					<div>
+						<h4>iPhone 7 32 GB - Red</h4>
+						<div class="price">
+							<div class="disc">
+								<span>-10%</span>
+								<span>Rp 11.500.000</span>
+							</div>
+							<div>
+								<span>Rp 10.350.000</span>
+							</div>
+						</div>
+						<div class="sspan">
+							<span>1</span>
+							<span>Buah</span>
+							<span>-</span>
+							<span>Merah</span>
+							<div class="color-box"></div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="list-item">
+				<div>
+					<img src="img/pakaian wanita.jpg">
+					<div>
+						<h4>Jaket Zebra Casual - Special</h4>
+						<div class="price">
+							<span class="vanish"></span>
+							<span>
+								<p class="vanish"></p>
+								<p>Rp 99.000</p>
+							</span>
+						</div>
+						<div class="sspan">
+							<span>2</span>
+							<span>Buah</span>
+							<span>-</span>
+							<span>XL</span>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="list-item">
+				<div>
+					<img src="img/camera-dslr.jpg">
+					<div>
+						<h4>Nikon DSLR D3500</h4>
+						<div class="price">
+							<span class="vanish"></span>
+							<span>
+								<p class="vanish"></p>
+								<p>Rp 5.000.000</p>
+							</span>
+						</div>
+						<div class="sspan">
+							<span>1</span>
+							<span>Buah</span>
+							<span>-</span>
+							<span>Lensa 28nm</span>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<ul class="wrapper bg-gray">
+			<li class="btn btn-top">
+				<span>
+					<p>Pesanan 8181555</p>
+					<p class="red">Dikembalikan</p>
+				</span>
+				<span class="gray small">Dipesan 13 November 2016</span>
+			</li>
+			<li class="timeline">
+				<div>
+					<span class="bold">Dikonfirmasi</span>
+					<span class="tl" id="stat1">
+						<div class="hidden"></div>
+						<div class="bg-green"></div>
+						<div class="bg-green"></div>
+					</span>
+					<span class="icon icon-48 gray"><i class="fa fa-comment"></i></span>
+				</div>
+				<div>
+					<span class="bold">Dikirim</span>
+					<span class="tl" id="stat2">
+						<div class="bg-green"></div>
+						<div class="bg-green"></div>
+						<div class="bg-green"></div>
+					</span>
+					<span class="icon icon-48 gray"><i class="fa fa-truck fa-flip-horizontal"></i></span>
+				</div>
+				<div>
+					<span class="bold">Dikembalikan</span>
+					<span class="tl" id="stat3">
+						<div class="bg-green"></div>
+						<div class="bg-red"></div>
+						<div class="hidden"></div>
+					</span>
+					<span class="icon icon-48 gray"><i class="fa fa-check"></i></span>
+				</div>
+			</li>
+			<li class="formal-view low">
+				<p>Sampai 18 November 2017</p>
+			</li>
+			<li class="list-item">
+				<div>
+					<img src="img/iphone 128.jpg">
+					<div>
+						<h4>iPhone 7 32 GB - Red</h4>
+						<div class="price">
+							<div class="disc">
+								<span>-10%</span>
+								<span>Rp 11.500.000</span>
+							</div>
+							<div>
+								<span>Rp 10.350.000</span>
+							</div>
+						</div>
+						<div class="sspan">
+							<span>1</span>
+							<span>Buah</span>
+							<span>-</span>
+							<span>Merah</span>
+							<div class="color-box"></div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="list-item">
+				<div>
+					<img src="img/pakaian wanita.jpg">
+					<div>
+						<h4>Jaket Zebra Casual - Special</h4>
+						<div class="price">
+							<span class="vanish"></span>
+							<span>
+								<p class="vanish"></p>
+								<p>Rp 99.000</p>
+							</span>
+						</div>
+						<div class="sspan">
+							<span>2</span>
+							<span>Buah</span>
+							<span>-</span>
+							<span>XL</span>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="list-item">
+				<div>
+					<img src="img/camera-dslr.jpg">
+					<div>
+						<h4>Nikon DSLR D3500</h4>
+						<div class="price">
+							<span class="vanish"></span>
+							<span>
+								<p class="vanish"></p>
+								<p>Rp 5.000.000</p>
+							</span>
+						</div>
+						<div class="sspan">
+							<span>1</span>
+							<span>Buah</span>
+							<span>-</span>
+							<span>Lensa 28nm</span>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</section>
+	<div style="height: 80px; width: 100%;"></div>
+	<section class="nav-bot center">
+		<a href=""><button class="btn">Cetak</button></a>
+		<a href=""><button class="btn btn-green">Konfirmasi pesanan</button></a>
+	</section>
+	<ul class="popup" id="popfilter">
+			<li class="btn btn-top">
+				<span>Saring</span>
+				<span onclick="popClose()"><i class="fa fa-close"></i></span>
+			</li>
+			<li class="content content-full">
+				<ul class="filter">
+					<li>
+						<div>Bulan</div>
+						<div>
+							<select>
+								<option class="low">Semua</option>
+								<option>Januari</option>
+								<option>Februari</option>
+								<option>Maret</option>
+								<option>April</option>
+								<option>Mei</option>
+								<option>Juni</option>
+								<option>Juli</option>
+								<option>Agustus</option>
+								<option>September</option>
+								<option>Oktober</option>
+								<option>November</option>
+								<option>Desember</option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<div>Tahun</div>
+						<div>
+							<select>
+								<option class="low">Semua</option>
+								<option>2018</option>
+								<option>2017</option>
+								<option>2016</option>
+								<option>2015</option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<div>Pengiriman</div>
+						<div>
+							<select>
+								<option class="low">Semua</option>
+								<option>JNE</option>
+								<option>Wahana</option>
+								<option>Pos Indonesia</option>
+								<option>Kilat</option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<div>Kategori</div>
+						<div>
+							<select>
+								<option class="low">Semua</option>
+								<option>Elektronik</option>
+								<option>Pria</option>
+								<option>Wanita</option>
+								<option>Anak-anak</option>
+								<option>Buku</option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<div>Harga</div>
+						<div class="range-slider">
+							<div>
+								<input type="range" name="minprice" min="0" max="5000000" step="100000" value="0" orient="horizontal" class="input-range" id="minrange">
+								
+								<input type="range" name="maxprice" min="5000000" max="10000000" step="100000" value="10000000" orient="horizontal" class="input-range" id="maxrange">
+							</div>
+							<div>
+								<span class="range-value" id="minprice">Rp. 0</span>
+								<span class="range-value" id="maxprice">10.000.000</span>
+							</div>
+							
+						</div>
+					</li>
+				</ul>
+			</li>
+			<div style="height: 80px; width: 100%;"></div>
+			<section class="nav-bot center">
+				<a href="order-status.html"><button class="btn">Semula</button></a>
+				<a href="order-status.html"><button class="btn btn-green">Saring <i class="fa fa-filter"></i></button></a>
+			</section>
+		</ul>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/Clamp.js/clamp.min.js"></script>
+	<script src="js/allshop.js"></script>
+</body>
+</html>

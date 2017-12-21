@@ -1,236 +1,182 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>allshop</title>
-	<link rel="stylesheet" type="text/css" href="css/allshop.css">
+	<title>allshop - Belanja dimanapun kapanpun</title>
+	<meta http-equiv="Cache-control" content="no-cache">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta charset="UTF-8">
+	<meta name="theme-color" content="#37c1a8">
+	<!-- icon icon-48 in the highest resolution we need it for -->
+	<link rel="icon icon-48" sizes="192x192" href="img/icon.png">
+	<!-- reuse same icon icon-48 for Safari -->
+	<link rel="apple-touch-icon icon-48" href="img/ios-icon.png">
+	<!-- multiple icons for IE -->
+	<meta name="msapplication-square310x310logo" content="img/ie-icon.png">
+	<!-- logo -->
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+	<!-- default -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<!-- handwriting -->
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/allshop.css">
 </head>
 <body>
 	<!-- header -->
-	<section>
-		<nav>
-			<ul>
-				<li onclick="sidenavOpen()"><i class="fa fa-bars"></i></li>
-				<li class="searchwrap">
-					<i class="fa fa-search"></i>
-					<input placeholder="Search" onclick="searchOpen()"></input>
-					<i class="fa fa-times"></i>
-					<!-- search pulldown -->
-					<div id="searchpulldown">
-						Terakhir dicari
-						<ul id="searchhis">
-							<li>Lorep ipsum</li>
-							<li>Lorep ipsum</li>
-							<li>Lorep ipsum</li>
-						</ul>
-						Maksud anda...
-						<ul id="searchsug">
-							<li>Lorep ipsum</li>
-							<li>Lorep ipsum</li>
-							<li>Lorep ipsum</li>
-						</ul>
-					</div>
-				</li>				
-				<li><i class="fa fa-shopping-cart"></i></li>
-			</ul>
-			<ul class="category">
-				<li>Komputer</li>
-				<li>Pakaian Wanita</li>
-				<li>Alat Rumah Tangga</li>
-				<li>Perlengkapan Sekolah</li>
-				<li>Smartphone</li>
-				<li>Sehari-hari</li>
-				<li>Buku</li>
-			</ul>
-		</nav>
-	</section>
+	<nav>
+		<ul>
+			<li class="icon icon-48" onclick="sidenavOpen()">
+				<i class="fa fa-bars"></i>
+			</li>
+			<!-- search -->
+			<li id="searchwrap">
+				<form action="">
+					<button><i class="fa fa-arrow-left"></i></button>
+					<input type="text" placeholder="Cari di sini..." onclick="searchOpen()">
+					<button type="submit"><i class="fa fa-search"></i></button>
+				</form>
+				<div id="searchpulldown">
+					<ul id="searchHis">
+						<b>Terakhir dicari</b>
+						<a href="search-result.html"><li>Jaket hitam</li></a>
+						<a href="search-result.html"><li>Jam tangan rolex</li></a>
+						<a href="search-result.html"><li>Sepatu sport</li></a>
+					</ul>
+					<ul id="searchSug">
+						<a href="search-result.html">
+							<li>
+								<span></span> - 
+								<b class="low">di Smartphone</b>
+							</li>
+						</a>
+						<a href="search-result.html">
+							<li>
+								<span></span> - 
+								<b class="low">di Komputer</b>
+							</li>
+						</a>
+						<a href="search-result.html">
+							<li>
+								<span></span> - 
+								<b class="low">di Hardware</b>
+							</li>
+						</a>
+					</ul>
+				</div>
+			</li>
+			<div class="shadow" onclick="searchClose()"></div>
+			<li class="icon icon-48">
+				<a href="cart.html">
+					<i class="fa fa-shopping-cart"></i>
+					<span id="cartItems">0</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="category">
+			<a href="category.html"><li>Elektronik</li></a>
+			<a href="category.html"><li>Wanita</li></a>
+			<a href="category.html"><li>Pria</li></a>
+			<a href="category.html"><li>Anak-anak</li></a>
+			<a href="category.html"><li>Furnitur</li></a>
+			<a href="category.html"><li>Buku</li></a>
+			<a href="category.html"><li>Lainnya</li></a>
+		</ul>
+	</nav>
 	<!-- sidebar -->
 	<div id="sidenav">
-		<div href="" onclick="sidenavClose()" class="close"><i class="fa fa-times"></i></div>
-		<a href="">param</a>
-		<a href="">param</a>
-		<a href="">param</a>
-		<a href="">param</a>
-		<a href="">param</a>
-		<a href="">param</a>
-		<a href="">param</a>
-		<a href="">param</a>
+		<div onclick="sidenavClose()" class="icon icon-48 close">
+			<i class="fa fa-times" aria-hidden="true"></i>
+		</div>
+		<a href="index.html">
+			<div id="logo">
+				<img src="img/icon.png">
+				<h2>allshop</h2>
+			</div>
+		</a>
+		<div>
+			<a href="category.html"><i class="fa fa-mobile-phone" aria-hidden="true"></i> ELEKTRONIK</a>
+			<a href="category.html"><i class="fa fa-wrench" aria-hidden="true"></i> PERKAKAS</a>
+			<a href="category.html"><i class="fa fa-male" aria-hidden="true"></i> PRIA</a>
+			<a href="category.html"><i class="fa fa-female" aria-hidden="true"></i> WANITA</a>
+			<a href="category.html"><i class="fa fa-child" aria-hidden="true"></i> ANAK-ANAK</a>
+			<a href="category.html"><i class="fa fa-shower" aria-hidden="true"></i> FURNITUR</a>
+			<a href="category.html"><i class="fa fa-book" aria-hidden="true"></i> BUKU dll</a>
+		</div>
+		<div>
+			<hr>
+			<a href=""><i class="fa fa-user-o" aria-hidden="true"></i> AKUNKU</a>
+			<a href="order-status.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i> PESANANKU</a>
+			<a href=""><i class="fa fa-question-circle-o" aria-hidden="true"></i> BANTUAN</a>
+		</div>
 	</div>
-	<div id="shadow" onclick="sidenavClose()"></div>
+	<div class="shadow" onclick="sidenavClose()"></div>
 	<!-- content -->
 	<section class="content">
-		<header>
-			<h1>Promo Hari Kartini</h1>
-			<h2><a href="">MORE</a></h2>
-		</header>
-		<ul class="item landscape">
-			<li>
-				<span class="promo">HOT</span>
-				<img src="img/pakaian wanita 275.jpg">
-				<ul>
-					<li>
-						<h4>Pakaian Wanita</h4>
-						<p>Mulai dari Rp 50.000</p>
-					</li>
-					<li style="color: red">Diskon hingga 70%</li>
-					<li style="font-weight: bold;">More</li>
-				</ul>		
-			</li>
-			<li>
-				<span class="promo">COD</span>
-				<img src="img/pakaian wanita 275.jpg">
-				<ul>
-					<li>
-						<h4>Pakaian Wanita</h4>
-						<p>Mulai dari Rp 50.000</p>
-					</li>
-					<li style="color: red">Diskon hingga 70%</li>
-					<li style="font-weight: bold;">More</li>
-				</ul>		
-			</li>
-			<li>
-				<img src="img/pakaian wanita 275.jpg">
-				<ul>
-					<li>
-						<h4>Pakaian Wanita</h4>
-						<p>Mulai dari Rp 50.000</p>
-					</li>
-					<li style="color: red">Diskon hingga 70%</li>
-					<li style="font-weight: bold;">More</li>
-				</ul>		
-			</li>
-			<li>
-				<img src="img/pakaian wanita 275.jpg">
-				<ul>
-					<li>
-						<h4>Pakaian Wanita</h4>
-						<p>Mulai dari Rp 50.000</p>
-					</li>
-					<li style="color: red">Diskon hingga 70%</li>
-					<li style="font-weight: bold;">More</li>
-				</ul>		
-			</li>
-			<li>
-				<img src="img/pakaian wanita 275.jpg">
-				<ul>
-					<li>
-						<h4>Pakaian Wanita</h4>
-						<p>Mulai dari Rp 50.000</p>
-					</li>
-					<li style="color: red">Diskon hingga 70%</li>
-					<li style="font-weight: bold;">More</li>
-				</ul>		
-			</li>
-			<li>
-				<img src="img/pakaian wanita 275.jpg">
-				<ul>
-					<li>
-						<h4>Pakaian Wanita</h4>
-						<p>Mulai dari Rp 50.000</p>
-					</li>
-					<li style="color: red">Diskon hingga 70%</li>
-					<li style="font-weight: bold;">More</li>
-				</ul>		
-			</li>
-			<li>
-				<img src="img/pakaian wanita 275.jpg">
-				<ul>
-					<li>
-						<h4>Pakaian Wanita</h4>
-						<p>Mulai dari Rp 50.000</p>
-					</li>
-					<li style="color: red">Diskon hingga 70%</li>
-					<li>More</li>
-				</ul>		
-			</li>
+		<!-- landscape -->
+		<ul class="items items-row landscape">
+			<header>
+				<span>Promo Hari Kartini</span>
+				<span class="timer">
+					<span id="hours"></span> : 
+					<span id="minutes"></span> : 
+					<span id="seconds"></span>
+				</span>
+			</header>
+			<a href="product.html">
+				<li>
+					<div>
+						<span class="promo">Free Ongkir</span>
+						<img src="img/pakaian wanita 275.jpg">	
+					</div>
+					<ul>
+						<li>
+							<h4 id="truncate">Jaket Zebra Casual</h4>
+						</li>
+						<li class="price">
+							<div class="disc">
+								<span>-10%</span>
+								<span>Rp 11.500.000</span>
+							</div>
+							<div>
+								<span>Rp 10.350.000</span>
+							</div>
+						</li>
+					</ul>
+				</li>
+			</a>
 		</ul>
 		<!-- portrait -->
-		<header>
-			<h1>Smartphone</h1>
-			<h2><a href="">MORE</a></h2>
-		</header>
-		<ul class="item portrait">
-			<li>
-				<img src="img/iphone 128 blue.jpg">
-				<ul>
-					<li>
-						<h4>Pakaian Wanita</h4>
-						<p>Mulai dari Rp 50.000</p>
-					</li>
-					<li style="color: red">Diskon hingga 70%</li>
-					<li style="font-weight: bold;">More</li>
-				</ul>		
-			</li>
-			<li>
-				<img src="img/iphone 128 blue.jpg">
-				<ul>
-					<li>
-						<h4>Pakaian Wanita</h4>
-						<p>Mulai dari Rp 50.000</p>
-					</li>
-					<li style="color: red">Diskon hingga 70%</li>
-					<li style="font-weight: bold;">More</li>
-				</ul>		
-			</li>
-			<li>
-				<img src="img/iphone 128 blue.jpg">
-				<ul>
-					<li>
-						<h4>Pakaian Wanita</h4>
-						<p>Mulai dari Rp 50.000</p>
-					</li>
-					<li style="color: red">Diskon hingga 70%</li>
-					<li style="font-weight: bold;">More</li>
-				</ul>		
-			</li>
-			<li>
-				<img src="img/iphone 128 blue.jpg">
-				<ul>
-					<li>
-						<h4>Pakaian Wanita</h4>
-						<p>Mulai dari Rp 50.000</p>
-					</li>
-					<li style="color: red">Diskon hingga 70%</li>
-					<li style="font-weight: bold;">More</li>
-				</ul>		
-			</li>
-			<li>
-				<img src="img/iphone 128 blue.jpg">
-				<ul>
-					<li>
-						<h4>Pakaian Wanita</h4>
-						<p>Mulai dari Rp 50.000</p>
-					</li>
-					<li style="color: red">Diskon hingga 70%</li>
-					<li style="font-weight: bold;">More</li>
-				</ul>		
-			</li>
-			<li>
-				<img src="img/iphone 128 blue.jpg">
-				<ul>
-					<li>
-						<h4>Pakaian Wanita</h4>
-						<p>Mulai dari Rp 50.000</p>
-					</li>
-					<li style="color: red">Diskon hingga 70%</li>
-					<li style="font-weight: bold;">More</li>
-				</ul>		
-			</li>
-			<li>
-				<img src="img/iphone 128 blue.jpg">
-				<ul>
-					<li>
-						<h4>Pakaian Wanita</h4>
-						<p>Mulai dari Rp 50.000</p>
-					</li>
-					<li style="color: red">Diskon hingga 70%</li>
-					<li style="font-weight: bold;">More</li>
-				</ul>		
-			</li>
+		<ul class="items items-row portrait">
+			<header>
+				<span>Smartphone</span>
+				<a href=""><i class="fa fa-external-link"></i></a>
+			</header>
+			<a href="product.html">
+				<li>
+					<div>
+						<span class="promo">Bonus Case</span>
+						<img src="img/iphone 128 blue.jpg">
+					</div>
+					<ul>
+						<li>
+							<h4>iPhone 7 32 GB - Blue</h4>
+						</li>
+						<li class="price">
+							<div class="disc">
+								<span>-10%</span>
+								<span>Rp 11.500.000</span>
+							</div>
+							<div>
+								<span>Rp 10.350.000</span>
+							</div>
+						</li>
+					</ul>
+				</li>
+			</a>
 		</ul>
 	</section>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/Clamp.js/clamp.min.js"></script>
 	<script src="js/allshop.js"></script>
 </body>
 </html>

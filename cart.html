@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>allshop - Belanja dimanapun kapanpun</title>
+	<meta http-equiv="Cache-control" content="no-cache">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="theme-color" content="#37c1a8">
+	<link rel="stylesheet" type="text/css" href="css/allshop.css">
+	<link rel="stylesheet" type="text/css" href="css/product.css">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<!-- handwriting -->
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<!-- logo -->
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+	<!-- default -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<!-- icon in the highest resolution we need it for -->
+	<link rel="icon" sizes="192x192" href="img/icon.png">
+	<!-- reuse same icon for Safari -->
+	<link rel="apple-touch-icon" href="img/ios-icon.png">
+	<!-- multiple icons for IE -->
+	<meta name="msapplication-square310x310logo" content="img/ie-icon.png">
+</head>
+<body>
+	<section class="content content-full">
+		<div class="btn btn-top">
+			<h2>Keranjang Belanja</h2>
+			<a href="product.html"><i class="fa fa-close"></i></a>
+		</div>
+		<ul class="wrapper">
+			<li class="btn btn-top">
+				<span>Daftar Pesanan</span>
+				<span>4 Buah</span>
+			</li>
+			<li class="list-item">
+				<div>
+					<img src="img/iphone 128.jpg">
+					<div>
+						<h4>iPhone 7 32 GB - Red</h4>
+						<div class="price">
+							<div class="disc">
+								<span>-10%</span>
+								<span>Rp 11.500.000</span>
+							</div>
+							<div>
+								<span>Rp 10.350.000</span>
+							</div>
+						</div>
+						<div class="sspan">
+							<span>1</span>
+							<span>Buah</span>
+							<span>-</span>
+							<span>Merah</span>
+							<div class="color-box"></div>
+						</div>
+					</div>
+				</div>
+				<div class="dropdown">
+					<div class="icon icon-32" onclick="dropdown(this)"><i class="fa fa-ellipsis-v"></i></div>
+					<div class="dropdown-content">
+						<a href="#">Edit</a>
+						<a href="#" style="color: red">Hapus</a>
+					</div>
+				</div>
+			</li>
+			<li class="list-item">
+				<div>
+					<img src="img/pakaian wanita.jpg">
+					<div>
+						<h4>Jaket Zebra Casual - Special</h4>
+						<div class="price">
+							<span class="vanish"></span>
+							<span>
+								<p class="vanish"></p>
+								<p>Rp 99.000</p>
+							</span>
+						</div>
+						<div class="sspan">
+							<span>2</span>
+							<span>Buah</span>
+							<span>-</span>
+							<span>XL</span>
+						</div>
+					</div>
+				</div>
+				<div class="dropdown">
+					<div class="icon icon-32" onclick="dropdown(this)"><i class="fa fa-ellipsis-v"></i></div>
+					<div class="dropdown-content">
+						<a href="#">Edit</a>
+						<a href="#" style="color: red">Hapus</a>
+					</div>
+				</div>
+			</li>
+			<li class="list-item">
+				<div>
+					<img src="img/camera-dslr.jpg">
+					<div>
+						<h4>Nikon DSLR D3500</h4>
+						<div class="price">
+							<span class="vanish"></span>
+							<span>
+								<p class="vanish"></p>
+								<p>Rp 5.000.000</p>
+							</span>
+						</div>
+						<div class="sspan">
+							<span>1</span>
+							<span>Buah</span>
+							<span>-</span>
+							<span>Lensa 28nm</span>
+						</div>
+					</div>
+				</div>
+				<div class="dropdown">
+					<div class="icon icon-32" onclick="dropdown(this)"><i class="fa fa-ellipsis-v"></i></div>
+					<div class="dropdown-content">
+						<a href="#">Edit</a>
+						<a href="#" style="color: red">Hapus</a>
+					</div>
+				</div>
+			</li>
+			<li class="list-item center">
+				<div>
+					<span>Promo</span>
+					<div class="promo">
+						<span><i class="fa fa-tag"></i> PROMO HUT-RI</span>
+					</div>
+				</div> 
+			</li>
+		</ul>
+		<ul class="wrapper">
+			<li>
+				<div class="btn btn-top">
+					<span>Jasa pengiriman</span>
+				</div>
+				<div class="formal-view">
+					<div>
+					<select>
+						<option value="volvo">JNE</option>
+						<option value="saab">TIKI</option>
+						<option value="mercedes">POS Indonesia</option>
+						<option value="audi">Wahana</option>
+					</select>
+					<select>
+						<option value="volvo">Normal</option>
+						<option value="saab">Kilat</option>
+					</select>
+					<span class="btn btn-32 bg-transparent">Rp 50.000</span>
+					</div>
+				</div>
+				<div class="btn btn-top">
+					<span>Alamat tujuan</span>
+					<span class="icon icon-48"><i class="fa fa-edit"></i></span>
+				</div>
+				<div class="address">
+					<h4>Ogi Yak</h4>
+					<p>Jalan Letkol Subadri RT/RW 05/06</p>
+					<p>Kec. Mlati</p>
+					<p>Kab. Sleman</p>
+					<p>D.I. Yogyakarta, 55288</p>
+					<p>Telp. 082137896767</p>
+				</div>
+			</li>
+		</ul>
+		<ul class="wrapper bg-blue">
+			<li class="list-item">
+				<div>
+					<b>Total</b>
+					<b>Rp 15.050.000</b>
+				</div>
+			</li>
+		</ul>
+		<ul class="wrapper">
+			<li class="btn btn-top">
+				<span>Kode Promo</span>
+				<span class="dropdown icon icon-48">
+					<div onclick="dropdown(this)">
+						<i class="fa fa-question-circle-o"></i>
+					</div>
+					<div class="dropdown-content">
+						<span>Kode promo berisi 6 digit angka dan huruf</b>.</span>
+					</div>
+				</span>
+			</li>
+			<li class="formal-view">
+				<span class="small">Kosongkan jika tidak ada.</span>
+				<form>
+					<input type="number" name="promocode" placeholder="Kode 6 Digit" maxlength="6">
+					<input type="submit" name="" class="btn" value="Terapkan">
+				</form>
+			</li>
+		</ul>
+	</section>
+	<div style="height: 80px; width: 100%;"></div>
+	<section class="nav-bot center">
+		<a href="product.html"><button class="btn">Kembali</button></a>
+		<a href="payment.html"><button class="btn btn-green">Pembayaran</button></a>
+	</section>
+	<script src="js/allshop.js"></script>
+</body>
+</html>

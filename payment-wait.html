@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>allshop - Belanja dimanapun kapanpun</title>
+	<meta http-equiv="Cache-control" content="no-cache">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta charset="UTF-8">
+	<meta name="theme-color" content="#37c1a8">
+	<!-- icon icon-48 in the highest resolution we need it for -->
+	<link rel="icon icon-48" sizes="192x192" href="img/icon.png">
+	<!-- reuse same icon icon-48 for Safari -->
+	<link rel="apple-touch-icon icon-48" href="img/ios-icon.png">
+	<!-- multiple icons for IE -->
+	<meta name="msapplication-square310x310logo" content="img/ie-icon.png">
+	<!-- logo -->
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+	<!-- default -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<!-- handwriting -->
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/allshop.css">
+	<link rel="stylesheet" type="text/css" href="css/product.css">
+</head>
+<body>
+	<section class="content content-full">
+		<div class="btn btn-top">
+			<h2>Proses Bayar</h2>
+			<a href="product.html"><i class="fa fa-close"></i></a>
+		</div>
+		<ul class="wrapper">
+			<li class="formal-view">
+				<p>Silahkan melakukan proses bayar melalui ATM terdekat.</p>
+			</li>
+			<header>Waktu tersisa</header>
+			<li class="bg-red">
+				<div class="timer center" style="font-size: 2em;">
+					<span id="hours"></span> : 
+					<span id="minutes"></span> : 
+					<span id="seconds"></span>
+				</div>
+			</li>
+			<header>Jumlah yang dibayar</header>
+			<div class="btn btn-top bg-blue">
+				<span>
+					<h2>Rp 15.000.000</h2>
+				</span>
+				<span>
+					<a href="cart.html">Rincian</a>
+				</span>
+			</div>
+			<header>Rekening tujuan</header>
+			<li class="formal-view bg-blue center">
+				<div>
+					<img src="img/bni.png" style="width: 50%">
+					<h2>BNI Cabang Sleman</h2>
+					<h2>600 600 6006</h2>
+				</div>
+			</li>
+			<header>Rekening Anda</header>
+			<li class="formal-view center">
+				<div>
+					<img src="img/bni.png" style="width: 50%">
+					<h2>a.n. Donald Trump</h2>
+					<h2>777 888 9999</h2>
+				</div>
+			</li>
+		</ul>
+	</section>
+	<div style="height: 80px; width: 100%;"></div>
+	<section class="nav-bot center">
+		<a href="index.html"><button class="btn">Batal</button></a>
+		<a href="order-status.html"><button class="btn btn-green">Selesai</button></a>
+	</section>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/Clamp.js/clamp.min.js"></script>
+	<script src="js/allshop.js"></script>
+</body>
+</html>
