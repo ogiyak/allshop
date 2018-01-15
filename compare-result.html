@@ -33,10 +33,10 @@
 			<li id="searchwrap">
 				<form action="">
 					<button><i class="fa fa-arrow-left"></i></button>
-					<input type="text" placeholder="Cari di sini..." onclick="searchOpen()">
+					<input type="search" placeholder="Cari di sini..." onclick="searchOpen()">
 					<button type="submit"><i class="fa fa-search"></i></button>
 				</form>
-				<div id="searchpulldown">
+				<div id="search-content">
 					<ul id="searchHis">
 						<b>Terakhir dicari</b>
 						<li><a href="product.html">Jaket hitam</a></li>
@@ -60,7 +60,7 @@
 			<li class="icon icon-48">
 				<a href="cart.html">
 					<i class="fa fa-shopping-cart"></i>
-					<span id="cartItems">0</span>
+					<span id="cart-indicator">0</span>
 				</a>
 			</li>
 		</ul>
@@ -95,9 +95,9 @@
 		</div>
 		<div>
 			<hr>
-			<a href=""><i class="fa fa-user-o" aria-hidden="true"></i> AKUNKU</a>
+			<a href="login.html"><i class="fa fa-user-o" aria-hidden="true"></i> AKUNKU</a>
 			<a href="order-status.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i> PESANANKU</a>
-			<a href=""><i class="fa fa-question-circle-o" aria-hidden="true"></i> BANTUAN</a>
+			<a href="help.html"><i class="fa fa-question-circle-o" aria-hidden="true"></i> BANTUAN</a>
 		</div>
 	</div>
 	<div class="shadow" onclick="sidenavClose()"></div>
@@ -125,36 +125,44 @@
 					<li>
 						<ul>
 							<li>
-								<a href="product.html" class="link"><h4>iPhone 7 - 32GB Red</h4></a>
-							</li>
-							<li class="price">
-								<div class="disc">
-									<span>-10%</span>
-									<span>Rp 11.500.000</span>
+								<div class="truncate">
+									<h2>iPhone 7 - 32GB Red</h2>
 								</div>
-								<div>
-									<span>Rp 10.350.000</span>
+								<div class="price">
+									<div class="disc">
+										<span>-10%</span>
+										<span>Rp 11.500.000</span>
+									</div>
+									<div>
+										<span>Rp 10.350.000</span>
+									</div>
 								</div>
 							</li>
 							<li>
-								<ul class="sspan">
-									<li class="main-rate">
+								<div class="sspan">
+									<div class="main-rate">
 										<span>4.5 <i class="fa fa-star"></i></span>
-									</li>
-									<li><span>999</span> Rating & <span>999</span> Ulasan</li>
-								</ul>
-							</li>
-							<li>
-								<ul class="sspan">
-									<li>999 Tersedia</li>
-									<li>
-										<i class="fa fa-truck fa-flip-horizontal"></i> <span>Gratis</span> kirim ke <span>Sleman</span>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<button class="btn btn-green-outer">Tambah <i class="fa fa-cart-plus"></i></button>
-								<button class="btn btn-green">Beli</button>
+									</div>
+									<span>999 Bintang</span>
+									<span>999 Ulasan</span>
+								</div>
+								<div class="sspan">
+									<span>999 Stok</span>
+									<span>Update <b>2 hari</b> yg lalu</span>
+								</div>
+								<div class="sspan">
+									<i class="fa fa-truck fa-flip-horizontal"></i>
+									<span>Gratis kirim ke <b>Sleman</b></span>
+								</div>
+								<div class="formal-wrapper">
+									<button class="btn btn-green-outer">
+										<span>Tambah</span>
+										<i class="fa fa-cart-plus"></i>
+									</button>
+									<a href="cart.html">
+										<button class="btn btn-green">Beli</button>
+									</a>
+								</div>
 							</li>
 						</ul>
 					</li>
@@ -307,7 +315,7 @@
 							<h4>Penjual</h4>
 						</span>
 						<span class="icon hidden">
-							<i class="fa fa-comment-o"></i>
+							<i class="fa fa-comments-o"></i>
 						</span>
 					</div>
 					<ul class="detail">
@@ -391,7 +399,7 @@
 											<span>999 Rating</span>
 										</li>
 										<li>
-											<i class="fa fa-comment-o"></i>
+											<i class="fa fa-comments-o"></i>
 											<span>999 Ulasan</span>
 										</li>
 									</ul>
@@ -464,7 +472,7 @@
 											<span>999 Rating</span>
 										</li>
 										<li>
-											<i class="fa fa-comment-o"></i>
+											<i class="fa fa-comments-o"></i>
 											<span>999 Ulasan</span>
 										</li>
 									</ul>
@@ -530,34 +538,44 @@
 					<li>
 						<ul>
 							<li>
-								<a href="product2.html" class="link"><h4>Xiaomi Mi 6 - 32GB Blue</h4></a>
-							</li>
-							<li class="price">
-								<span class="vanish">-10%</span>
-								<span>
-									<p class="vanish">Rp 11.500.000</p>
-									<p>Rp 7.500.000</p>
-								</span>
-							</li>
-							<li>
-								<ul class="sspan">
-									<div class="main-rate">
-										<span>4.5 <i class="fa fa-star"></i></span>
+								<div class="truncate">
+									<h2>Xiaomi 6 - 32GB</h2>
+								</div>
+								<div class="price">
+									<div class="disc vanish">
+										<span>-10%</span>
+										<span>Rp 11.500.000</span>
 									</div>
-									<li><span>999</span> Rating & <span>999</span> Ulasan</li>
-								</ul>
+									<div>
+										<span>Rp 5.200.000</span>
+									</div>
+								</div>
 							</li>
 							<li>
-								<ul class="sspan">
-									<li>999 Tersedia</li>
-									<li>
-										<i class="fa fa-truck fa-flip-horizontal"></i> <span>Gratis</span> kirim ke <span>Sleman</span>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<button class="btn btn-green-outer">Tambah <i class="fa fa-cart-plus"></i></button>
-								<button class="btn btn-green">Beli</button>
+								<div class="sspan">
+									<div class="main-rate">
+										<span>4 <i class="fa fa-star"></i></span>
+									</div>
+									<span>999 Bintang</span>
+									<span>999 Ulasan</span>
+								</div>
+								<div class="sspan">
+									<span>999 Stok</span>
+									<span>Update <b>2 hari</b> yg lalu</span>
+								</div>
+								<div class="sspan">
+									<i class="fa fa-truck fa-flip-horizontal"></i>
+									<span>Gratis kirim ke <b>Sleman</b></span>
+								</div>
+								<div class="formal-wrapper">
+									<button class="btn btn-green-outer">
+										<span>Tambah</span>
+										<i class="fa fa-cart-plus"></i>
+									</button>
+									<a href="cart.html">
+										<button class="btn btn-green">Beli</button>
+									</a>
+								</div>
 							</li>
 						</ul>
 					</li>
@@ -710,7 +728,7 @@
 							<h4>Penjual</h4>
 						</span>
 						<span class="icon hidden">
-							<i class="fa fa-comment-o"></i>
+							<i class="fa fa-comments-o"></i>
 						</span>
 					</div>
 					<ul class="detail">
@@ -794,7 +812,7 @@
 											<span>999 Rating</span>
 										</li>
 										<li>
-											<i class="fa fa-comment-o"></i>
+											<i class="fa fa-comments-o"></i>
 											<span>999 Ulasan</span>
 										</li>
 									</ul>
@@ -867,7 +885,7 @@
 											<span>999 Rating</span>
 										</li>
 										<li>
-											<i class="fa fa-comment-o"></i>
+											<i class="fa fa-comments-o"></i>
 											<span>999 Ulasan</span>
 										</li>
 									</ul>

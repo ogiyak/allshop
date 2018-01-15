@@ -37,26 +37,28 @@
 					</div>
 				</div>
 			</li>
-			<li class="formal-view">
+			<li class="formal-wrapper">
 				<p>Silahkan isi Nama dan Nomor rekening sesuai yang tertera pada buku tabungan Anda.</p>
 			</li>
-			<ul class="btn-group center">
-				<li>
-					<p><b>Nama</b> Pemilik Rekening</p>
-					<input type="text" name="account_name" size="35">
-				</li>
-				<li>
-					<p><b>Nomor</b> Rekening</p>
-					<input type="number" name="account_number" size="35">
-				</li>	
-			</ul>
+			<li class="formal-wrapper">
+				<form action="payment-wait.html" class="form-group full-width">
+					<label for="account_name">Nama Pemilik Rekening</label>
+					<input type="text" name="account" id="account_name">
+					<label for="account_number">Nomor Rekening</label>
+					<input type="number" name="account" id="account_number">
+					<div class="nav-bot center">
+						<a href="payment.html">
+							<button class="btn">Kembali</button>
+						</a>
+						<a href="payment-wait.html">
+							<button class="btn btn-green">Bayar</button>
+						</a>
+					</div>
+				</form>
+			</li>
 		</ul>
 	</section>
 	<div style="height: 80px; width: 100%;"></div>
-	<section class="nav-bot center">
-		<a href="payment.html"><button class="btn">Kembali</button></a>
-		<a href="payment-wait.html"><button class="btn btn-green">Bayar</button></a>
-	</section>
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/Clamp.js/clamp.min.js"></script>
 	<script src="js/allshop.js"></script>

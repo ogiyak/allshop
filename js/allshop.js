@@ -1,7 +1,7 @@
 var sidenav = document.getElementById("sidenav");
 var shadow = document.getElementsByClassName("shadow");
-var searchwrap = document.getElementById("searchwrap");
-var searchpulldown = document.getElementById("searchpulldown");
+var searchWrap = document.getElementById("searchwrap");
+var searchContent = document.getElementById("search-content");
 var sidenavCloseBtn = document.querySelector("#sidenav .close");
 var searchBackBtn = document.querySelector("#searchwrap form button:nth-child(1)");
 // searchbar
@@ -9,23 +9,29 @@ function sidenavOpen(){
 	sidenav.style.left = "0vw";
 	shadow[1].style.display = "block";
 	sidenavCloseBtn.style.display = "flex";
+
+	// disabling background to scroll 
+	$("body").css("overflow", "hidden");
 }
 function sidenavClose(){
 	sidenav.style.left = "-70vw";
 	shadow[1].style.display = "none";
 	sidenavCloseBtn.style.display = "none";
+
+	// enabling background to scroll 
+	$("body").css("overflow", "auto");
 }
 // search
 function searchOpen(){
-	if(searchpulldown.style.display !== "block"){
+	if(searchContent.style.display !== "block"){
 		document.querySelectorAll("nav .icon")[0].style.display = "none";
 		document.querySelectorAll("nav .icon")[1].style.display = "none";
-		searchpulldown.style.width = searchwrap.offsetWidth+"px";
-		searchpulldown.style.display = "block";
+		searchContent.style.width = searchWrap.offsetWidth+"px";
+		searchContent.style.display = "block";
 		shadow[0].style.display = "block";
 		searchBackBtn.style.display = "block";
-		searchpulldown.className += "active";
-		searchwrap.className += "active";
+		searchContent.className += "active";
+		searchWrap.className += "active";
 
 		// pulldown helper
 		var inputChecker = setInterval(function(){checker()}, 1);
@@ -49,17 +55,16 @@ function searchOpen(){
 function searchClose() {
 	document.querySelectorAll("nav .icon")[0].style.display = "flex";
 	document.querySelectorAll("nav .icon")[1].style.display = "flex";
-	searchpulldown.style.width = searchwrap.offsetWidth+"px";
-	searchpulldown.style.display = "none";
+	searchContent.style.width = searchWrap.offsetWidth+"px";
+	searchContent.style.display = "none";
 	shadow[0].style.display = "none";
 	searchBackBtn.style.display = "none";
-	searchpulldown.className = "";
-	searchwrap.className = "";
+	searchContent.className = "";
+	searchWrap.className = "";
 	// pulldown helper
 	document.getElementById("searchSug").style.display = "none";
 	document.getElementById("searchHis").style.display = "block";
 }
-
 // popup
 function popClose(){
 	$(".popup").css({
@@ -151,24 +156,34 @@ $(".content-img > li").click(function(){
 });
 // range slider
 // https://codepen.io/ATC-test/pen/myPNqW
-var minRange = $('#minrange'),
-	maxRange = $('#maxrange'),
-	minVal = $('#minprice'),
-	maxVal = $('#maxprice');
+// var minRange = $('#minrange'),
+// 	maxRange = $('#maxrange'),
+// 	minVal = $('#minprice'),
+// 	maxVal = $('#maxprice');
 
-minVal.html(minRange.attr('value'));
-maxVal.html(maxRange.attr('value'));
+// minVal.html(minRange.attr('value'));
+// maxVal.html(maxRange.attr('value'));
 
-minRange.on('input', function(){
-	minVal.html(minRange.attr('value'));
-});
-maxRange.on('input', function(){
-	maxVal.html(maxRange.attr('value'));
-});
-// advance-search
+// minRange.on('input', function(){
+// 	minVal.html(minRange.attr('value'));
+// });
+// maxRange.on('input', function(){
+// 	maxVal.html(maxRange.attr('value'));
+// });	
+// advance-search - filter indicator
 function vanish(e){
 	e.className = "vanish";
 }
+// navigation shrink
+$(document).on("scroll", function(){
+	if($(document).scrollTop() > 132){
+		$("nav").css("padding", "0 0 0 0");
+		$("nav .category").addClass("shrink");
+	}else{
+		$("nav").css("padding", "16px 0 0 0");
+		$("nav .category").removeClass("shrink");
+	}
+});
 // promocounter
 if(document.querySelector(".timer").innerHTML !== ""){
 	var d = new Date();

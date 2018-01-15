@@ -33,11 +33,17 @@
 		</div>
 		<div class="advance-search">
 			<div>
-				<div class="btn btn-32" onclick="vanish(this)">Bulan<i class="fa fa-close"></i></div>
+				<div class="btn btn-32" onclick="vanish(this)">
+					<span>Maret</span>
+					<i class="fa fa-times-circle"></i>
+				</div>
 			</div>
 			<div>
-				<div class="btn btn-32 btn-green" onclick="popOpen(this)" id="popopenfilter">Saring<i class="fa fa-filter"></i></div>
-				<div class="btn btn-32 btn-green">
+				<div class="btn btn-32 btn-green-outer" onclick="popOpen(this)" id="popopenfilter">
+					<span>Saring</span>
+					<i class="fa fa-filter"></i>
+				</div>
+				<div class="btn btn-32 btn-green-outer">
 					<i class="fa fa-search"></i>
 				</div>
 			</div>
@@ -55,7 +61,7 @@
 						<div class="bg-green"></div>
 						<div class="bg-green"></div>
 					</span>
-					<span class="icon icon-48 gray"><i class="fa fa-comment"></i></span>
+					<span class="icon icon-48"><i class="fa fa-comment"></i></span>
 				</div>
 				<div>
 					<span>Pengiriman</span>
@@ -64,7 +70,7 @@
 						<div></div>
 						<div></div>
 					</span>
-					<span class="icon icon-48 blue"><i class="fa fa-truck fa-flip-horizontal"></i></span>
+					<span class="icon icon-48"><i class="fa fa-truck fa-flip-horizontal"></i></span>
 				</div>
 				<div>
 					<span>Penerimaan</span>
@@ -73,10 +79,10 @@
 						<div></div>
 						<div class="hidden"></div>
 					</span>
-					<span class="icon icon-48 blue"><i class="fa fa-check"></i></span>
+					<span class="icon icon-48"><i class="fa fa-check"></i></span>
 				</div>
 			</li>
-			<li class="formal-view low">
+			<li class="formal-wrapper low">
 				<p>Diperkirakan sampai 18 November 2017</p>
 			</li>
 			<li class="list-item">
@@ -98,7 +104,6 @@
 							<span>Buah</span>
 							<span>-</span>
 							<span>Merah</span>
-							<div class="color-box"></div>
 						</div>
 					</div>
 				</div>
@@ -162,7 +167,7 @@
 						<div class="bg-green"></div>
 						<div class="bg-green"></div>
 					</span>
-					<span class="icon icon-48 gray"><i class="fa fa-comment"></i></span>
+					<span class="icon icon-48"><i class="fa fa-comment"></i></span>
 				</div>
 				<div>
 					<span class="bold">Dikirim</span>
@@ -171,7 +176,7 @@
 						<div class="bg-green"></div>
 						<div class="bg-green"></div>
 					</span>
-					<span class="icon icon-48 gray"><i class="fa fa-truck fa-flip-horizontal"></i></span>
+					<span class="icon icon-48"><i class="fa fa-truck fa-flip-horizontal"></i></span>
 				</div>
 				<div>
 					<span class="bold">Diterima</span>
@@ -180,10 +185,10 @@
 						<div class="bg-green"></div>
 						<div class="hidden"></div>
 					</span>
-					<span class="icon icon-48 gray"><i class="fa fa-check"></i></span>
+					<span class="icon icon-48"><i class="fa fa-check"></i></span>
 				</div>
 			</li>
-			<li class="formal-view low">
+			<li class="formal-wrapper low">
 				<p>Sampai 18 November 2017</p>
 			</li>
 			<li class="list-item">
@@ -205,7 +210,6 @@
 							<span>Buah</span>
 							<span>-</span>
 							<span>Merah</span>
-							<div class="color-box"></div>
 						</div>
 					</div>
 				</div>
@@ -269,7 +273,7 @@
 						<div class="bg-green"></div>
 						<div class="bg-green"></div>
 					</span>
-					<span class="icon icon-48 gray"><i class="fa fa-comment"></i></span>
+					<span class="icon icon-48"><i class="fa fa-comment"></i></span>
 				</div>
 				<div>
 					<span class="bold">Dikirim</span>
@@ -278,7 +282,7 @@
 						<div class="bg-green"></div>
 						<div class="bg-green"></div>
 					</span>
-					<span class="icon icon-48 gray"><i class="fa fa-truck fa-flip-horizontal"></i></span>
+					<span class="icon icon-48"><i class="fa fa-truck fa-flip-horizontal"></i></span>
 				</div>
 				<div>
 					<span class="bold">Dikembalikan</span>
@@ -287,10 +291,10 @@
 						<div class="bg-red"></div>
 						<div class="hidden"></div>
 					</span>
-					<span class="icon icon-48 gray"><i class="fa fa-check"></i></span>
+					<span class="icon icon-48"><i class="fa fa-check"></i></span>
 				</div>
 			</li>
-			<li class="formal-view low">
+			<li class="formal-wrapper low">
 				<p>Sampai 18 November 2017</p>
 			</li>
 			<li class="list-item">
@@ -312,7 +316,6 @@
 							<span>Buah</span>
 							<span>-</span>
 							<span>Merah</span>
-							<div class="color-box"></div>
 						</div>
 					</div>
 				</div>
@@ -366,72 +369,65 @@
 		<a href=""><button class="btn">Cetak</button></a>
 		<a href=""><button class="btn btn-green">Konfirmasi pesanan</button></a>
 	</section>
-	<ul class="popup" id="popfilter">
-			<li class="btn btn-top">
-				<span>Saring</span>
-				<span onclick="popClose()"><i class="fa fa-close"></i></span>
-			</li>
-			<li class="content content-full">
+	<section>
+		<div class="popup" id="popfilter">
+			<div class="content content-full">
+				<div class="btn btn-top">
+					<span>Saring</span>
+					<span onclick="popClose()"><i class="fa fa-close"></i></span>
+				</div>
 				<ul class="filter">
 					<li>
-						<div>Bulan</div>
-						<div>
-							<select>
-								<option class="low">Semua</option>
-								<option>Januari</option>
-								<option>Februari</option>
-								<option>Maret</option>
-								<option>April</option>
-								<option>Mei</option>
-								<option>Juni</option>
-								<option>Juli</option>
-								<option>Agustus</option>
-								<option>September</option>
-								<option>Oktober</option>
-								<option>November</option>
-								<option>Desember</option>
-							</select>
-						</div>
+						<label for="filter-month">Bulan</label>
+						<select id="filter-month">
+							<option class="low">Semua</option>
+							<option>Januari</option>
+							<option>Februari</option>
+							<option>Maret</option>
+							<option>April</option>
+							<option>Mei</option>
+							<option>Juni</option>
+							<option>Juli</option>
+							<option>Agustus</option>
+							<option>September</option>
+							<option>Oktober</option>
+							<option>November</option>
+							<option>Desember</option>
+						</select>
 					</li>
 					<li>
-						<div>Tahun</div>
-						<div>
-							<select>
-								<option class="low">Semua</option>
-								<option>2018</option>
-								<option>2017</option>
-								<option>2016</option>
-								<option>2015</option>
-							</select>
-						</div>
+						<label for="year">Tahun</label>
+						<select id="filter-year">
+							<option class="low">Semua</option>
+							<option>2018</option>
+							<option>2017</option>
+							<option>2016</option>
+							<option>2015</option>
+						</select>
 					</li>
 					<li>
-						<div>Pengiriman</div>
-						<div>
-							<select>
-								<option class="low">Semua</option>
-								<option>JNE</option>
-								<option>Wahana</option>
-								<option>Pos Indonesia</option>
-								<option>Kilat</option>
-							</select>
-						</div>
+						<label for="filter-courier">Pengiriman</label>
+						<select id="filter-courier">
+							<option class="low">Semua</option>
+							<option>JNE</option>
+							<option>Wahana</option>
+							<option>Pos Indonesia</option>
+							<option>Kilat</option>
+						</select>
 					</li>
 					<li>
-						<div>Kategori</div>
-						<div>
-							<select>
-								<option class="low">Semua</option>
-								<option>Elektronik</option>
-								<option>Pria</option>
-								<option>Wanita</option>
-								<option>Anak-anak</option>
-								<option>Buku</option>
-							</select>
-						</div>
+						<label for="filter-category">Kategori</label>
+						<select id="filter-category">
+							<option class="low">Semua</option>
+							<option>Elektronik</option>
+							<option>Pria</option>
+							<option>Wanita</option>
+							<option>Anak-anak</option>
+							<option>Buku</option>
+						</select>
 					</li>
 					<li>
-						<div>Harga</div>
+						<label>Harga</label>
 						<div class="range-slider">
 							<div>
 								<input type="range" name="minprice" min="0" max="5000000" step="100000" value="0" orient="horizontal" class="input-range" id="minrange">
@@ -442,17 +438,17 @@
 								<span class="range-value" id="minprice">Rp. 0</span>
 								<span class="range-value" id="maxprice">10.000.000</span>
 							</div>
-							
 						</div>
 					</li>
 				</ul>
-			</li>
+			</div>
 			<div style="height: 80px; width: 100%;"></div>
-			<section class="nav-bot center">
+			<div class="nav-bot center">
 				<a href="order-status.html"><button class="btn">Semula</button></a>
 				<a href="order-status.html"><button class="btn btn-green">Saring <i class="fa fa-filter"></i></button></a>
-			</section>
-		</ul>
+			</div>
+		</div>
+	</section>
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/Clamp.js/clamp.min.js"></script>
 	<script src="js/allshop.js"></script>

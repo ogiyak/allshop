@@ -21,57 +21,54 @@
 	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/allshop.css">
 	<link rel="stylesheet" type="text/css" href="css/product.css">
+	<link rel="stylesheet" type="text/css" href="css/range-slider.css">
 </head>
 <body>
 	<section class="content content-full">
 		<div class="btn btn-top">
-			<h2>Proses Bayar</h2>
-			<a href="product.html"><i class="fa fa-close"></i></a>
+			<span>Bantuan</span>
+			<a href="index.html" class="icon icon-48">
+				<i class="fa fa-close"></i>
+			</a>
 		</div>
-		<ul class="wrapper">
-			<li class="formal-wrapper">
-				<p>Silahkan melakukan pembayaran melalui ATM terdekat. Informasi uang yang harus dibayarkan dan nomor rekening tujuan tertera di bawah ini (dilabeli biru)</p>
-			</li>
-			<header>Waktu tersisa</header>
-			<li>
-				<div class="timer center" style="font-size: 2em; color: #f44335;">
-					<span id="hours"></span> : 
-					<span id="minutes"></span> : 
-					<span id="seconds"></span>
-				</div>
-			</li>
-			<header>Jumlah yang dibayar</header>
-			<div class="btn btn-top bg-blue">
-				<span>
-					<h2>Rp 15.345.000</h2>
-				</span>
-				<span>
-					<a href="cart.html">Rincian</a>
-				</span>
+		<div class="wrapper">
+			<form action="" class="searchbar">
+				<input type="search" placeholder="Ada yang bisa kami bantu?">
+				<button class="btn btn-green" type="submit" value="Cari"><i class="fa fa-search"></i></button>
+			</form>
+		</div>
+		<div class="wrapper">
+			<div class="btn btn-top">
+				<span>Panduan</span>
+				<a href="" class="icon"><i class="fa fa-external-link-square"></i></a>
 			</div>
-			<header>Rekening tujuan</header>
-			<li class="formal-wrapper bg-blue center">
-				<div>
-					<img src="img/bni.png" style="width: 50%">
-					<h2>BNI Cabang Jakarta</h2>
-					<h2>600 600 6006</h2>
-				</div>
-			</li>
-			<header>Rekening Anda</header>
-			<li class="formal-wrapper center">
-				<div>
-					<img src="img/bni.png" style="width: 50%">
-					<h2>a.n. Viviane Ann</h2>
-					<h2>777 888 9999</h2>
-				</div>
-			</li>
-		</ul>
-	</section>
-	<div style="height: 80px; width: 100%;"></div>
-	<section class="nav-bot center">
-		<a href="index.html"><button class="btn">Batal</button></a>
-		<a href="order-status.html"><button class="btn btn-green">Selesai</button></a>
-	</section>
+			<ul class="list sparse bordered">
+				<li>Pembayaran</li>
+				<li>Pengiriman</li>
+				<li>Pembatalan</li>
+				<li>Pengembalian</li>
+				<li>Sering ditanyakan (FAQ)</li>
+			</ul>
+		</div>
+		<div class="wrapper">
+			<div class="btn btn-top">
+				<span>Forum</span>
+				<a href="" class="icon"><i class="fa fa-external-link-square"></i></a>
+			</div>
+			<ul class="list sparse bordered">
+				<li>Pesanan tidak ada kabar selama 7 hari</li>
+				<li>Uang pembatalan belum dikembalikan</li>
+				<li>Barang tidak sesuai pesanan</li>
+				<li>Pembayaran selalu tidak berhasil</li>
+				<li>Toko tidak menerima pembatalan</li>
+			</ul>
+		</div>
+		<div class="wrapper">
+			<div class="btn btn-top">
+				<span>Hubungi kami</span>
+				<span class="icon icon-48"><i class="fa fa-phone"></i></span>
+			</div>
+		</div>
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/Clamp.js/clamp.min.js"></script>
 	<script src="js/allshop.js"></script>
