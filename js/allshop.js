@@ -174,6 +174,19 @@ $(".content-img > li").click(function(){
 function vanish(e){
 	e.className = "vanish";
 }
+// adding product to cart
+$("#addtoCart").click(function(event){
+	var cartIdk = $("#cart-indicator");
+	
+	cartIdk.html(parseInt($("#cart-indicator").html())+1)
+	cartIdk.css({
+		"backgroundColor" : "var(--color-red)",
+		"fontWeight" : "bolder",
+	});
+
+	cartIdk.addClass('animation-active');
+	setTimeout(function(){cartIdk.removeClass('animation-active')}, 250);
+});
 // navigation shrink
 $(document).on("scroll", function(){
 	if($(document).scrollTop() > 132){
