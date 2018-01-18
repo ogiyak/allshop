@@ -37,24 +37,28 @@ body{
 input, select{
 	font-size: 1em !important;
 	padding: 8px;
-	border: 1px solid #8d8d8d;
+	border: 1px solid var(--color-gray-dark);
 	border-radius: 5px;
-	background-color: transparent;
-	transition: background-color .2s;
+	background-color: #fff;
 }
 input{
 	height: 48px;
 	outline: none;
 }
-input:focus{
-	border-color: var(--color-main-dark)
+input[type=number]::-webkit-outer-spin-button, 
+input[type=number]::-webkit-inner-spin-button{
+    -webkit-appearance: inner-spin-button !important;
+    opacity: 1;
+}
+input:focus, select:focus{
+	border-color: var(--color-main-dark);
+	border-width: 1.75px;
 }
 label{
 	font-weight: bolder;
 }
 select:focus{
 	outline: none;
-	background-color: #efefef;
 }
 a{
 	text-decoration: none;
@@ -93,7 +97,7 @@ nav > ul{
 }
 nav > ul > *{
 	padding: 8px 16px;
-	margin: 0 8px 0 0;
+	/*margin: 0 8px 0 0;*/
 	display: inline-block;
 	background-color: white;
 	color: black;
@@ -112,8 +116,8 @@ nav .category::-webkit-scrollbar{
 	display: none;
 }
 nav .category > *{
-	background-color: #a9ffff;
-	margin-right: 3px;
+	background-color: var(--color-main);
+	margin-right: 0;
 	height: 32px;
 	line-height: 1em;
 	border-radius: 5px;
@@ -160,13 +164,12 @@ nav .category > *{
 	height: 48px;
 	width: 100%;
 	background-color: transparent;
-	outline: 1px solid rgba(0,0,0,.7);
+	outline: 1px solid var(--color-black);
 	flex: 3;
 }
 #searchwrap form{
 	width: 100%;
 	display: flex;
-	flex-direction: row;
 }
 #searchwrap form *{
 	background-color: transparent;
@@ -192,7 +195,7 @@ nav .category > *{
 #searchwrap input::placeholder{
 	font-family: "Roboto", sans-serif;
 	font-weight: 300;
-	color: rgba(70,70,70,1);
+	color: var(--color-black-ligth);
 }
 #search-content{
 	display: none;
@@ -221,7 +224,7 @@ nav .category > *{
 	width: 20px;
 	height: 20px;
 	color: white;
-	background-color: var(--color-gray);
+	background-color: var(--color-gray-dark);
 	font-size: 10px;
 	/*centering*/
 	line-height: 20px;
@@ -524,10 +527,11 @@ nav .category > *{
 	padding: 8px 12px;
 	margin: 0 4px 0 0;
 	border-radius: 5px;
-	background-color: rgba(189, 189, 189, .5);
+	background-color: var(--color-gray);
 	border: 1.5px solid transparent;
-	height: 48px;
-	color: #484848;
+	min-height: 48px;
+	min-width: 48px;
+	color: var(--color-black);
 	position: relative !important;
 	display: inline-flex;
 	justify-content: center;
@@ -560,7 +564,7 @@ nav .category > *{
 	margin-left: 4px;
 }
 .btn-32{
-	height: 32px !important;
+	min-height: 32px !important;
 }
 .btn-bot{
 	width: 100%;
@@ -570,7 +574,9 @@ nav .category > *{
 	padding: 0 !important;
 	text-align: center;
 	font-size: 14px;
+	font-weight: bolder;
 	color: var(--color-black-ligth);
+	border-radius: 0 0 5px 5px !important;
 }
 .btn-bot > *{
 	padding: 16px !important;
@@ -586,6 +592,7 @@ nav .category > *{
 	justify-content: space-between;
 	font-size: 14px;
 	color: var(--color-black-ligth);
+	border-radius: 5px 5px 0 0 !important;
 }
 .btn-top > *{
 	padding: 16px !important;
@@ -606,10 +613,23 @@ nav .category > *{
 	background-color: transparent;
 	border-color: #37c1a8;
 }
+.btn-red{
+	background-color: var(--color-red);
+	color: #fff;
+}
+.btn-red-outer{
+	background-color: transparent;
+	border-color: var(--color-red);
+}
 .btn img{
 	max-width: 24px;
 	max-height: 24px;
 	margin-right: 16px;
+}
+.inactive{
+	border-color: var(--color-gray);
+	background-color: var(--color-gray-light);
+	color: var(--color-gray-dark) !important;
 }
 /*font*/
 .normal{
@@ -649,46 +669,56 @@ nav .category > *{
 .link{
 	color: blue !important;
 }
-/*carts items*/
+/*items (img, text) column-list representation*/
 .list-item{
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	font-size: 14px;
 	border: 1px solid;
-	border-color: #edf0f2;
+	border-color: var(--color-gray-light);
 	min-height: 48px;
+
 	/*thanks to css-tricks, should add fixed width into parents*/
 	min-width: 0;
 	white-space: nowrap;
-	/*overflow: hidden;*/
+	overflow: hidden;
 	text-overflow: ellipsis;
 }
 /*wrapper items components (there are 2)*/
 .list-item > *{
-	flex: 1 0 auto;
 	display: flex;
 	align-items: center;
 }
-/*every element inside child's wrapper*/
-.list-item > * > *{
-	padding: 4px 0;
-}
 /*first column*/
 .list-item > *:nth-child(1){
-	flex-direction: row;
+	flex: 1 0 90%;
 }
+/*image*/
 .list-item > *:nth-child(1) > *:nth-child(1){
 	width: 80px !important;
 	max-height: 80px !important;
 	padding: 4px;
 }
+/*main text*/
 .list-item > *:nth-child(1) > *:nth-child(2){
 	display: flex;
 	flex-direction: column;
 }
-/*second column - icon/control*/
+/*second column - icon/action*/
 .list-item > *:nth-child(2){
-	max-width: 32px;
+	flex: 1 0 10%;
+	justify-content: center;
+	align-self: center;
+	min-width: 32px;
+	max-width: 48px;
+}
+/*every element inside child's wrapper*/
+.list-item > * > *{
+	padding: 4px 0;
+}
+.list-item > * > *:first-child{
+	padding: 0 0 4px 0;
 }
 .list-item > * > * > *{
 	/*thanks to css-tricks (cont)*/
@@ -696,12 +726,45 @@ nav .category > *{
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.color-box{
-	background-color: #f44335;
-	border-radius: 2px;
-	margin: 4px;
-	height: 1em;
-	width: 1em;
+.pulldown{
+	flex: 0 1 100%;
+	min-height: 48px;
+	background-color: var(--color-gray-light);
+
+	display: none;
+	flex-direction: row;
+}
+.pulldown > *{
+	flex: 1 1 auto;
+}
+.pulldown input, .pulldown select{
+	width: auto;
+	height: auto;
+	border-radius: 0 !important;
+}
+#product-color-inpu > *{
+	color: white;
+}
+#product-color-inpu *[value="Red"]{
+	background-color: red;
+}
+#product-color-inpu *[value="Silver"]{
+	background-color: silver;
+}
+#product-color-inpu *[value="Black"]{
+	background-color: black;
+}
+#product-color-inpu *[value="Gold"]{
+	background-color: gold;
+}
+#product-color-inpu *[value="Blue"]{
+	background-color: blue;
+}
+#product-color-inpu *[value="Gray"]{
+	background-color: gray;
+}
+#product-color-inpu *[value="Brown"]{
+	background-color: brown;
 }
 .dropdown{
 	position: relative;
@@ -973,12 +1036,38 @@ input[name="promocode"]{
 .spec > *:nth-child(3) > ul > li > ul > li:nth-child(2){
 	flex: 2;
 }
-.formal-wrapper{
+/*spacing wrapper*/
+.formal-column{
 	padding: 0 8px !important;
 }
-.formal-wrapper > *{
-	margin-top: 8px !important;
-	margin-bottom: 8px !important;
+.formal-column > *{
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+.formal-column > *:first-child{
+	margin-top: 8px;
+	margin-bottom: 0;
+}
+/*if theris a single child*/
+.formal-column > *:last-child{
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+.formal-row{
+	padding: 8px 0 !important;
+}
+.formal-row > *{
+	margin-left: 8px;
+	margin-right: 8px;
+}
+.formal-row > *:first-child{
+	margin-left: 8px;
+	margin-right: 0;
+}
+/*if theris a single child*/
+.formal-row > *:last-child{
+	margin-left: 8px;
+	margin-right: 8px;
 }
 /*rating and review (rr)*/
 .rr{
@@ -1336,11 +1425,35 @@ input[name="promocode"]{
 	border: 1px solid transparent;
 }
 /*animations*/
-@keyframes active{
+@keyframes zoom-in{
     from {transform: scale(1.5, 1.5);}
     to {transform: scale(1, 1);}
 }
-.animation-active{
-	-webkit-animation: active .2s;
-	animation: active .2s;
+@keyframes zoom-out{
+    from {transform: scale(0.5, 0.5);}
+    to {transform: scale(1, 1);}
+}
+@keyframes slide-down{
+	from {transform: translateY(-48px);}
+	to {transform: translateY(0);}
+}
+@keyframes fade{
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+.ani-zoom-in{
+	-webkit-animation: zoom-in .175s;
+	animation: zoom-in .175s;
+}
+.ani-zoom-out{
+	-webkit-animation: zoom-out .175s;
+	animation: zoom-out .175s;
+}
+.ani-slide-down{
+	-webkit-animation: slide-down .175s;
+	animation: slide-down .175s;
+}
+.ani-fade{
+	-webkit-animation: fade .175s;
+	animation: fade .175s;
 }
