@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>allshop - Belanja dimanapun kapanpun</title>
+	<title>allshop - Pembayaran</title>
 	<meta http-equiv="Cache-control" content="no-cache">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta charset="UTF-8">
-	<meta name="theme-color" content="#37c1a8">
-	<!-- icon icon-48 in the highest resolution we need it for -->
-	<link rel="icon icon-48" sizes="192x192" href="img/icon.png">
-	<!-- reuse same icon icon-48 for Safari -->
-	<link rel="apple-touch-icon icon-48" href="img/ios-icon.png">
-	<!-- multiple icons for IE -->
-	<meta name="msapplication-square310x310logo" content="img/ie-icon.png">
-	<!-- logo -->
-	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-	<!-- default -->
+	<meta name="theme-color" content="#ff1744">
+	<!-- font -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-	<!-- handwriting -->
-	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+	<!-- style -->
 	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/allshop.css">
-	<link rel="stylesheet" type="text/css" href="css/product.css">
+	<!-- icon in the highest resolution we need it for -->
+	<link rel="icon" sizes="192x192" href="img/icon.png">
+	<!-- reuse same icon for Safari -->
+	<link rel="apple-touch-icon" href="img/ios-icon.png">
+	<!-- multiple icons for IE -->
+	<meta name="msapplication-square310x310logo" content="img/ie-icon.png">
 </head>
 <body>
 	<section class="content content-full">
@@ -28,11 +25,10 @@
 			<h2>Pembayaran</h2>
 			<a href="product.html"><i class="fa fa-close"></i></a>
 		</div>
-		<div class="wrapper bg-blue">
+		<div class="wrapper">
 			<div class="btn btn-top">
 				<span>
-					<p class="low small">Jumlah yang dibayar</p>
-					<h2>Rp 17.960.000</h2>
+					<h2 class="green">Rp 17.960.000</h2>
 				</span>
 				<span>
 					<a href="cart.html">Rincian</a>
@@ -112,7 +108,7 @@
 			</li>
 			<li class="list-item" onclick="itemSelected(this)">
 				<div>
-					<img src="img/pos.jpg">
+					<img src="img/pos.png">
 					<div>
 						<h4>POS Indonesia</h4>
 					</div>
@@ -126,7 +122,7 @@
 	<div style="height: 80px; width: 100%;"></div>
 	<section class="nav-bot center">
 		<a href="cart.html"><button class="btn">Kembali</button></a>
-		<a href="payment-instruction.html"><button class="btn btn-green">Lanjutkan</button></a>
+		<a href="payment-instruction.html"><button class="btn inactive">Lanjutkan</button></a>
 	</section>
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/Clamp.js/clamp.min.js"></script>
@@ -135,8 +131,9 @@
 		function itemSelected(e){
 			$(".list-item").css("background-color", "#fff");
 			$(".list-item .sign").css("visibility", "hidden");
+			$('.nav-bot').find('button.inactive').removeClass('inactive').addClass('btn-green');
 
-			e.style.backgroundColor = "#73f4d9";
+			e.style.backgroundColor = "var(--color-main-light)";
 			$(e).find(".sign").css("visibility", "visible");
 		}
 	</script>

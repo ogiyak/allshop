@@ -11,7 +11,7 @@ function sidenavOpen(){
 	sidenavCloseBtn.style.display = "flex";
 
 	// disabling background to scroll 
-	$("body").css("overflow", "hidden !important");
+	$("body").css("overflow", "hidden");
 }
 function sidenavClose(){
 	sidenav.style.left = "-70vw";
@@ -122,7 +122,7 @@ function showMore(e){
 		setTimeout(function(){
 			e.previousElementSibling.style.display = "block";
 		}, 200);
-		e.style.backgroundColor = "var(--color-gray)";
+		e.style.backgroundColor = "var(--color-gray-light)";
 		e.innerHTML = '<i class="fa fa-angle-up"></i>';
 	}else{
 		e.previousElementSibling.style.display = "none";
@@ -173,8 +173,9 @@ $("#addtoCart").click(function(event){
 		cartIdk.html(parseInt($("#cart-indicator").html())+1)
 	};
 	cartIdk.css({
-		"backgroundColor" : "var(--color-red)",
+		"backgroundColor" : "#fff",
 		"fontWeight" : "bolder",
+		"color" : "#000"
 	});
 
 	cartIdk.addClass('ani-zoom-in');
@@ -220,35 +221,7 @@ $('.btn-green-outer').click(function(){
 	$(this).removeClass('btn-green-outer');
 	$(this).addClass('inactive');
 });
-// promocounter
-if(document.querySelector(".timer").innerHTML !== ""){
-	var d = new Date();
-	var t = d.getHours();
-	if(t != 24){
-		var secTimer = setInterval(function(){
-			var d = new Date();
-			var t = d.getSeconds();
-			var timer = 60-t;
-			document.getElementById("seconds").innerHTML = timer;
-		}, 1000);
-		var minTimer = setInterval(function(){
-			var d = new Date();
-			var t = d.getMinutes();
-			var timer = 60-t;
-			document.getElementById("minutes").innerHTML = timer;
-		}, 1000);
-		var hourTimer = setInterval(function(){
-			var d = new Date();
-			var t = d.getHours();
-			var timer = 24-t;
-			document.getElementById("hours").innerHTML = timer;
-		}, 1000);
-	}else{
-		document.getElementById("seconds").innerHTML = "0";	
-		document.getElementById("minutes").innerHTML = "0";	
-		document.getElementById("hours").innerHTML = "0";	
-	}
-}
+
 // media popup
 $(".content-img > li").click(function(){
 	if($(this).find('img').length){
@@ -278,3 +251,33 @@ $(".content-img > li").click(function(){
 		}
 	}
 });
+
+// promocounter
+if(document.querySelector(".timer").innerHTML !== ""){
+	var d = new Date();
+	var t = d.getHours();
+	if(t != 24){
+		var secTimer = setInterval(function(){
+			var d = new Date();
+			var t = d.getSeconds();
+			var timer = 60-t;
+			document.getElementById("seconds").innerHTML = timer;
+		}, 1000);
+		var minTimer = setInterval(function(){
+			var d = new Date();
+			var t = d.getMinutes();
+			var timer = 60-t;
+			document.getElementById("minutes").innerHTML = timer;
+		}, 1000);
+		var hourTimer = setInterval(function(){
+			var d = new Date();
+			var t = d.getHours();
+			var timer = 24-t;
+			document.getElementById("hours").innerHTML = timer;
+		}, 1000);
+	}else{
+		document.getElementById("seconds").innerHTML = "0";	
+		document.getElementById("minutes").innerHTML = "0";	
+		document.getElementById("hours").innerHTML = "0";	
+	}
+}

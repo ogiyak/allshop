@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>allshop - Belanja dimanapun kapanpun</title>
+	<title>allshop - Keranjang Belanja</title>
 	<meta http-equiv="Cache-control" content="no-cache">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta charset="UTF-8">
-	<meta name="theme-color" content="#37c1a8">
-	<link rel="stylesheet" type="text/css" href="css/allshop.css">
-	<link rel="stylesheet" type="text/css" href="css/product.css">
-	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-	<!-- handwriting -->
-	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-	<!-- logo -->
-	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-	<!-- default -->
+	<meta name="theme-color" content="#ff1744">
+	<!-- font -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+	<!-- style -->
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/allshop.css">
 	<!-- icon in the highest resolution we need it for -->
 	<link rel="icon" sizes="192x192" href="img/icon.png">
 	<!-- reuse same icon for Safari -->
@@ -58,20 +55,20 @@
 				<div class="pulldown-trigger">
 					<i class="fa fa-angle-down"></i>
 				</div>
-				<div class="pulldown center">
+				<div class="list-item pulldown">
 					<div>
-						<button class="btn btn-32 btn-red">
+						<div class="icon icon-32">
 							<i class="fa fa-trash-o"></i>
-						</button>
-					</div>
-					<div>
-						<input type="number" min="1" max="100" value="1" class="product-qty-input"> buah
-					</div>
-					<div>
-						<select class="product-color-input">
-							<option value="Red">Red</option>
-							<option value="Silver">Silver</option>
-						</select>
+						</div>
+						<div style="flex-direction: row">
+							<form>
+								<label><span>Jumlah</span><input type="number" min="1" max="100" value="1" class="product-qty-input" style="width: 48px"></label>
+								<label><span>Warna</span><select class="product-color-input">
+									<option value="Red">Red</option>
+									<option value="Silver">Silver</option>
+								</select></label>
+							</form>
+						</div>
 					</div>
 				</div>
 			</li>
@@ -100,21 +97,20 @@
 				<div class="pulldown-trigger">
 					<i class="fa fa-angle-down"></i>
 				</div>
-				<div class="pulldown center">
+				<div class="list-item pulldown">
 					<div>
-						<button class="btn btn-32 btn-red">
+						<div class="icon icon-32">
 							<i class="fa fa-trash-o"></i>
-						</button>
-					</div>
-					<div>
-						<input type="number" min="1" max="100" value="2" class="product-qty-input"> buah
-					</div>
-					<div>
-						<select class="product-color-input">
-							<option value="Blue">Blue</option>
-							<option value="Gray">Gray</option>
-							<option value="Black">Black</option>
-						</select>
+						</div>
+						<div style="flex-direction: row">
+							<form>
+								<label><span>Jumlah</span><input type="number" min="1" max="100" value="1" class="product-qty-input" style="width: 48px"></label>
+								<label><span>Warna</span><select class="product-color-input">
+									<option value="Red">Red</option>
+									<option value="Silver">Silver</option>
+								</select></label>
+							</form>
+						</div>
 					</div>
 				</div>
 			</li>
@@ -143,21 +139,20 @@
 				<div class="pulldown-trigger">
 					<i class="fa fa-angle-down"></i>
 				</div>
-				<div class="pulldown center">
+				<div class="list-item pulldown">
 					<div>
-						<button class="btn btn-32 btn-red">
+						<div class="icon icon-32">
 							<i class="fa fa-trash-o"></i>
-						</button>
-					</div>
-					<div>
-						<input type="number" min="1" max="100" value="1" class="product-qty-input"> buah
-					</div>
-					<div>
-						<select class="product-color-input">
-							<option value="Brown">Brown</option>
-							<option value="Black">Black</option>
-							<option value="Silver">Silver</option>
-						</select>
+						</div>
+						<div style="flex-direction: row">
+							<form>
+								<label><span>Jumlah</span><input type="number" min="1" max="100" value="1" class="product-qty-input" style="width: 48px"></label>
+								<label><span>Warna</span><select class="product-color-input">
+									<option value="Red">Red</option>
+									<option value="Silver">Silver</option>
+								</select></label>
+							</form>
+						</div>
 					</div>
 				</div>
 			</li>
@@ -177,17 +172,17 @@
 				</div>
 				<div class="formal-column">
 					<div>
-					<select>
-						<option value="volvo">JNE</option>
-						<option value="saab">TIKI</option>
-						<option value="mercedes">POS Indonesia</option>
-						<option value="audi">Wahana</option>
-					</select>
-					<select>
-						<option value="volvo">Normal</option>
-						<option value="saab">Kilat</option>
-					</select>
-					<span class="btn btn-32 bg-transparent">Rp 50.000</span>
+						<select>
+							<option value="volvo">JNE</option>
+							<option value="saab">TIKI</option>
+							<option value="mercedes">POS Indonesia</option>
+							<option value="audi">Wahana</option>
+						</select>
+						<select>
+							<option value="volvo">Normal</option>
+							<option value="saab">Kilat</option>
+						</select>
+						<span class="formal-column">Rp 50.000</span>
 					</div>
 				</div>
 				<div class="btn btn-top">
@@ -204,12 +199,27 @@
 				</div>
 			</li>
 		</ul>
-		<ul class="wrapper bg-blue">
+		<ul class="wrapper">
+			<li class="btn btn-top">
+				<div>Total</div>
+				<span class="dropdown icon icon-48">
+					<div onclick="dropdown(this)">
+						<i class="fa fa-question-circle-o"></i>
+					</div>
+					<div class="dropdown-content">
+						<span>Total = Pesanan + Jasa kirim</span>
+					</div>
+				</span>
+			</li>
 			<li class="list-item">
 				<div>
-					<b>Total</b>
-					<b>Rp 17.960.000</b>
+					<img src="img/business.svg" class="square-48">
+					<div>
+						<div class="sspan">Rp 17.910.000 + Rp 50.000</div>
+						<h2 class="green">Rp 17.960.000</h2>
+					</div>
 				</div>
+				<div></div>
 			</li>
 		</ul>
 		<ul class="wrapper">
@@ -220,7 +230,7 @@
 						<i class="fa fa-question-circle-o"></i>
 					</div>
 					<div class="dropdown-content">
-						<span>Kode promo berisi 6 digit angka dan huruf</b>.</span>
+						<span>Kode promo berisi 6 digit angka dan huruf.</span>
 					</div>
 				</span>
 			</li>
