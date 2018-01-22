@@ -3,7 +3,7 @@ var shadow = document.getElementsByClassName("shadow");
 var searchWrap = document.getElementById("searchwrap");
 var searchContent = document.getElementById("search-content");
 var sidenavCloseBtn = document.querySelector("#sidenav .close");
-var searchBackBtn = document.querySelector("#searchwrap form button:nth-child(1)");
+var searchBackBtn = document.querySelector("#searchwrap form *:nth-child(1)");
 // searchbar
 function sidenavOpen(){
 	sidenav.style.left = "0vw";

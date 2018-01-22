@@ -186,10 +186,10 @@ nav .category > *{
 	background-color: transparent;
 	border: none;
 }
-#searchwrap form input{
+#searchwrap form > input[type=search]{
 	width: 100%;
 }
-#searchwrap form button{
+#searchwrap form > *:first-child, #searchwrap form > *:last-child{
 	width: 48px;
 	height: inherit;
 	display: flex;
@@ -197,7 +197,7 @@ nav .category > *{
 	align-items: center;
 }
 /*back button*/
-#searchwrap form button:nth-child(1){
+#searchwrap form > *:nth-child(1){
 	display: none;
 }
 #searchwrap input:focus{
@@ -206,7 +206,7 @@ nav .category > *{
 #searchwrap input::placeholder{
 	font-family: "Roboto", sans-serif;
 	font-weight: 300;
-	color: var(--color-black-ligth);
+	color: var(--color-black);
 }
 #search-content{
 	display: none;
@@ -239,7 +239,6 @@ nav .category > *{
 	font-size: 10px;
 	/*centering*/
 	line-height: 20px;
-	font-family: cursive;
 }
 /*shadow effect*/
 .shadow{
