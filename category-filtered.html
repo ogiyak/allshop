@@ -22,7 +22,7 @@
 <body>
 	<!-- header -->
 	<nav>
-		<ul>
+		<ul class="navigation">
 			<li class="icon icon-48" onclick="sidenavOpen()">
 				<i class="fa fa-bars"></i>
 			</li>
@@ -34,16 +34,43 @@
 					<button type="submit"><i class="fa fa-search"></i></button>
 				</form>
 				<div id="search-content">
-					<ul id="searchHis">
+					<ul class="list row filter-row">
+						<li>
+							<label for="murah">
+								<input type="radio" name="filter" id="murah">
+								<span>Termurah</span>
+							</label>
+						</li>
+						<li>
+							<label for="baru">
+								<input type="radio" name="filter" id="baru">
+								<span>Terbaru</span>
+							</label>
+						</li>
+						<li>
+							<label for="laris">
+								<input type="radio" name="filter" id="laris">
+								<span>Terlaris</span>
+							</label>
+						</li>
+						<li>
+							<label for="relevan">
+								<input type="radio" name="filter" id="relevan" checked>
+								<span>Terelevan</span>
+							</label>
+						</li>
+					</ul>
+					<ul id="searchHis" class="formal-column list column">
 						<div class="btn btn-top">
-							<div>Terakhir dicari</div>
-							<div><i class="fa fa-close"></i></div>
+							<span>Dicari sebelumnya</span>
+							<i class="fa fa-close"></i>
 						</div>
-						<a href="search-result.html"><li>Jaket hitam</li></a>
+						<a href="search-result.html"><li>Jaket hitam</li>
+						</a>
 						<a href="search-result.html"><li>Jam tangan rolex</li></a>
 						<a href="search-result.html"><li>Sepatu sport</li></a>
 					</ul>
-					<ul id="searchSug">
+					<ul id="searchSug" class="formal-column list column">
 						<a href="search-result.html">
 							<li>
 								<span></span> - di Smartphone
@@ -62,7 +89,6 @@
 					</ul>
 				</div>
 			</li>
-			<div class="shadow" onclick="searchClose()"></div>
 			<li class="icon icon-48">
 				<a href="cart.html">
 					<i class="fa fa-shopping-cart"></i>
@@ -70,6 +96,7 @@
 				</a>
 			</li>
 		</ul>
+		<div class="shadow" onclick="searchClose()"></div>
 		<ul class="category">
 			<a href="category.html" class="active"><li>Elektronik <i class="fa fa-angle-right"></i></li></a>
 			<a href="category-end.html"><li>Smartphone</li></a>
@@ -104,27 +131,185 @@
 			<hr>
 			<a href="login.html"><i class="fa fa-user-o main-dark" aria-hidden="true"></i> Akunku</a>
 			<a href="order-status.html"><i class="fa fa-shopping-bag main-dark" aria-hidden="true"></i> Pesananku</a>
-			<a href="help.html"><i class="fa fa-question-circle-o main-dark" aria-hidden="true"></i> Bantuan</a>
+			<a href="help.html"><i class="fa fa-question-circle main-dark" aria-hidden="true"></i> Bantuan</a>
+			<hr>
+			<a href="help.html"><i class="fa fa-info-circle main-dark" aria-hidden="true"></i> Tentang <span style="font-family: 'Poiret One', cursive; font-weight: bolder;">allshop</span></a>
 		</div>
 	</div>
 	<div class="shadow" onclick="sidenavClose()"></div>
 	<!-- content -->
 	<section class="content">
+		<!-- promo -->
+		<div class="items-header">
+			<span>Produk Unggulan</span>
+			<span><i class="fa fa-ellipsis-v icon icon-32"></i></span>
+		</div>
+		<ul class="items items-row landscape">
+			<li>
+				<a href="product.html">
+					<div>
+						<span class="promo">Free Ongkir</span>
+						<img src="img/mac4.jpg">	
+					</div>
+					<ul>
+						<li>
+							<h4 id="truncate">MacBook Pro Retina 15inc</h4>
+						</li>
+						<li class="price">
+							<div class="disc">
+								<span>-10%</span>
+								<span>Rp 25.500.000</span>
+							</div>
+							<div>
+								<span>Rp 24.350.000</span>
+							</div>
+						</li>
+						<li>
+							<div class="main-rate">
+								<span>4.5 <i class="fa fa-star"></i></span>
+							</div>
+							<div>
+								<span>300 <i class="fa fa-comments-o"></i></span>
+							</div>
+						</li>
+					</ul>
+				</a>
+			</li>
+			<li>
+				<a href="product.html">
+					<div>
+						<span class="promo">Free Ongkir</span>
+						<img src="img/iphone2.jpg">	
+					</div>
+					<ul>
+						<li>
+							<h4 id="truncate">iPhone 7 - 16GB Red</h4>
+						</li>
+						<li class="price">
+							<div class="disc">
+								<span>-10%</span>
+								<span>Rp 10.500.000</span>
+							</div>
+							<div>
+								<span>Rp 9.500.000</span>
+							</div>
+						</li>
+						<li>
+							<div class="main-rate">
+								<span>4.5 <i class="fa fa-star"></i></span>
+							</div>
+							<div>
+								<span>250 <i class="fa fa-comments-o"></i></span>
+							</div>
+						</li>
+					</ul>
+				</a>
+			</li>
+			<li>
+				<a href="product.html">
+					<div>
+						<span class="promo">Baru</span>
+						<img src="img/iphone7black.png">	
+					</div>
+					<ul>
+						<li>
+							<h4 id="truncate">iPhone 7 - 16GB Black</h4>
+						</li>
+						<li class="price">
+							<div class="disc">
+								<span>-5%</span>
+								<span>Rp 7.000.000</span>
+							</div>
+							<div>
+								<span>Rp 6.500.000</span>
+							</div>
+						</li>
+						<li>
+							<div class="main-rate">
+								<span>4 <i class="fa fa-star"></i></span>
+							</div>
+							<div>
+								<span>200 <i class="fa fa-comments-o"></i></span>
+							</div>
+						</li>
+					</ul>
+				</a>
+			</li>
+			<li>
+				<a href="product.html">
+					<div>
+						<span class="promo">Baru</span>
+						<img src="img/iphone7gold.jpg">	
+					</div>
+					<ul>
+						<li>
+							<h4 id="truncate">iPhone 7 - 16GB Gold</h4>
+						</li>
+						<li class="price">
+							<div class="disc">
+								<span>-5%</span>
+								<span>Rp 10.500.000</span>
+							</div>
+							<div>
+								<span>Rp 9.000.000</span>
+							</div>
+						</li>
+						<li>
+							<div class="main-rate">
+								<span>4.5 <i class="fa fa-star"></i></span>
+							</div>
+							<div>
+								<span>150 <i class="fa fa-comments-o"></i></span>
+							</div>
+						</li>
+					</ul>
+				</a>
+			</li>
+			<li>
+				<a href="product.html">
+					<div>
+						<img src="img/iphone7rose.png">	
+					</div>
+					<ul>
+						<li>
+							<h4 id="truncate">iPhone 7 - 32GB Rose</h4>
+						</li>
+						<li class="price">
+							<div class="disc">
+								<span>-10%</span>
+								<span>Rp 10.500.000</span>
+							</div>
+							<div>
+								<span>Rp 9.350.000</span>
+							</div>
+						</li>
+						<li>
+							<div class="main-rate">
+								<span>4 <i class="fa fa-star"></i></span>
+							</div>
+							<div>
+								<span>100 <i class="fa fa-comments-o"></i></span>
+							</div>
+						</li>
+					</ul>
+				</a>
+			</li>
+		</ul>
 		<div class="advance-search">
 			<div>
 				<div class="btn btn-32" onclick="vanish(this)">
-					<span>Elektronik</span>
+					<span>Apple</span>
 					<a href="category.html"><i class="fa fa-times-circle"></i></a>
 				</div>
 			</div>
 			<div>
-				<div class="btn btn-32 btn-green" onclick="popOpen(this)" id="popopenfilter">
+				<div class="btn btn-32 btn-main" onclick="popOpen(this)" id="popopenfilter">
 					<span>Saring</span>
 					<i class="fa fa-filter"></i>
 				</div>
 				<div class="dropdown">
-					<div class="btn btn-32 btn-green-outer" onclick="dropdown(this)">
-						<span>Relevan</span>
+					<div class="btn btn-32 btn-main-outer" onclick="dropdown(this)">
+						<span>Sortir</span>
 						<i class="fa fa-sort"></i>
 					</div>
 					<ul class="dropdown-content">
@@ -132,7 +317,7 @@
 						<a href=""><li>Termahal</i></li></a>
 						<a href=""><li>Terpopuler</i></li></a>
 						<a href=""><li>Terlaris</i></li></a>
-						<a href=""><li>Relevan</i></li></a>
+						<a href=""><li>Sortir</i></li></a>
 					</ul>
 				</div>
 			</div>
@@ -145,20 +330,80 @@
 			<li>
 				<a href="product.html">
 					<div>
-						<span class="promo">Bonus Case</span>
-						<img src="img/samsungs8.png">
+						<span class="promo">Free Ongkir</span>
+						<img src="img/iphone1.jpg">	
 					</div>
 					<ul>
 						<li>
-							<h4>Samsung S8 16 GB - Black</h4>
+							<h4 id="truncate">iPhone 7 - 32GB Red</h4>
 						</li>
 						<li class="price">
 							<div class="disc">
 								<span>-10%</span>
-								<span>Rp 9.500.000</span>
+								<span>Rp 11.500.000</span>
 							</div>
 							<div>
-								<span>Rp 8.350.000</span>
+								<span>Rp 10.350.000</span>
+							</div>
+						</li>
+						<li>
+							<div class="main-rate">
+								<span>4.5 <i class="fa fa-star"></i></span>
+							</div>
+							<div>
+								<span>300 <i class="fa fa-comments-o"></i></span>
+							</div>
+						</li>
+					</ul>
+				</a>
+			</li>
+			<li>
+				<a href="product.html">
+					<div>
+						<span class="promo">Free Ongkir</span>
+						<img src="img/iphone2.jpg">	
+					</div>
+					<ul>
+						<li>
+							<h4 id="truncate">iPhone 7 - 16GB Red</h4>
+						</li>
+						<li class="price">
+							<div class="disc">
+								<span>-10%</span>
+								<span>Rp 10.500.000</span>
+							</div>
+							<div>
+								<span>Rp 9.500.000</span>
+							</div>
+						</li>
+						<li>
+							<div class="main-rate">
+								<span>4.5 <i class="fa fa-star"></i></span>
+							</div>
+							<div>
+								<span>250 <i class="fa fa-comments-o"></i></span>
+							</div>
+						</li>
+					</ul>
+				</a>
+			</li>
+			<li>
+				<a href="product.html">
+					<div>
+						<span class="promo">Baru</span>
+						<img src="img/iphone7black.png">	
+					</div>
+					<ul>
+						<li>
+							<h4 id="truncate">iPhone 7 - 16GB Black</h4>
+						</li>
+						<li class="price">
+							<div class="disc">
+								<span>-5%</span>
+								<span>Rp 7.000.000</span>
+							</div>
+							<div>
+								<span>Rp 6.500.000</span>
 							</div>
 						</li>
 						<li>
@@ -166,7 +411,66 @@
 								<span>4 <i class="fa fa-star"></i></span>
 							</div>
 							<div>
-								<span>15 <i class="fa fa-comments-o"></i></span>
+								<span>200 <i class="fa fa-comments-o"></i></span>
+							</div>
+						</li>
+					</ul>
+				</a>
+			</li>
+			<li>
+				<a href="product.html">
+					<div>
+						<span class="promo">Baru</span>
+						<img src="img/iphone7gold.jpg">	
+					</div>
+					<ul>
+						<li>
+							<h4 id="truncate">iPhone 7 - 16GB Gold</h4>
+						</li>
+						<li class="price">
+							<div class="disc">
+								<span>-5%</span>
+								<span>Rp 10.500.000</span>
+							</div>
+							<div>
+								<span>Rp 9.000.000</span>
+							</div>
+						</li>
+						<li>
+							<div class="main-rate">
+								<span>4.5 <i class="fa fa-star"></i></span>
+							</div>
+							<div>
+								<span>150 <i class="fa fa-comments-o"></i></span>
+							</div>
+						</li>
+					</ul>
+				</a>
+			</li>
+			<li>
+				<a href="product.html">
+					<div>
+						<img src="img/iphone7rose.png">	
+					</div>
+					<ul>
+						<li>
+							<h4 id="truncate">iPhone 7 - 32GB Rose</h4>
+						</li>
+						<li class="price">
+							<div class="disc">
+								<span>-10%</span>
+								<span>Rp 10.500.000</span>
+							</div>
+							<div>
+								<span>Rp 9.350.000</span>
+							</div>
+						</li>
+						<li>
+							<div class="main-rate">
+								<span>4 <i class="fa fa-star"></i></span>
+							</div>
+							<div>
+								<span>100 <i class="fa fa-comments-o"></i></span>
 							</div>
 						</li>
 					</ul>
@@ -202,96 +506,6 @@
 					</ul>
 				</a>
 			</li>
-			<li>
-				<a href="product.html">
-					<div>
-						<span class="promo">Bonus Case</span>
-						<img src="img/oneplus5.jpg">
-					</div>
-					<ul>
-						<li>
-							<h4>OnePlus 5</h4>
-						</li>
-						<li class="price">
-							<div class="disc">
-								<span>-10%</span>
-								<span>Rp 6.500.000</span>
-							</div>
-							<div>
-								<span>Rp 5.350.000</span>
-							</div>
-						</li>
-						<li>
-							<div class="main-rate">
-								<span>4 <i class="fa fa-star"></i></span>
-							</div>
-							<div>
-								<span>15 <i class="fa fa-comments-o"></i></span>
-							</div>
-						</li>
-					</ul>
-				</a>
-			</li>
-			<li>
-				<a href="product.html">
-					<div>
-						<span class="promo">Bonus Case</span>
-						<img src="img/xiaomimia1.jpg">
-					</div>
-					<ul>
-						<li>
-							<h4>Xiaomi MiA1 32 GB</h4>
-						</li>
-						<li class="price">
-							<div class="disc">
-								<span>-15%</span>
-								<span>Rp 4.500.000</span>
-							</div>
-							<div>
-								<span>Rp 3.000.000</span>
-							</div>
-						</li>
-						<li>
-							<div class="main-rate">
-								<span>4 <i class="fa fa-star"></i></span>
-							</div>
-							<div>
-								<span>15 <i class="fa fa-comments-o"></i></span>
-							</div>
-						</li>
-					</ul>
-				</a>
-			</li>
-			<li>
-				<a href="product.html">
-					<div>
-						<span class="promo">Bonus Case</span>
-						<img src="img/googlepixel2.jpg">
-					</div>
-					<ul>
-						<li>
-							<h4>Google Pixel 2</h4>
-						</li>
-						<li class="price">
-							<div class="disc vanish">
-								<span>-20%</span>
-								<span>Rp 11.500.000</span>
-							</div>
-							<div>
-								<span>Rp 10.350.000</span>
-							</div>
-						</li>
-						<li>
-							<div class="main-rate">
-								<span>4 <i class="fa fa-star"></i></span>
-							</div>
-							<div>
-								<span>15 <i class="fa fa-comments-o"></i></span>
-							</div>
-						</li>
-					</ul>
-				</a>
-			</li>
 		</ul>
 		<div class="items-header">	
 			<h4>Laptop</h4>
@@ -301,19 +515,19 @@
 			<li>
 				<a href="product.html">
 					<div>
-						<img src="img/laptop.jpg">
+						<img src="img/mac.jpg">
 					</div>
 					<ul>
 						<li>
-							<h4>Xiaomi MiBook</h4>
+							<h4>Apple 13.3" MacBook Pro</h4>
 						</li>
 						<li class="price">
 							<div class="disc">
 								<span>-10%</span>
-								<span>Rp 11.500.000</span>
+								<span>Rp 20.500.000</span>
 							</div>
 							<div>
-								<span>Rp 10.350.000</span>
+								<span>Rp 19.350.000</span>
 							</div>
 						</li>
 						<li>
@@ -331,11 +545,11 @@
 				<a href="product.html">
 					<div>
 						<span class="promo">Bonus Tas</span>
-						<img src="img/razerblade.png">
+						<img src="img/mac2.jpg">
 					</div>
 					<ul>
 						<li>
-							<h4>Razer Blade</h4>
+							<h4>Apple 14" MacBook Pro</h4>
 						</li>
 						<li class="price">
 							<div class="disc">
@@ -360,11 +574,11 @@
 			<li>
 				<a href="product.html">
 					<div>
-						<img src="img/mac2.jpg">
+						<img src="img/mac3.jpg">
 					</div>
 					<ul>
 						<li>
-							<h4>MacBook Pro</h4>
+							<h4>Apple 13.3" MacBook Pro with Touch Bar</h4>
 						</li>
 						<li class="price">
 							<div class="disc vanish">
@@ -390,19 +604,19 @@
 				<a href="product.html">
 					<div>
 						<span class="promo">Bonus Mouse</span>
-						<img src="img/asusrog.jpg">
+						<img src="img/mac4.jpg">
 					</div>
 					<ul>
 						<li>
-							<h4>Asus ROG 15" 1070Ti</h4>
+							<h4>Apple MacBook Pro 15-Inch</h4>
 						</li>
 						<li class="price">
 							<div class="disc">
 								<span>-10%</span>
-								<span>Rp 15.500.000</span>
+								<span>Rp 22.500.000</span>
 							</div>
 							<div>
-								<span>Rp 14.350.000</span>
+								<span>Rp 21.350.000</span>
 							</div>
 						</li>
 						<li>
@@ -419,11 +633,11 @@
 			<li>
 				<a href="product.html">
 					<div>
-						<img src="img/dell.jpg">
+						<img src="img/mac5.jpg">
 					</div>
 					<ul>
 						<li>
-							<h4>Dell Inspiron 5500</h4>
+							<h4>Apple Gold MacBook Pro 13-Inch</h4>
 						</li>
 						<li class="price">
 							<div class="disc">
@@ -453,10 +667,10 @@
 		<ul class="items items-row portrait">
 			<li>
 				<a href="product.html">
-					<img src="img/switch.jpg">
+					<img src="img/homepod.jpg">
 					<ul>
 						<li>
-							<h4>Nintendo Switch</h4>
+							<h4>Apple HomePod - Black</h4>
 						</li>
 						<li class="price">
 							<div class="disc">
@@ -480,10 +694,10 @@
 			</li>
 			<li>
 				<a href="product.html">
-					<img src="img/alexa.jpg">
+					<img src="img/iWatch.jpg">
 					<ul>
 						<li>
-							<h4>Amazon Alexa</h4>
+							<h4>Apple iWatch - Couple</h4>
 						</li>
 						<li class="price">
 							<div class="disc vanish">
@@ -507,10 +721,10 @@
 			</li>
 			<li>
 				<a href="product.html">
-					<img src="img/googlehome.png">
+					<img src="img/iwatch2.jpg">
 					<ul>
 						<li>
-							<h4>Google Home Assistant</h4>
+							<h4>Apple iWatch - White</h4>
 						</li>
 						<li class="price">
 							<div class="disc">
@@ -534,24 +748,23 @@
 			</li>
 			<li>
 				<a href="product.html">
-					<span class="promo">Bonus Sport Band</span>
-					<img src="img/iwatch.jpg">
+					<img src="img/ipad.jpg">
 					<ul>
 						<li>
-							<h4>Apple iWatch</h4>
+							<h4>Apple iPad 9.7"</h4>
 						</li>
 						<li class="price">
 							<div class="disc">
 								<span>-5%</span>
-								<span>Rp 7.500.000</span>
+								<span>Rp 10.500.000</span>
 							</div>
 							<div>
-								<span>Rp 7.350.000</span>
+								<span>Rp 9.350.000</span>
 							</div>
 						</li>
 						<li>
 							<div class="main-rate">
-								<span>3 <i class="fa fa-star"></i></span>
+								<span>4 <i class="fa fa-star"></i></span>
 							</div>
 							<div>
 								<span>113 <i class="fa fa-comments-o"></i></span>
@@ -562,19 +775,18 @@
 			</li>
 			<li>
 				<a href="product.html">
-					<span class="promo">Bonus Case</span>
-					<img src="img/gopro2.jpg">
+					<img src="img/ipad2.png">
 					<ul>
 						<li>
-							<h4>GoPro Hero4 Black</h4>
+							<h4>iPad Wi-Fi 128GB - Space Grey</h4>
 						</li>
 						<li class="price">
 							<div class="disc">
 								<span>-15%</span>
-								<span>Rp 6.500.000</span>
+								<span>Rp 10.500.000</span>
 							</div>
 							<div>
-								<span>Rp 5.350.000</span>
+								<span>Rp 9.350.000</span>
 							</div>
 						</li>
 						<li>
@@ -630,9 +842,20 @@
 						</select>
 					</li>
 					<li>
-						<label for="filter-rate">Rating</label>
+						<label for="filter-rate">Rating barang</label>
 						<select id="filter-rate">
-							<option class="low">Semua</option>
+							<option>Semua</option>
+							<option>5</option>
+							<option>4</option>
+							<option>3</option>
+							<option>2</option>
+							<option>1</option>
+						</select>
+					</li>
+					<li>
+						<label for="filter-rate">Rating toko</label>
+						<select id="filter-rate">
+							<option>Semua</option>
 							<option>5</option>
 							<option>4</option>
 							<option>3</option>
@@ -660,7 +883,7 @@
 			<div class="nav-bot center">
 				<a href="category.html"><button class="btn">Semula</button></a>
 				<a href="category-filtered.html">
-					<button class="btn btn-green">
+					<button class="btn btn-main">
 						<span>Saring</span>
 						<i class="fa fa-filter"></i>
 					</button>

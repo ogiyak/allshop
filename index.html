@@ -22,7 +22,7 @@
 <body>
 	<!-- header -->
 	<nav>
-		<ul>
+		<ul class="navigation">
 			<li class="icon icon-48" onclick="sidenavOpen()">
 				<i class="fa fa-bars"></i>
 			</li>
@@ -34,16 +34,43 @@
 					<button type="submit"><i class="fa fa-search"></i></button>
 				</form>
 				<div id="search-content">
-					<ul id="searchHis">
+					<ul class="list row filter-row">
+						<li>
+							<label for="murah">
+								<input type="radio" name="filter" id="murah">
+								<span>Termurah</span>
+							</label>
+						</li>
+						<li>
+							<label for="baru">
+								<input type="radio" name="filter" id="baru">
+								<span>Terbaru</span>
+							</label>
+						</li>
+						<li>
+							<label for="laris">
+								<input type="radio" name="filter" id="laris">
+								<span>Terlaris</span>
+							</label>
+						</li>
+						<li>
+							<label for="relevan">
+								<input type="radio" name="filter" id="relevan" checked>
+								<span>Terelevan</span>
+							</label>
+						</li>
+					</ul>
+					<ul id="searchHis" class="formal-column list column">
 						<div class="btn btn-top">
-							<div>Terakhir dicari</div>
-							<div><i class="fa fa-close"></i></div>
+							<span>Dicari sebelumnya</span>
+							<i class="fa fa-close"></i>
 						</div>
-						<a href="search-result.html"><li>Jaket hitam</li></a>
+						<a href="search-result.html"><li>Jaket hitam</li>
+						</a>
 						<a href="search-result.html"><li>Jam tangan rolex</li></a>
 						<a href="search-result.html"><li>Sepatu sport</li></a>
 					</ul>
-					<ul id="searchSug">
+					<ul id="searchSug" class="formal-column list column">
 						<a href="search-result.html">
 							<li>
 								<span></span> - di Smartphone
@@ -62,7 +89,6 @@
 					</ul>
 				</div>
 			</li>
-			<div class="shadow" onclick="searchClose()"></div>
 			<li class="icon icon-48">
 				<a href="cart.html">
 					<i class="fa fa-shopping-cart"></i>
@@ -70,14 +96,15 @@
 				</a>
 			</li>
 		</ul>
+		<div class="shadow" onclick="searchClose()"></div>
 		<ul class="category">
 			<a href="category.html"><li>Elektronik</li></a>
-			<a href="category.html"><li>Smartphone</li></a>
-			<a href="category.html"><li>Laptop</li></a>
-			<a href="category.html"><li>Gadget</li></a>
-			<a href="category.html"><li>Kamera</li></a>
-			<a href="category.html"><li>Aksesoris</li></a>
-			<a href="category.html"><li>Lainnya</li></a>
+			<a href="category.html"><li>Perkakas</li></a>
+			<a href="category.html"><li>Pria</li></a>
+			<a href="category.html"><li>Wanita</li></a>
+			<a href="category.html"><li>Anak-anak</li></a>
+			<a href="category.html"><li>Mebel</li></a>
+			<a href="category.html"><li>Buku dll</li></a>
 		</ul>
 	</nav>
 	<!-- sidebar -->
@@ -104,7 +131,9 @@
 			<hr>
 			<a href="login.html"><i class="fa fa-user-o main-dark" aria-hidden="true"></i> Akunku</a>
 			<a href="order-status.html"><i class="fa fa-shopping-bag main-dark" aria-hidden="true"></i> Pesananku</a>
-			<a href="help.html"><i class="fa fa-question-circle-o main-dark" aria-hidden="true"></i> Bantuan</a>
+			<a href="help.html"><i class="fa fa-question-circle main-dark" aria-hidden="true"></i> Bantuan</a>
+			<hr>
+			<a href="help.html"><i class="fa fa-info-circle main-dark" aria-hidden="true"></i> Tentang <span style="font-family: 'Poiret One', cursive; font-weight: bolder;">allshop</span></a>
 		</div>
 	</div>
 	<div class="shadow" onclick="sidenavClose()"></div>
@@ -426,14 +455,16 @@
 		</ul>
 		<!-- portrait -->
 		<header class="items-header">
-			<span>Smartphone</span>
+			<a href="category-end.html"><span>Smartphone</span></a>
 			<a href="category.html" class="icon icon-32"><i class="fa fa-external-link-square"></i></a>
 		</header>
 		<ul class="items items-row portrait">
 			<li>
 				<a href="product.html">
-					<span class="promo">Bonus Case</span>
-					<img src="img/iphonered.jpg">
+					<div>
+						<span class="promo">Bonus Case</span>
+						<img src="img/iphonered.jpg">
+					</div>
 					<ul>
 						<li>
 							<h4>iPhone 7 Red - 32GB</h4>
@@ -610,7 +641,7 @@
 			</li>
 		</ul>
 		<header class="items-header">
-			<span>Laptop</span>
+			<a href="category-end.html"><span>Laptop</span></a>
 			<a href="category.html" class="icon icon-32"><i class="fa fa-external-link-square"></i></a>
 		</header>
 		<ul class="items items-row portrait">
@@ -763,7 +794,7 @@
 			</li>
 		</ul>
 		<header class="items-header">
-			<span>Furnitur</span>
+			<a href="category-end.html"><span>Furnitur</span></a>
 			<a href="category.html" class="icon icon-32"><i class="fa fa-external-link-square"></i></a>
 		</header>
 		<ul class="items items-row portrait">

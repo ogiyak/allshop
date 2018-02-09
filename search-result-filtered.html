@@ -22,7 +22,7 @@
 <body>
 	<!-- header -->
 	<nav>
-		<ul>
+		<ul class="navigation">
 			<li class="icon icon-48" onclick="sidenavOpen()">
 				<i class="fa fa-bars"></i>
 			</li>
@@ -30,39 +30,65 @@
 			<li id="searchwrap">
 				<form action="search-result.html">
 					<button type="button" onclick="searchClose()"><i class="fa fa-arrow-left"></i></button>
-					<input type="search" placeholder="Cari di sini..." onclick="searchOpen()">
+					<input type="search" placeholder="iphone 7 32gb" onclick="searchOpen()">
 					<button type="submit"><i class="fa fa-search"></i></button>
 				</form>
 				<div id="search-content">
-					<ul id="searchHis">
+					<ul class="list row filter-row">
+						<li>
+							<label for="murah">
+								<input type="radio" name="filter" id="murah">
+								<span>Termurah</span>
+							</label>
+						</li>
+						<li>
+							<label for="baru">
+								<input type="radio" name="filter" id="baru">
+								<span>Terbaru</span>
+							</label>
+						</li>
+						<li>
+							<label for="laris">
+								<input type="radio" name="filter" id="laris">
+								<span>Terlaris</span>
+							</label>
+						</li>
+						<li>
+							<label for="relevan">
+								<input type="radio" name="filter" id="relevan" checked>
+								<span>Terelevan</span>
+							</label>
+						</li>
+					</ul>
+					<ul id="searchHis" class="formal-column list column">
 						<div class="btn btn-top">
-							<div>Terakhir dicari</div>
-							<div><i class="fa fa-close"></i></div>
+							<span>Dicari sebelumnya</span>
+							<i class="fa fa-close"></i>
 						</div>
-						<a href="search-result.html"><li>Jaket hitam</li></a>
+						<a href="search-result.html"><li>Jaket hitam</li>
+						</a>
 						<a href="search-result.html"><li>Jam tangan rolex</li></a>
 						<a href="search-result.html"><li>Sepatu sport</li></a>
 					</ul>
-					<ul id="searchSug">
+					<ul id="searchSug" class="formal-column list column">
 						<a href="search-result.html">
 							<li>
-								<span></span><b class="low">- di Smartphone</b>
-							</li>
-						</a>	
-						<a href="search-result.html">
-							<li>
-								<span></span><b class="low"> - di Komputer</b>
+								<span></span> - di Smartphone
 							</li>
 						</a>
 						<a href="search-result.html">
 							<li>
-								<span></span><b class="low"> - di Hardware</b>
+								<span></span> - di Komputer
+							</li>
+						</a>
+						<a href="search-result.html">
+							<li>
+								<span></span> - di Hardware
 							</li>
 						</a>
 					</ul>
 				</div>
 			</li>
-			<div class="shadow" onclick="searchClose()"></div>
 			<li class="icon icon-48">
 				<a href="cart.html">
 					<i class="fa fa-shopping-cart"></i>
@@ -70,6 +96,7 @@
 				</a>
 			</li>
 		</ul>
+		<div class="shadow" onclick="searchClose()"></div>
 		<ul class="category">
 			<a href="category.html"><li>Elektronik</li></a>
 			<a href="category.html"><li>Smartphone</li></a>
@@ -104,7 +131,9 @@
 			<hr>
 			<a href="login.html"><i class="fa fa-user-o main-dark" aria-hidden="true"></i> Akunku</a>
 			<a href="order-status.html"><i class="fa fa-shopping-bag main-dark" aria-hidden="true"></i> Pesananku</a>
-			<a href="help.html"><i class="fa fa-question-circle-o main-dark" aria-hidden="true"></i> Bantuan</a>
+			<a href="help.html"><i class="fa fa-question-circle main-dark" aria-hidden="true"></i> Bantuan</a>
+			<hr>
+			<a href="help.html"><i class="fa fa-info-circle main-dark" aria-hidden="true"></i> Tentang <span style="font-family: 'Poiret One', cursive; font-weight: bolder;">allshop</span></a>
 		</div>
 	</div>
 	<div class="shadow" onclick="sidenavClose()"></div>
@@ -118,13 +147,13 @@
 				</div>
 			</div>
 			<div>
-				<div class="btn btn-32 btn-green" onclick="popOpen(this)" id="popopenfilter">
+				<div class="btn btn-32 btn-main" onclick="popOpen(this)" id="popopenfilter">
 					<span>Kategori</span>
 					<i class="fa fa-filter"></i>
 				</div>
 				<div class="dropdown">
-					<div class="btn btn-32 btn-green-outer" onclick="dropdown(this)">
-						<span>Relevan</span>
+					<div class="btn btn-32 btn-main-outer" onclick="dropdown(this)">
+						<span>Sortir</span>
 						<i class="fa fa-sort"></i>
 					</div>
 					<ul class="dropdown-content">
@@ -132,19 +161,18 @@
 						<a href=""><li>Termahal</i></li></a>
 						<a href=""><li>Terpopuler</i></li></a>
 						<a href=""><li>Terlaris</i></li></a>
-						<a href=""><li>Relevan</i></li></a>
+						<a href=""><li>Sortir</i></li></a>
 					</ul>
 				</div>
 			</div>
 		</div>
-		<div class="items-header">	
-			<p style="font-weight: normal;">Hasil pencarian "iphone 7 32gb"</p>
-		</div>
 		<ul class="items items-col portrait">
 			<li>
 				<a href="product.html">
-					<span class="promo">Bonus Case</span>
-					<img src="img/iphonered.jpg">
+					<div>
+						<span class="promo">Bonus Case</span>
+						<img src="img/iphonered.jpg">
+					</div>
 					<ul>
 						<li>
 							<h4>iPhone 7 Red - 32GB</h4>
@@ -171,7 +199,9 @@
 			</li>
 			<li>
 				<a href="product.html">
-					<img src="img/iphone7lense.jpg">
+					<div>
+						<img src="img/iphone7lense.jpg">
+					</div>
 					<ul>
 						<li>
 							<h4>iPhone 7 32mm Lense</h4>
@@ -198,7 +228,9 @@
 			</li>
 			<li>
 				<a href="product.html">
-					<img src="img/iphone7conn.jpg">
+					<div>
+						<img src="img/iphone7conn.jpg">
+					</div>
 					<ul>
 						<li>
 							<h4>iphone 7 USB C Connector</h4>
@@ -225,8 +257,10 @@
 			</li>
 			<li>
 				<a href="product.html">
-					<span class="promo">Bonus Case</span>
-					<img src="img/iphone7red.jpg">
+					<div>
+						<span class="promo">Bonus Case</span>
+						<img src="img/iphone7red.jpg">
+					</div>
 					<ul>
 						<li>
 							<h4>iPhone 7 Red - 32GB</h4>
@@ -253,7 +287,9 @@
 			</li>
 			<li>
 				<a href="product.html">
-					<img src="img/iphone7red2.jpg">
+					<div>
+						<img src="img/iphone7red2.jpg">
+					</div>
 					<ul>
 						<li>
 							<h4>iPhone 7 Red - 32GB</h4>
@@ -280,8 +316,10 @@
 			</li>
 			<li>
 				<a href="product.html">
-					<span class="promo">Bonus Holder</span>
-					<img src="img/iphone7acc.jpg">
+					<div>
+						<span class="promo">Bonus Holder</span>
+						<img src="img/iphone7acc.jpg">
+					</div>
 					<ul>
 						<li>
 							<h4>iphone 7 Metal Case</h4>
@@ -347,9 +385,20 @@
 						</select>
 					</li>
 					<li>
-						<label for="filter-rate">Rating</label>
+						<label for="filter-rate">Rating barang</label>
 						<select id="filter-rate">
-							<option class="low">Semua</option>
+							<option>Semua</option>
+							<option>5</option>
+							<option>4</option>
+							<option>3</option>
+							<option>2</option>
+							<option>1</option>
+						</select>
+					</li>
+					<li>
+						<label for="filter-rate">Rating toko</label>
+						<select id="filter-rate">
+							<option>Semua</option>
 							<option>5</option>
 							<option>4</option>
 							<option>3</option>
@@ -376,7 +425,7 @@
 			<div style="height: 80px; width: 100%;"></div>
 			<section class="nav-bot center">
 				<a href="search-result.html"><button class="btn">Semula</button></a>
-				<a href="search-result.html"><button class="btn btn-green">Saring <i class="fa fa-filter"></i></button></a>
+				<a href="search-result.html"><button class="btn btn-main">Saring <i class="fa fa-filter"></i></button></a>
 			</section>
 		</ul>
 		<div class="formal-column">

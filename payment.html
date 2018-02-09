@@ -22,13 +22,41 @@
 <body>
 	<section class="content content-full">
 		<div class="btn btn-top">
-			<h2>Pembayaran</h2>
+			<span>Pembayaran</span>
 			<a href="product.html"><i class="fa fa-close"></i></a>
+		</div>
+		<div class="wrapper wrapper-transparent">
+			<div class="timeline">
+				<div>
+					<div class="active">Cara bayar</div>
+					<div class="tl" id="stat1">
+						<div class="hidden"></div>
+						<div class="bg-green"></div>
+						<div></div>
+					</div>
+				</div>
+				<div>
+					<div>Proses bayar</div>
+					<div class="tl" id="stat2">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+				<div>
+					<div>Selesai</div>
+					<div class="tl" id="stat3">
+						<div></div>
+						<div></div>
+						<div class="hidden"></div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="wrapper">
 			<div class="btn btn-top">
 				<span>
-					<h2 class="green">Rp 17.960.000</h2>
+					<h2 class="green-dark">Rp 17.960.000</h2>
 				</span>
 				<span>
 					<a href="cart.html">Rincian</a>
@@ -131,7 +159,7 @@
 		function itemSelected(e){
 			$(".list-item").css("background-color", "#fff");
 			$(".list-item .sign").css("visibility", "hidden");
-			$('.nav-bot').find('button.inactive').removeClass('inactive').addClass('btn-green');
+			$('.nav-bot').find('button.inactive').removeClass('inactive').addClass('btn-main');
 
 			e.style.backgroundColor = "var(--color-main-light)";
 			$(e).find(".sign").css("visibility", "visible");

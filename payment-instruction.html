@@ -22,8 +22,36 @@
 <body>
 	<section class="content content-full">
 		<div class="btn btn-top">
-			<h2>Transfer Bank</h2>
+			<span>Pembayaran</span>
 			<a href="product.html"><i class="fa fa-close"></i></a>
+		</div>
+		<div class="wrapper wrapper-transparent">
+			<div class="timeline">
+				<div>
+					<div>Cara bayar</div>
+					<div class="tl" id="stat1">
+						<div class="hidden"></div>
+						<div class="bg-green"></div>
+						<div class="bg-green"></div>
+					</div>
+				</div>
+				<div>
+					<div class="active">Proses bayar</div>
+					<div class="tl" id="stat2">
+						<div class="bg-green"></div>
+						<div class="bg-green"></div>
+						<div></div>
+					</div>
+				</div>
+				<div>
+					<div>Selesai</div>
+					<div class="tl" id="stat3">
+						<div></div>
+						<div></div>
+						<div class="hidden"></div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<ul class="wrapper">
 			<li class="list-item">
@@ -35,21 +63,19 @@
 				</div>
 			</li>
 			<li class="formal-column">
-				<p>Silahkan isi Nama dan Nomor rekening sesuai yang tertera pada buku tabungan Anda.</p>
+				<p>Silahkan masukkan Nama dan Nomor rekening sesuai dengan yang tertera pada buku tabungan Anda.</p>
 			</li>
 			<li class="formal-column">
-				<form action="" class="form-group full-width">
+				<form action="payment-wait.html" class="form-group full-width">
 					<label for="account_name">Nama Pemilik Rekening</label>
 					<input type="text" name="account" id="account_name">
 					<label for="account_number">Nomor Rekening</label>
 					<input type="number" name="account" id="account_number">
 					<div class="nav-bot center">
 						<a href="payment.html">
-							<button class="btn">Kembali</button>
+							<button type="button" class="btn">Kembali</button>
 						</a>
-						<a href="payment-wait.html">
-							<button class="btn btn-green">Bayar</button>
-						</a>
+						<button type="submit" class="btn btn-main">Bayar</button>
 					</div>
 				</form>
 			</li>

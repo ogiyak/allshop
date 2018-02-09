@@ -28,56 +28,53 @@
 			</a>
 		</div>
 		<div class="advance-search">
+			<div></div>
 			<div>
-			</div>
-			<div>
-				<div class="btn btn-32 btn-green-outer" onclick="popOpen(this)" id="popopenfilter">
+				<div class="btn btn-32 btn-main-outer" onclick="popOpen(this)" id="popopenfilter">
 					<span>Saring</span>
 					<i class="fa fa-filter"></i>
 				</div>
-				<div class="btn btn-32 btn-green-outer">
+				<div class="btn btn-32 btn-main-outer">
 					<i class="fa fa-search"></i>
 				</div>
 			</div>
 		</div>
+		<!-- daftar pesanan -->
 		<ul class="wrapper">
 			<li class="btn btn-top">
 				<span>
-					<p>Pesanan 9191333</p>
-					<p class="">Diproses</p>
+					<p class="gantle">Pesanan 9191333</p>
+					<p class="small">Diproses</p>
 				</span>
 				<span class="gray small">Dipesan 13 November 2017</span>
 			</li>
 			<li class="timeline">
 				<div>
-					<span class="bold">Dikonfirmasi</span>
+					<span class="active">Dikemas</span>
 					<span class="tl" id="stat1">
 						<div class="hidden"></div>
-						<div class="bg-green"></div>
-						<div class="bg-green"></div>
+						<div class="bg-green"><i class="fa fa-comment"></i></div>
+						<div></div>
 					</span>
-					<span class="icon icon-48"><i class="fa fa-comment"></i></span>
 				</div>
 				<div>
 					<span>Pengiriman</span>
 					<span class="tl" id="stat2">
-						<div class="bg-green"></div>
 						<div></div>
+						<div><i class="fa fa-truck fa-flip-horizontal"></i></div>
 						<div></div>
 					</span>
-					<span class="icon icon-48"><i class="fa fa-truck fa-flip-horizontal"></i></span>
 				</div>
 				<div>
 					<span>Penerimaan</span>
 					<span class="tl" id="stat3">
 						<div></div>
-						<div></div>
+						<div><i class="fa fa-check"></i></div>
 						<div class="hidden"></div>
 					</span>
-					<span class="icon icon-48"><i class="fa fa-check"></i></span>
 				</div>
 			</li>
-			<li class="formal-column low">
+			<li class="list column low">
 				<p>Diperkirakan sampai 18 November 2017</p>
 			</li>
 			<li class="list-item">
@@ -150,107 +147,142 @@
 				</div>
 			</li>
 		</ul>
+		<ul class="wrapper">
+			<li class="btn btn-top">
+				<span>
+					<p class="gantle">Pesanan 8191222</p>
+					<p class="small">Belum dikonfirmasi</p>
+				</span>
+				<span class="gray small">Dipesan 6 November 2017</span>
+			</li>
+			<li class="timeline">
+				<div>
+					<span class="active">Dikemas</span>
+					<span class="tl" id="stat1">
+						<div class="hidden"></div>
+						<div class="bg-green"><i class="fa fa-comment"></i></div>
+						<div class="bg-green"></div>
+					</span>
+				</div>
+				<div>
+					<span class="active">Dikirim</span>
+					<span class="tl" id="stat2">
+						<div class="bg-green"></div>
+						<div class="bg-green"><i class="fa fa-truck fa-flip-horizontal"></i></div>
+						<div class="bg-green"></div>
+					</span>
+				</div>
+				<div>
+					<span class="active">Diterima</span>
+					<span class="tl" id="stat3">
+						<div class="bg-green"></div>
+						<div class="bg-green"><i class="fa fa-check"></i></div>
+						<div class="hidden"></div>
+					</span>
+				</div>
+			</li>
+			<li class="list column low">
+				<p>Sampai 13 November 2017</p>
+			</li>
+			<li class="list-item">
+				<div>
+					<img src="img/switch.jpg">
+					<div>
+						<h4>Nintendo Switch</h4>
+						<div class="price">
+							<div class="disc">
+								<span>-33%</span>
+								<span>Rp 7.500.000</span>
+							</div>
+							<div>
+								<span>Rp 5.700.000</span>
+							</div>
+						</div>
+						<div class="sspan">
+							<span id="product-qty">1</span>
+							<span>buah</span>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
 		<ul class="wrapper inactive">
 			<li class="btn btn-top">
 				<span>
 					<p>Pesanan 8181555</p>
-					<p class="green">Selesai</p>
+					<p class="green small">Selesai</p>
 				</span>
 				<span class="gray small">Dipesan 13 November 2016</span>
 			</li>
 			<li class="timeline">
 				<div>
-					<span class="bold">Dikonfirmasi</span>
+					<span class="active">Dikemas</span>
 					<span class="tl" id="stat1">
 						<div class="hidden"></div>
-						<div class="bg-green"></div>
+						<div class="bg-green"><i class="fa fa-comment"></i></div>
 						<div class="bg-green"></div>
 					</span>
-					<span class="icon icon-48"><i class="fa fa-comment"></i></span>
 				</div>
 				<div>
-					<span class="bold">Dikirim</span>
+					<span class="active">Pengiriman</span>
 					<span class="tl" id="stat2">
 						<div class="bg-green"></div>
-						<div class="bg-green"></div>
+						<div class="bg-green"><i class="fa fa-truck fa-flip-horizontal"></i></div>
 						<div class="bg-green"></div>
 					</span>
-					<span class="icon icon-48"><i class="fa fa-truck fa-flip-horizontal"></i></span>
 				</div>
 				<div>
-					<span class="bold">Diterima</span>
+					<span class="active">Diterima</span>
 					<span class="tl" id="stat3">
 						<div class="bg-green"></div>
-						<div class="bg-green"></div>
+						<div class="bg-green"><i class="fa fa-check"></i></div>
 						<div class="hidden"></div>
 					</span>
-					<span class="icon icon-48"><i class="fa fa-check"></i></span>
 				</div>
 			</li>
-			<li class="formal-column low">
-				<p>Sampai 18 November 2017</p>
+			<li class="list column low">
+				<p>Sampai 10 November 2017</p>
 			</li>
 			<li class="list-item">
 				<div>
-					<img src="img/iphonered.jpg">
+					<img src="img/mac2.jpg">
 					<div>
-						<h4>iPhone 7 32 GB - Red</h4>
+						<h4>MacBook Pro 15"</h4>
 						<div class="price">
 							<div class="disc">
 								<span>-10%</span>
-								<span>Rp 11.500.000</span>
+								<span>Rp 22.500.000</span>
 							</div>
 							<div>
-								<span>Rp 10.350.000</span>
+								<span>Rp 21.350.000</span>
 							</div>
 						</div>
 						<div class="sspan">
 							<span>1</span>
 							<span>Buah</span>
 							<span>-</span>
-							<span>Merah</span>
+							<span>Silver</span>
 						</div>
 					</div>
 				</div>
 			</li>
 			<li class="list-item">
 				<div>
-					<img src="img/wanitaportrait.jpg">
+					<img src="img/tas.jpg">
 					<div>
-						<h4>Jaket Zebra Casual - Special</h4>
+						<h4>Tas Cantik</h4>
 						<div class="price">
 							<span class="vanish"></span>
 							<span>
 								<p class="vanish"></p>
-								<p>Rp 99.000</p>
-							</span>
-						</div>
-						<div class="sspan">
-							<span>2</span>
-							<span>Buah</span>
-							<span>-</span>
-							<span>XL</span>
-						</div>
-					</div>
-				</div>
-			</li>
-			<li class="list-item">
-				<div>
-					<img src="img/cameradslr.jpg">
-					<div>
-						<h4>Nikon DSLR D3500</h4>
-						<div class="price">
-							<span class="vanish"></span>
-							<span>
-								<p class="vanish"></p>
-								<p>Rp 5.000.000</p>
+								<p>Rp 99.999.000</p>
 							</span>
 						</div>
 						<div class="sspan">
 							<span>1</span>
 							<span>Buah</span>
 							<span>-</span>
-							<span>Lensa 28nm</span>
+							<span>Pink</span>
 						</div>
 					</div>
 				</div>
@@ -260,54 +292,51 @@
 			<li class="btn btn-top">
 				<span>
 					<p>Pesanan 8181345</p>
-					<p class="red">Dikembalikan</p>
+					<p class="red small">Dikembalikan</p>
 				</span>
 				<span class="gray small">Dipesan 13 November 2016</span>
 			</li>
 			<li class="timeline">
 				<div>
-					<span class="bold">Dikonfirmasi</span>
+					<span class="active">Dikemas</span>
 					<span class="tl" id="stat1">
 						<div class="hidden"></div>
-						<div class="bg-green"></div>
+						<div class="bg-green"><i class="fa fa-comment"></i></div>
 						<div class="bg-green"></div>
 					</span>
-					<span class="icon icon-48"><i class="fa fa-comment"></i></span>
 				</div>
 				<div>
-					<span class="bold">Dikirim</span>
+					<span class="active">Pengiriman</span>
 					<span class="tl" id="stat2">
 						<div class="bg-green"></div>
-						<div class="bg-green"></div>
+						<div class="bg-green"><i class="fa fa-truck fa-flip-horizontal"></i></div>
 						<div class="bg-green"></div>
 					</span>
-					<span class="icon icon-48"><i class="fa fa-truck fa-flip-horizontal"></i></span>
 				</div>
 				<div>
-					<span class="bold">Dikembalikan</span>
+					<span class="active">Dikembalikan</span>
 					<span class="tl" id="stat3">
 						<div class="bg-green"></div>
-						<div class="bg-red"></div>
+						<div class="bg-red"><i class="fa fa-close"></i></div>
 						<div class="hidden"></div>
 					</span>
-					<span class="icon icon-48"><i class="fa fa-check"></i></span>
 				</div>
 			</li>
-			<li class="formal-column low">
-				<p>Sampai 18 November 2017</p>
+			<li class="list column low">
+				<p>Sampai 2 November 2017</p>
 			</li>
 			<li class="list-item">
 				<div>
-					<img src="img/iphonered.jpg">
+					<img src="img/tesla-car.png">
 					<div>
-						<h4>iPhone 7 32 GB - Red</h4>
+						<h4>Tesla Model C</h4>
 						<div class="price">
 							<div class="disc">
 								<span>-10%</span>
-								<span>Rp 11.500.000</span>
+								<span>Rp 1.000.500.000</span>
 							</div>
 							<div>
-								<span>Rp 10.350.000</span>
+								<span>Rp 999.000.000</span>
 							</div>
 						</div>
 						<div class="sspan">
@@ -321,42 +350,19 @@
 			</li>
 			<li class="list-item">
 				<div>
-					<img src="img/wanitaportrait.jpg">
+					<img src="img/lamp.jpg">
 					<div>
-						<h4>Jaket Zebra Casual - Special</h4>
+						<h4>Lampu Ruang TV</h4>
 						<div class="price">
 							<span class="vanish"></span>
 							<span>
 								<p class="vanish"></p>
-								<p>Rp 99.000</p>
-							</span>
-						</div>
-						<div class="sspan">
-							<span>2</span>
-							<span>Buah</span>
-							<span>-</span>
-							<span>XL</span>
-						</div>
-					</div>
-				</div>
-			</li>
-			<li class="list-item">
-				<div>
-					<img src="img/cameradslr.jpg">
-					<div>
-						<h4>Nikon DSLR D3500</h4>
-						<div class="price">
-							<span class="vanish"></span>
-							<span>
-								<p class="vanish"></p>
-								<p>Rp 5.000.000</p>
+								<p>Rp 450.000</p>
 							</span>
 						</div>
 						<div class="sspan">
 							<span>1</span>
 							<span>Buah</span>
-							<span>-</span>
-							<span>Lensa 28nm</span>
 						</div>
 					</div>
 				</div>
@@ -365,7 +371,7 @@
 	</section>
 	<div style="height: 80px; width: 100%;"></div>
 	<section class="nav-bot center">
-		<button class="btn btn-green-outer">Konfirmasi pesanan</button>
+		<button class="btn btn-main-outer">Konfirmasi pesanan (1)</button>
 	</section>
 	<section>
 		<div class="popup" id="popfilter">
@@ -443,7 +449,7 @@
 			<div style="height: 80px; width: 100%;"></div>
 			<div class="nav-bot center">
 				<a href="order-status.html"><button class="btn">Semula</button></a>
-				<a href="order-status-filtered.html"><button class="btn btn-green"><span>Saring</span><i class="fa fa-filter"></i></button></a>
+				<a href="order-status-filtered.html"><button class="btn btn-main"><span>Saring</span><i class="fa fa-filter"></i></button></a>
 			</div>
 		</div>
 	</section>

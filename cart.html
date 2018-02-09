@@ -62,11 +62,11 @@
 						</div>
 						<div style="flex-direction: row">
 							<form>
-								<label><span>Jumlah</span><input type="number" min="1" max="100" value="1" class="product-qty-input" style="width: 48px"></label>
-								<label><span>Warna</span><select class="product-color-input">
+								<input type="number" min="1" max="100" value="1" class="product-qty-input" style="width: 48px">
+								<select class="product-color-input">
 									<option value="Red">Red</option>
 									<option value="Silver">Silver</option>
-								</select></label>
+								</select>
 							</form>
 						</div>
 					</div>
@@ -156,11 +156,16 @@
 					</div>
 				</div>
 			</li>
-			<li class="list-item center">
+			<li class="list-item">
 				<div>
-					<span>Promo</span>
-					<div class="promo">
-						<span><i class="fa fa-tag"></i> PROMO HUT-RI</span>
+					<span class="center">Promo</span>
+					<div class="list row">
+						<span class="promo">
+							<i class="fa fa-tag"></i> KARTINI
+						</span>
+						<span class="promo">
+							<i class="fa fa-tag"></i> HUT-RI
+						</span>
 					</div>
 				</div> 
 			</li>
@@ -187,7 +192,7 @@
 				</div>
 				<div class="btn btn-top">
 					<span>Alamat tujuan</span>
-					<span class="icon icon-48"><i class="fa fa-edit"></i></span>
+					<span class="icon icon-32"><i class="fa fa-edit"></i></span>
 				</div>
 				<div class="address">
 					<h4>Ogi Yak</h4>
@@ -202,7 +207,7 @@
 		<ul class="wrapper">
 			<li class="btn btn-top">
 				<div>Total</div>
-				<span class="dropdown icon icon-48">
+				<span class="dropdown icon icon-32">
 					<div onclick="dropdown(this)">
 						<i class="fa fa-question-circle-o"></i>
 					</div>
@@ -216,7 +221,7 @@
 					<img src="img/business.svg" class="square-48">
 					<div>
 						<div class="sspan">Rp 17.910.000 + Rp 50.000</div>
-						<h2 class="green">Rp 17.960.000</h2>
+						<h2 class="green-dark">Rp 17.960.000</h2>
 					</div>
 				</div>
 				<div></div>
@@ -225,7 +230,7 @@
 		<ul class="wrapper">
 			<li class="btn btn-top">
 				<span>Kode Promo</span>
-				<span class="dropdown icon icon-48">
+				<span class="dropdown icon icon-32">
 					<div onclick="dropdown(this)">
 						<i class="fa fa-question-circle-o"></i>
 					</div>
@@ -234,11 +239,11 @@
 					</div>
 				</span>
 			</li>
-			<li class="formal-column">
+			<li class="list column">
 				<span class="small">Kosongkan jika tidak ada.</span>
 				<form target="">
 					<input type="number" name="promocode" placeholder="Kode 6 Digit" maxlength="6">
-					<input type="submit" name="" class="btn btn-green" value="Terapkan">
+					<input type="submit" name="" class="btn btn-main" value="Terapkan">
 				</form>
 			</li>
 		</ul>
@@ -246,7 +251,7 @@
 	<div style="height: 80px; width: 100%;"></div>
 	<section class="nav-bot center">
 		<a href="product.html"><button class="btn">Kembali</button></a>
-		<a href="payment.html"><button class="btn btn-green">Pembayaran</button></a>
+		<a href="payment.html"><button class="btn btn-main">Pembayaran</button></a>
 	</section>
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/allshop.js"></script>

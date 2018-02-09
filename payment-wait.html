@@ -22,24 +22,44 @@
 <body>
 	<section class="content content-full">
 		<div class="btn btn-top">
-			<h2>Proses Bayar</h2>
+			<span>Pembayaran</span>
 			<a href="product.html"><i class="fa fa-close"></i></a>
+		</div>
+		<div class="wrapper wrapper-transparent">
+			<div class="timeline">
+				<div>
+					<div>Cara bayar</div>
+					<div class="tl" id="stat1">
+						<div class="hidden"></div>
+						<div class="bg-green"></div>
+						<div class="bg-green"></div>
+					</div>
+				</div>
+				<div>
+					<div>Proses bayar</div>
+					<div class="tl" id="stat2">
+						<div class="bg-green"></div>
+						<div class="bg-green"></div>
+						<div class="bg-green"></div>
+					</div>
+				</div>
+				<div>
+					<div class="active">Selesai</div>
+					<div class="tl" id="stat3">
+						<div class="bg-green"></div>
+						<div class="bg-green"></div>
+						<div class="hidden"></div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<ul class="wrapper">
 			<li class="formal-column">
-				<p>Silahkan melakukan pembayaran melalui ATM terdekat. Informasi uang yang harus dibayarkan dan nomor rekening tujuan tertera di bawah ini.</p>
-			</li>
-			<header>Waktu tersisa</header>
-			<li>
-				<div class="timer center" style="font-size: 2em; color: #f44335;">
-					<span id="hours"></span> Jam : 
-					<span id="minutes"></span> Mnt : 
-					<span id="seconds"></span> Dtk
-				</div>
+				<p>Silahkan membayar melalui ATM terdekat. Informasi uang yang harus dibayarkan dan nomor rekening tujuan tertera di bawah ini.</p>
 			</li>
 			<header>Jumlah yang dibayar</header>
 			<div class="btn btn-top">
-				<span class="green">
+				<span class="green-dark">
 					<h2>Rp 17.960.123</h2>
 				</span>
 				<span>
@@ -47,27 +67,29 @@
 				</span>
 			</div>
 			<header>Rekening tujuan</header>
-			<li class="formal-column center">
+			<li class="list-item">
 				<div>
-					<img src="img/bni.png" style="width: 50%">
-					<h2>BNI Cabang Jakarta</h2>
-					<p>600 600 6006</p>
-				</div>
-			</li>
-			<header>Rekening Anda</header>
-			<li class="formal-column center">
-				<div>
-					<img src="img/bni.png" style="width: 50%">
-					<h2>a.n. Viviane Ann</h2>
-					<p>777 888 9999</p>
+					<img src="img/bni.png">
+					<div>
+						<h2>BNI Cabang Jakarta</h2>
+						<p>600 600 6006</p>
+					</div>
 				</div>
 			</li>
 		</ul>
+		<div class="wrapper">
+			<header>Waktu tersisa</header>
+			<div class="timer center" style="font-size: 1.5em; color: #f44335; margin: 8px 0;">
+				<span id="hours"></span> Jam : 
+				<span id="minutes"></span> Mnt : 
+				<span id="seconds"></span> Dtk
+			</div>
+		</div>
 	</section>
 	<div style="height: 80px; width: 100%;"></div>
 	<section class="nav-bot center">
-		<a href="index.html"><button class="btn">Batal</button></a>
-		<a href="order-status.html"><button class="btn btn-green">Selesai</button></a>
+		<a href="payment.html"><button class="btn">Ubah cara bayar <i class="fa fa-edit"></i></button></a>
+		<a href="order-status.html"><button class="btn btn-main">Selesai</button></a>
 	</section>
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/Clamp.js/clamp.min.js"></script>

@@ -26,12 +26,14 @@ function searchOpen(){
 	if(searchContent.style.display !== "block"){
 		document.querySelectorAll("nav .icon")[0].style.display = "none";
 		document.querySelectorAll("nav .icon")[1].style.display = "none";
-		searchContent.style.width = searchWrap.offsetWidth+"px";
 		searchContent.style.display = "block";
 		shadow[0].style.display = "block";
 		searchBackBtn.style.display = "block";
 		searchContent.className += "active";
 		searchWrap.className += "active";
+
+		// radius bottom to zero
+		searchWrap.style.borderRadius = "2px 2px 0 0";
 
 		// pulldown helper
 		var inputChecker = setInterval(function(){checker()}, 1);
@@ -58,7 +60,6 @@ function searchOpen(){
 function searchClose() {
 	document.querySelectorAll("nav .icon")[0].style.display = "flex";
 	document.querySelectorAll("nav .icon")[1].style.display = "flex";
-	searchContent.style.width = searchWrap.offsetWidth+"px";
 	searchContent.style.display = "none";
 	shadow[0].style.display = "none";
 	searchBackBtn.style.display = "none";
@@ -69,6 +70,9 @@ function searchClose() {
 	document.getElementById("searchHis").style.display = "block";
 
 	$('body').css('overflow', 'auto');
+
+	// radius bottom to normal
+	searchWrap.style.borderRadius = "2px";	
 }
 // popup
 function popOpen(e){
@@ -165,6 +169,7 @@ function dropdown(e){
 function vanish(e){
 	e.className = "vanish";
 }
+
 // adding product to cart
 $("#addtoCart").click(function(event){
 	var cartIdk = $("#cart-indicator");
@@ -183,14 +188,41 @@ $("#addtoCart").click(function(event){
 
 	$(this).html('<span>Ditambah</span></i>')
 });
+
+$("#addtoCart2").click(function(event){
+	var cartIdk = $("#cart-indicator");
+	
+	if($(this).hasClass('inactive') == false){
+		cartIdk.html(parseInt($("#cart-indicator").html())+1)
+	};
+	cartIdk.css({
+		"backgroundColor" : "#fff",
+		"fontWeight" : "bolder",
+		"color" : "#000"
+	});
+
+	cartIdk.addClass('ani-zoom-in');
+	setTimeout(function(){cartIdk.removeClass('ani-zoom-in')}, 250);
+
+	$(this).html('<span>Ditambah</span></i>')
+});
+
+// subscribe status
+$('#subscribe').click(function(){
+	$(this).html("Berlangganan")
+});
+$('#subscribe2').click(function(){
+	$(this).html("Berlangganan")
+});
+
 // navigation shrink
 $(document).on("scroll", function(){
-	if($(document).scrollTop() > 132){
-		$("nav").css("padding", "0 0 0 0");
+	if($(document).scrollTop() > 104){
+		$("nav").css("padding", "0");
 		$("nav .category").addClass("shrink");
 	}else{
-		$("nav").css("padding", "16px 0 0 0");
 		$("nav .category").removeClass("shrink");
+		$("nav").css("padding", "8px 0");
 	}
 });
 
@@ -217,8 +249,8 @@ $('.pulldown-trigger').click(function(){
 });
 
 // inactive animation
-$('.btn-green-outer').click(function(){
-	$(this).removeClass('btn-green-outer');
+$('.btn-main-outer').click(function(){
+	$(this).removeClass('btn-main-outer');
 	$(this).addClass('inactive');
 });
 
