@@ -1064,7 +1064,7 @@ input[name="promocode"]{
 	border-radius: 3px;
 	bottom: 0;
 	color: var(--color-white);
-	background-color: rgba(0,0,0,.3);
+	background-color: rgba(0,0,0,.2);
 	padding: 4px;
 }
 /*kolom 2 - details*/
@@ -1532,7 +1532,7 @@ input[type=range]::-webkit-slider-runnable-track {
 	flex: 1 0 auto;
 }
 .list{
-	display: flex !important;
+	display: flex;
 }
 .list.column{
 	flex-direction: column !important;
