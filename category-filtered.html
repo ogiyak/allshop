@@ -5,7 +5,7 @@
 	<meta http-equiv="Cache-control" content="no-cache">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta charset="UTF-8">
-	<meta name="theme-color" content="#ff1744">
+	<meta name="theme-color" content="#005ecb">
 	<!-- font -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
@@ -60,15 +60,17 @@
 							</label>
 						</li>
 					</ul>
-					<ul id="searchHis" class="formal-column list column">
+					<ul id="searchHis">
 						<div class="btn btn-top">
 							<span>Dicari sebelumnya</span>
 							<i class="fa fa-close"></i>
 						</div>
-						<a href="search-result.html"><li>Jaket hitam</li>
-						</a>
-						<a href="search-result.html"><li>Jam tangan rolex</li></a>
-						<a href="search-result.html"><li>Sepatu sport</li></a>
+						<div class="formal-column list column">
+							<a href="search-result.html"><li>Jaket hitam</li>
+							</a>
+							<a href="search-result.html"><li>Jam tangan rolex</li></a>
+							<a href="search-result.html"><li>Sepatu sport</li></a>
+						</div>
 					</ul>
 					<ul id="searchSug" class="formal-column list column">
 						<a href="search-result.html">
@@ -180,7 +182,7 @@
 					</div>
 					<ul>
 						<li>
-							<h4 id="truncate">MacBook Pro Retina 15inc</h4>
+							<h4>MacBook Pro Retina 15inc</h4>
 						</li>
 						<li class="price">
 							<div class="disc">
@@ -210,7 +212,7 @@
 					</div>
 					<ul>
 						<li>
-							<h4 id="truncate">iPhone 7 - 16GB Red</h4>
+							<h4>iPhone 7 - 16GB Red</h4>
 						</li>
 						<li class="price">
 							<div class="disc">
@@ -240,7 +242,7 @@
 					</div>
 					<ul>
 						<li>
-							<h4 id="truncate">iPhone 7 - 16GB Black</h4>
+							<h4>iPhone 7 - 16GB Black</h4>
 						</li>
 						<li class="price">
 							<div class="disc">
@@ -270,7 +272,7 @@
 					</div>
 					<ul>
 						<li>
-							<h4 id="truncate">iPhone 7 - 16GB Gold</h4>
+							<h4>iPhone 7 - 16GB Gold</h4>
 						</li>
 						<li class="price">
 							<div class="disc">
@@ -299,7 +301,7 @@
 					</div>
 					<ul>
 						<li>
-							<h4 id="truncate">iPhone 7 - 32GB Rose</h4>
+							<h4>iPhone 7 - 32 GB Rose</h4>
 						</li>
 						<li class="price">
 							<div class="disc">
@@ -335,7 +337,7 @@
 					</div>
 					<ul>
 						<li>
-							<h4 id="truncate">iPhone 7 - 32GB Red</h4>
+							<h4>iPhone 7 - 32 GB Red</h4>
 						</li>
 						<li class="price">
 							<div class="disc">
@@ -365,7 +367,7 @@
 					</div>
 					<ul>
 						<li>
-							<h4 id="truncate">iPhone 7 - 16GB Red</h4>
+							<h4>iPhone 7 - 16GB Red</h4>
 						</li>
 						<li class="price">
 							<div class="disc">
@@ -395,7 +397,7 @@
 					</div>
 					<ul>
 						<li>
-							<h4 id="truncate">iPhone 7 - 16GB Black</h4>
+							<h4>iPhone 7 - 16GB Black</h4>
 						</li>
 						<li class="price">
 							<div class="disc">
@@ -425,7 +427,7 @@
 					</div>
 					<ul>
 						<li>
-							<h4 id="truncate">iPhone 7 - 16GB Gold</h4>
+							<h4>iPhone 7 - 16GB Gold</h4>
 						</li>
 						<li class="price">
 							<div class="disc">
@@ -454,7 +456,7 @@
 					</div>
 					<ul>
 						<li>
-							<h4 id="truncate">iPhone 7 - 32GB Rose</h4>
+							<h4>iPhone 7 - 32 GB Rose</h4>
 						</li>
 						<li class="price">
 							<div class="disc">
@@ -775,7 +777,7 @@
 			</li>
 			<li>
 				<a href="product.html">
-					<img src="img/ipad2.png">
+					<img src="img/ipad2.jpg">
 					<ul>
 						<li>
 							<h4>iPad Wi-Fi 128GB - Space Grey</h4>
@@ -801,7 +803,9 @@
 				</a>
 			</li>
 		</ul>
-		<i class="fa fa-refresh fa-spin center" style="width: 100%; color: #8d8d8d"></i>
+		<div class="center formal-row">
+			<i class="fa fa-refresh fa-spin low"></i>
+		</div>
 	</section>
 	<section>
 		<div class="popup" id="popfilter">
@@ -892,6 +896,7 @@
 		</div>
 	</section>
 	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/Clamp.js/clamp.min.js"></script>
 	<script src="js/allshop.js"></script>
 </body>
 </html>

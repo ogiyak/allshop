@@ -4,6 +4,7 @@ var searchWrap = document.getElementById("searchwrap");
 var searchContent = document.getElementById("search-content");
 var sidenavCloseBtn = document.querySelector("#sidenav .close");
 var searchBackBtn = document.querySelector("#searchwrap form *:nth-child(1)");
+
 // searchbar
 function sidenavOpen(){
 	sidenav.style.left = "0vw";
@@ -39,7 +40,7 @@ function searchOpen(){
 		var inputChecker = setInterval(function(){checker()}, 1);
 		function checker(){
 			if(document.querySelector("#searchwrap form input").value !== ""){
-				document.getElementById("searchSug").style.display = "block";
+				document.getElementById("searchSug").style.display = "flex";
 				document.getElementById("searchHis").style.display = "none";
 				
 				var str = document.querySelectorAll("#searchSug > * > * > span");
@@ -165,11 +166,6 @@ function dropdown(e){
 // 	maxVal.html(maxRange.attr('value'));
 // });
 
-// advance-search - filter indicator
-function vanish(e){
-	e.className = "vanish";
-}
-
 // adding product to cart
 $("#addtoCart").click(function(event){
 	var cartIdk = $("#cart-indicator");
@@ -207,7 +203,7 @@ $("#addtoCart2").click(function(event){
 	$(this).html('<span>Ditambah</span></i>')
 });
 
-// subscribe status
+// subscribe status animation
 $('#subscribe').click(function(){
 	$(this).html("Berlangganan")
 });
@@ -254,10 +250,33 @@ $('.btn-main-outer').click(function(){
 	$(this).addClass('inactive');
 });
 
-// media popup
+// customer-review statistic (in product img)
+$(".customer-review").click(function(){
+	if($(this).css("flex-direction") != 'column'){
+		$(this).css({
+			'height' : '100%', 
+			'flex-direction' : 'column',
+			'background-color' : 'rgba(0,0,0,.5)'
+		});
+		$(this).children().css('padding' , '8px 0');
+		$(this).addClass('ani-strech-h');
+		$(this).find('.vanish').removeClass('vanish').addClass('unvanish');
+	}else{
+		$(this).css({
+			'height' : 'auto',
+			'flex-direction' : 'row',
+			'background-color' : 'rgba(0,0,0,.2)'
+		});
+		$(this).children().css('padding' , '0');
+		$(this).removeClass('ani-strech-h');
+		$(this).find('.unvanish').removeClass('unvanish').addClass('vanish');
+	}
+});
+
+// media popup click function
 $(".content-img > li").click(function(){
 	if($(this).find('img').length){
-		if($(this).find('img').css('position') !== 'fixed'){
+		if($(this).find('img').css('position') != 'fixed'){
 			$(".content-img > li").css('visibility', 'hidden');
 			$(this).find('img').css({
 				position : 'fixed',
@@ -269,20 +288,34 @@ $(".content-img > li").click(function(){
 				objectFit : 'contain',
 			});
 			$(this).css('visibility', 'visible');
-			$(this).parent().css('overflow', 'hidden');
+			$(this).find('p').css({
+				'position' : 'fixed',
+				'top' : '50%',
+				'left' : '50%',
+				'transform' : 'translate(-50%, -50%)'
+			});
 		}else{
 			$(".content-img > li").css('visibility', 'visible');
 			$(this).find('img').css({
 				position : 'static',
 				transform : 'translate(0, 0)',
-				width : '144px',
+				width : '100%',
 				height : '192px',
 				objectFit : 'cover',
 			});
-			$(this).parent().css('overflow', 'auto');
+			$(this).find('p').css({
+				'position': 'absolute',
+				'top' : '0',
+				'left' : '0',
+				'transform' : 'translate(0, 0)'
+			});
 		}
-	}
+	};
 });
+
+// trunction using clamp.js
+// var module = document.getElementsByClassName("truncate");
+// $clamp(module, {clamp: 2});
 
 // promocounter
 if(document.querySelector(".timer").innerHTML !== ""){

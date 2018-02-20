@@ -5,7 +5,7 @@
 	<meta http-equiv="Cache-control" content="no-cache">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta charset="UTF-8">
-	<meta name="theme-color" content="#ff1744">
+	<meta name="theme-color" content="#005ecb">
 	<!-- font -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
@@ -30,7 +30,7 @@
 			<li id="searchwrap">
 				<form action="search-result.html">
 					<button type="button" onclick="searchClose()"><i class="fa fa-arrow-left"></i></button>
-					<input type="search" placeholder="iphone 7 32gb" onclick="searchOpen()">
+					<input type="search" placeholder="Cari disini..." onclick="searchOpen()" value="iphone 7 32 GB">
 					<button type="submit"><i class="fa fa-search"></i></button>
 				</form>
 				<div id="search-content">
@@ -490,10 +490,13 @@
 			</section>
 		</ul>
 		<div class="formal-column">
-			<i class="fa fa-refresh fa-spin center" style="width: 100%; color: #8d8d8d"></i>
+			<div class="center formal-row">
+			<i class="fa fa-refresh fa-spin low"></i>
+		</div>
 		</div>
 	</section>
 	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/Clamp.js/clamp.min.js"></script>
 	<script src="js/allshop.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
 	<meta http-equiv="Cache-control" content="no-cache">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta charset="UTF-8">
-	<meta name="theme-color" content="#ff1744">
+	<meta name="theme-color" content="#005ecb">
 	<!-- font -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
@@ -104,11 +104,11 @@
 						</div>
 						<div style="flex-direction: row">
 							<form>
-								<label><span>Jumlah</span><input type="number" min="1" max="100" value="1" class="product-qty-input" style="width: 48px"></label>
-								<label><span>Warna</span><select class="product-color-input">
-									<option value="Red">Red</option>
-									<option value="Silver">Silver</option>
-								</select></label>
+								<input type="number" min="1" max="100" value="2" class="product-qty-input" style="width: 48px">
+								<select class="product-color-input">
+									<option value="Blue">Blue</option>
+									<option value="Black">Black</option>
+								</select>
 							</form>
 						</div>
 					</div>
@@ -146,11 +146,11 @@
 						</div>
 						<div style="flex-direction: row">
 							<form>
-								<label><span>Jumlah</span><input type="number" min="1" max="100" value="1" class="product-qty-input" style="width: 48px"></label>
-								<label><span>Warna</span><select class="product-color-input">
-									<option value="Red">Red</option>
+								<input type="number" min="1" max="100" value="1" class="product-qty-input" style="width: 48px">
+								<select class="product-color-input">
+									<option value="Brown">Brown</option>
 									<option value="Silver">Silver</option>
-								</select></label>
+								</select>
 							</form>
 						</div>
 					</div>
@@ -242,7 +242,7 @@
 			<li class="list column">
 				<span class="small">Kosongkan jika tidak ada.</span>
 				<form target="">
-					<input type="number" name="promocode" placeholder="Kode 6 Digit" maxlength="6">
+					<input type="number" name="promocode" placeholder="Kode 6 digit" maxlength="6">
 					<input type="submit" name="" class="btn btn-main" value="Terapkan">
 				</form>
 			</li>
@@ -254,6 +254,7 @@
 		<a href="payment.html"><button class="btn btn-main">Pembayaran</button></a>
 	</section>
 	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/Clamp.js/clamp.min.js"></script>
 	<script src="js/allshop.js"></script>
 </body>
 </html>
