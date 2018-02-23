@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>allshop - Keranjang Belanja</title>
+	<title>allshop - Status pesanan</title>
 	<meta http-equiv="Cache-control" content="no-cache">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta charset="UTF-8">
@@ -22,13 +22,48 @@
 <body>
 	<section class="content content-full">
 		<div class="btn btn-top">
-			<h2>Keranjang Belanja</h2>
-			<a href="product.html"><i class="fa fa-close"></i></a>
+			<span>Informasi Pesanan</span>
+			<a href="order-status.html" class="icon icon-48">
+				<i class="fa fa-close"></i>
+			</a>
 		</div>
+		<!-- daftar pesanan -->
 		<ul class="wrapper">
 			<li class="btn btn-top">
-				<span>Daftar Pesanan</span>
-				<span>4 buah</span>
+				<span>
+					<p class="gantle">Pesanan 9191333</p>
+					<p>Diproses</p>
+				</span>
+				<span class="low small">Dipesan 13 November 2017</span>
+			</li>
+			<li class="timeline">
+				<div>
+					<span class="active">Dikemas</span>
+					<span class="tl" id="stat1">
+						<div class="hidden"></div>
+						<div class="bg-green"><i class="fa fa-comment"></i></div>
+						<div></div>
+					</span>
+				</div>
+				<div>
+					<span>Pengiriman</span>
+					<span class="tl" id="stat2">
+						<div></div>
+						<div><i class="fa fa-truck fa-flip-horizontal"></i></div>
+						<div></div>
+					</span>
+				</div>
+				<div>
+					<span>Penerimaan</span>
+					<span class="tl" id="stat3">
+						<div></div>
+						<div><i class="fa fa-check"></i></div>
+						<div class="hidden"></div>
+					</span>
+				</div>
+			</li>
+			<li class="formal low small">
+				<p>Diperkirakan sampai 18 November 2017</p>
 			</li>
 			<li class="list-item">
 				<div>
@@ -45,29 +80,10 @@
 							</div>
 						</div>
 						<div class="sspan">
-							<span class="product-qty">1</span>
+							<span id="product-qty">1</span>
 							<span>buah</span>
 							<span>-</span>
-							<span class="product-color">Red</span>
-						</div>
-					</div>
-				</div>
-				<div class="pulldown-trigger">
-					<i class="fa fa-angle-down"></i>
-				</div>
-				<div class="list-item pulldown">
-					<div>
-						<div class="icon icon-32">
-							<i class="fa fa-trash-o"></i>
-						</div>
-						<div style="flex-direction: row">
-							<form>
-								<input type="number" min="1" max="100" value="1" class="product-qty-input" style="width: 48px">
-								<select class="product-color-input">
-									<option value="Red">Red</option>
-									<option value="Silver">Silver</option>
-								</select>
-							</form>
+							<span id="product-color">Red</span>
 						</div>
 					</div>
 				</div>
@@ -87,29 +103,10 @@
 							</div>
 						</div>
 						<div class="sspan">
-							<span class="product-qty">2</span>
+							<span id="product-qty">2</span>
 							<span>buah</span>
 							<span>-</span>
-							<span class="product-color">Blue</span>
-						</div>
-					</div>
-				</div>
-				<div class="pulldown-trigger">
-					<i class="fa fa-angle-down"></i>
-				</div>
-				<div class="list-item pulldown">
-					<div>
-						<div class="icon icon-32">
-							<i class="fa fa-trash-o"></i>
-						</div>
-						<div style="flex-direction: row">
-							<form>
-								<input type="number" min="1" max="100" value="2" class="product-qty-input" style="width: 48px">
-								<select class="product-color-input">
-									<option value="Blue">Blue</option>
-									<option value="Black">Black</option>
-								</select>
-							</form>
+							<span id="product-color">Blue</span>
 						</div>
 					</div>
 				</div>
@@ -129,65 +126,48 @@
 							</div>
 						</div>
 						<div class="sspan">
-							<span class="product-qty">1</span>
+							<span id="product-qty">1</span>
 							<span>buah</span>
 							<span>-</span>
-							<span class="product-color">Brown</span>
+							<span id="product-color">Brown</span>
 						</div>
 					</div>
 				</div>
-				<div class="pulldown-trigger">
-					<i class="fa fa-angle-down"></i>
-				</div>
-				<div class="list-item pulldown">
-					<div>
-						<div class="icon icon-32">
-							<i class="fa fa-trash-o"></i>
-						</div>
-						<div style="flex-direction: row">
-							<form>
-								<input type="number" min="1" max="100" value="1" class="product-qty-input" style="width: 48px">
-								<select class="product-color-input">
-									<option value="Brown">Brown</option>
-									<option value="Silver">Silver</option>
-								</select>
-							</form>
-						</div>
-					</div>
-				</div>
-			</li>
-			<li class="list-item">
-				<div>
-					<span class="center">Promo</span>
-					<div class="list row">
-						<span class="low small">Tidak ada promo yg diterapkan.</span>
-					</div>
-				</div> 
 			</li>
 		</ul>
+		<!-- promo code -->
+		<ul class="wrapper">
+			<li class="btn btn-top">
+				<span>Promo</span>
+			</li>
+			<li class="list row">
+				<span class="promo">
+					<i class="fa fa-tag"></i>
+					<span>KARTINI</span> | <span>10%</span>
+				</span>
+				<span class="promo">
+					<i class="fa fa-tag"></i>
+					<span>HUT RI</span> | <span>17%</span>
+				</span>
+			</li>
+		</ul>
+		<!-- courier -->
 		<ul class="wrapper">
 			<li>
 				<div class="btn btn-top">
 					<span>Jasa pengiriman</span>
 				</div>
-				<div class="formal-column">
+				<div class="list-item">
 					<div>
-						<select>
-							<option value="volvo">JNE</option>
-							<option value="saab">TIKI</option>
-							<option value="mercedes">POS Indonesia</option>
-							<option value="audi">Wahana</option>
-						</select>
-						<select>
-							<option value="volvo">Normal</option>
-							<option value="saab">Kilat</option>
-						</select>
-						<span class="formal-column">Rp 50.000</span>
+						<img src="img/jne.png">
+						<div>
+							<span class="gantle">JNE (Normal)</span>
+							<span>Rp 50.000</span>
+						</div>
 					</div>
 				</div>
 				<div class="btn btn-top">
 					<span>Alamat tujuan</span>
-					<span class="icon icon-32"><i class="fa fa-edit"></i></span>
 				</div>
 				<div class="address">
 					<h4>Ogi Yak</h4>
@@ -199,6 +179,7 @@
 				</div>
 			</li>
 		</ul>
+		<!-- total cost -->
 		<ul class="wrapper">
 			<li class="btn btn-top">
 				<div>Total</div>
@@ -217,37 +198,22 @@
 					<!-- Icon made by https://www.flaticon.com/authors/darius-dan from www.flaticon.com  -->
 					<div>
 						<div class="sspan">Rp 17.910.000 + Rp 50.000</div>
-						<h2 class="green-dark">Rp 17.960.000</h2>
+						<div class="price">
+							<div class="disc">
+								<span>27% Promo</span>
+								<span>Rp 17.960.000</span>
+							</div>
+							<div>Rp 13.110.000</div>
+						</div>
 					</div>
 				</div>
 				<div></div>
 			</li>
 		</ul>
-		<ul class="wrapper">
-			<li class="btn btn-top">
-				<span>Kode Promo</span>
-				<span class="dropdown icon icon-32">
-					<div onclick="dropdown(this)">
-						<i class="fa fa-question-circle-o"></i>
-					</div>
-					<div class="dropdown-content">
-						<span>Kode promo berisi 6 digit angka dan huruf.</span>
-					</div>
-				</span>
-			</li>
-			<li class="list column">
-				<span class="small">Kosongkan jika tidak ada.</span>
-				<div>
-					<input type="number" name="promocode" placeholder="Kode 6 digit" maxlength="6">
-					<a href="cart-promoused.html"><input type="submit" class="btn btn-main" value="Terapkan"></a>
-				</div>
-			</li>
-		</ul>
 	</section>
 	<div style="height: 80px; width: 100%;"></div>
 	<section class="nav-bot center">
-		<a href="index.html"><button class="btn">Belanja lagi</button></a>
-		<a href="payment.html"><button class="btn btn-main">Pembayaran</button></a>
+		<button class="btn inactive">Konfirmasi pesanan</button>
 	</section>
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/Clamp.js/clamp.min.js"></script>

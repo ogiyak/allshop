@@ -98,7 +98,7 @@
 				</a>
 			</li>
 		</ul>
-		<div class="shadow" onclick="searchClose()"></div>
+		
 		<ul class="category">
 			<a href="category.html"><li>Elektronik</li></a>
 			<a href="category.html"><li>Smartphone</li></a>
@@ -138,7 +138,6 @@
 			<a><i class="fa fa-info-circle main-dark" aria-hidden="true"></i> Tentang <span style="font-family: 'Poiret One', cursive; font-weight: bolder;">allshop</span></a>
 		</div>
 	</div>
-	<div class="shadow" onclick="sidenavClose()"></div>
 	<!-- content -->
 	<section class="content">
 		<!-- head of content -->
@@ -361,7 +360,7 @@
 		<div class="wrapper">
 			<div class="btn btn-top">
 				<span>Penjual</span>
-				<span class="icon icon-48">
+				<span class="icon icon-48" onclick="popOpen(this)" id="popopenchat">
 					<i class="fa fa-comment"></i>
 				</span>
 			</div>
@@ -964,10 +963,10 @@
 		</div>
 	</section>
 	<!-- pop up menu -->
-	<section>
+	<section class="popup-wrapper">
 		<!-- images -->
-		<ul class="popup" id="popimg">
-			<li class="btn btn-top" onclick="popClose()">
+		<ul class="popup pop-full" id="popimg">
+			<li class="btn btn-top reverse-row" onclick="popClose()">
 				<div class="sspan center">
 					<span>6</span>
 					<i class="fa fa-photo"></i>
@@ -977,7 +976,7 @@
 					<span>Video</span>
 				</div>
 				<span class="icon icon-48">
-					<i class="fa fa-close"></i>
+					<i class="fa fa-arrow-left"></i>
 				</span>
 			</li>
 			<li>
@@ -1010,11 +1009,11 @@
 			</li>
 		</ul>
 		<!-- compare -->
-		<ul class="popup" id="popcompare">
-			<li class="btn btn-top" onclick="popClose()">
+		<ul class="popup pop-full" id="popcompare">
+			<li class="btn btn-top reverse-row" onclick="popClose()">
 				<span>Bandingkan dengan...</span>
 				<span class="icon icon-48">
-					<i class="fa fa-close" style="color: black;"></i>
+					<i class="fa fa-arrow-left"></i>
 				</span>
 			</li>
 			<li class="content-item content-full">
@@ -1209,7 +1208,40 @@
 				</ul>
 			</li>
 		</ul>
+		<!-- chat -->
+		<ul class="popup" id="popchat">
+			<li class="btn btn-top reverse-row" onclick="popClose()">
+				<span>Chat Toko</span>
+				<span class="icon icon-48">
+					<i class="fa fa-arrow-left"></i>
+				</span>
+			</li>
+			<li class="chats">
+				<div class="list-item">
+					<div>
+						<div class="pp">
+							<img src="img/toko.jpg">
+						</div>
+						<div>
+							<h4>Toko Wijaya <i class="verified fa fa-check-circle"></i></h4>
+							<span class="sspan">Terakhir aktif 4 jam yg lalu</span>
+						</div>
+					</div>
+					<div></div>
+				</div>
+				<div class="chat-dialog">
+					<p class="sspan center">Belum ada pesan.</p>
+				</div>
+				<div class="chat-input">
+					<input type="text" name="user_msg" placeholder="Tuliskan pesan..." autofocus="true">
+					<div class="icon icon-48 bg-main">
+						<i class="fa fa-angle-right"></i>
+					</div>
+				</div>
+			</li>
+		</ul>
 	</section>
+	<div id="shadow"></div>
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/Clamp.js/clamp.min.js"></script>
 	<script src="js/allshop.js"></script>

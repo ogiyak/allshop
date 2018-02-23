@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>allshop - Status pesanan</title>
+	<meta http-equiv="Cache-control" content="no-cache">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta charset="UTF-8">
+	<meta name="theme-color" content="#005ecb">
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+	<!-- style -->
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/allshop.css">
+	<!-- icon in the highest resolution we need it for -->
+	<link rel="icon" sizes="192x192" href="img/icon.png">
+	<!-- reuse same icon for Safari -->
+	<link rel="apple-touch-icon" href="img/ios-icon.png">
+	<!-- multiple icons for IE -->
+	<meta name="msapplication-square310x310logo" content="img/ie-icon.png">
+</head>
+<body>
+	<section class="content content-full">
+		<div class="btn btn-top">
+			<span>Informasi Pesanan</span>
+			<a href="order-status.html" class="icon icon-48">
+				<i class="fa fa-close"></i>
+			</a>
+		</div>
+		<!-- daftar pesanan -->
+		<ul class="wrapper">
+			<li class="btn btn-top">
+				<span>
+					<p class="gantle">Pesanan 8191222</p>
+					<p id="confirmationStatus">Belum dikonfirmasi</p>
+				</span>
+				<span class="low small">Dipesan 6 November 2017</span>
+			</li>
+			<li class="timeline">
+				<div>
+					<span class="active">Dikemas</span>
+					<span class="tl" id="stat1">
+						<div class="hidden"></div>
+						<div class="bg-green"><i class="fa fa-comment"></i></div>
+						<div class="bg-green"></div>
+					</span>
+				</div>
+				<div>
+					<span class="active">Dikirim</span>
+					<span class="tl" id="stat2">
+						<div class="bg-green"></div>
+						<div class="bg-green"><i class="fa fa-truck fa-flip-horizontal"></i></div>
+						<div class="bg-green"></div>
+					</span>
+				</div>
+				<div>
+					<span class="active">Diterima</span>
+					<span class="tl" id="stat3">
+						<div class="bg-green"></div>
+						<div class="bg-green"><i class="fa fa-check"></i></div>
+						<div class="hidden"></div>
+					</span>
+				</div>
+			</li>
+			<li class="formal low small">
+				<p>Sampai 13 November 2017</p>
+			</li>
+			<li class="list-item">
+				<div>
+					<img src="img/switch.jpg">
+					<div>
+						<h4>Nintendo Switch</h4>
+						<div class="price">
+							<div class="disc">
+								<span>-33%</span>
+								<span>Rp 7.500.000</span>
+							</div>
+							<div>
+								<span>Rp 5.700.000</span>
+							</div>
+						</div>
+						<div class="sspan">
+							<span id="product-qty">1</span>
+							<span>buah</span>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<ul class="wrapper">
+			<li class="btn btn-top">
+				<span>Promo</span>
+			</li>
+			<li class="list row">
+				<span class="promo">
+					<i class="fa fa-tag"></i>
+					<span>HUT allshop</span> | <span>13%</span>
+				</span>
+			</li>
+		</ul>
+		<!-- courier -->
+		<ul class="wrapper">
+			<li>
+				<div class="btn btn-top">
+					<span>Jasa pengiriman</span>
+				</div>
+				<div class="list-item">
+					<div>
+						<img src="img/pos.png">
+						<div>
+							<span class="gantle">POS Indonesia (Express)</span>
+							<span>Rp 75.000</span>
+						</div>
+					</div>
+				</div>
+				<div class="btn btn-top">
+					<span>Alamat tujuan</span>
+				</div>
+				<div class="address">
+					<h4>Ogi Yak</h4>
+					<p>Jalan Letkol Subadri RT/RW 05/06</p>
+					<p>Kec. Mlati</p>
+					<p>Kab. Sleman</p>
+					<p>D.I. Yogyakarta, 55288</p>
+					<p>Telp. 082137896767</p>
+				</div>
+			</li>
+		</ul>
+		<ul class="wrapper">
+			<li class="btn btn-top">
+				<div>Total</div>
+				<span class="dropdown icon icon-32">
+					<div onclick="dropdown(this)">
+						<i class="fa fa-question-circle-o"></i>
+					</div>
+					<div class="dropdown-content">
+						<span>Total = Pesanan + Jasa kirim</span>
+					</div>
+				</span>
+			</li>
+			<li class="list-item">
+				<div>
+					<img src="img/shoppingbag.svg" class="square-48">
+					<!-- Icon made by https://www.flaticon.com/authors/darius-dan from www.flaticon.com  -->
+					<div>
+						<div class="sspan">Rp 5.700.000 + Rp 75.000</div>
+						<div class="price">
+							<div class="disc">
+								<span>13% Promo</span>
+								<span>Rp 5.775.000</span>
+							</div>
+							<div>Rp 5.550.000</div>
+						</div>
+					</div>
+				</div>
+				<div></div>
+			</li>
+		</ul>
+	</section>
+	<div style="height: 80px; width: 100%;"></div>
+	<section class="nav-bot center">
+		<button class="btn btn-main-outer" id="confirm">Konfirmasi pesanan</button>
+	</section>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/Clamp.js/clamp.min.js"></script>
+	<script src="js/allshop.js"></script>
+</body>
+</html>
