@@ -203,18 +203,23 @@ nav .category > *{
 #searchSug{
 	display: none;
 }
-#cart-indicator{
+#cart-indicator, #notif-indicator{
 	position: absolute;
-	right: 3px;
-	bottom: 3px;
+	right: 6px;
+	bottom: 6px;
 	border-radius: 50%;
-	width: 18px;
-	height: 18px;
-	font-size: 8px;
-	line-height: 8px;
-	padding: 5px;
-	color: var(--white);
+	width: 16px;
+	height: 16px;
+	font-size: 10px;
+	color: var(--white-light);
 	background-color: var(--main-dark);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#cart-indicator.active, #notif-indicator.active{
+	background-color: var(--white-light);
+	color: var(--black);
 }
 /*active effect*/
 nav.active{
@@ -248,6 +253,10 @@ nav.active{
 	height: 32px !important;
 	width: 32px !important;
 }
+.icon-24{
+	height: 24px !important;
+	width: 24px !important;
+}
 .icon-16{
 	height: 16px !important;
 	width: 16px !important;
@@ -263,8 +272,13 @@ nav.active{
 .icon:hover{
 	background-color: rgba(0,0,0,.1);
 }
-.active input::placeholder{
-	color: var(--black);
+.icon-notif{
+	background-color: var(--red);
+	color: var(--white);
+	font-size: 10px !important;
+}
+.icon-notif > *{
+	font-size: 10px !important;
 }
 /*shadow effect*/
 #shadow{
@@ -282,19 +296,21 @@ nav.active{
 #sidenav{
 	position: fixed;
 	top: 0;
-	left: -70vw;
-	width: 70vw;
-	min-height: 100vh;
+	left: -80vw;
+	width: 80vw;
+	height: 100vh;
 	overflow-x: hidden;
-	background-color: var(--white);
-	color: black;
-	padding: 1em 1em 1em 2em;
+	background-color: var(--white-light);
+	color: var(--black);
 	transition: left .2s;
 	display: flex;
 	flex-direction: column;
 	white-space: nowrap;
 	overflow-y: auto;
 	z-index: 101;
+}
+#sidenav *{
+	font-size: 16px;
 }
 #logo{
 	display: flex;
@@ -311,25 +327,13 @@ nav.active{
 	font-size: 1.5em !important;
 	font-weight: bolder;
 }
-#sidenav a{
-	display: block;
-	padding: .75em 0;
-	margin: 0;
-	text-decoration: none;
-}
-#sidenav a > i{
-	width: 1em;
-}
 #sidenav .close{
 	position: fixed;
-	top: 8%;
-	left: 85%;
+	top: 50%;
+	left: 90%;
 	transform: translate(-50%, -50%);
 	display: none;
 	color: var(--white-light);
-}
-#sidenav a i.fa{
-	margin-right: 1em;
 }
 /*content*/
 .content{
@@ -397,7 +401,7 @@ nav.active{
 	object-fit: cover;
 }
 .promo{
-	font-size: 12px;
+	font-size: 12px !important;
 	padding: 4px !important;
 	text-align: center;
 	background-color: var(--gray-dark);
@@ -414,7 +418,8 @@ nav.active{
 .list-item .promo, .list .promo{
 	background-color: var(--red);
 	height: 24px;
-	margin-right: 8px; 
+	margin-right: 8px;
+	line-height: normal;
 }
 .items > *{
 	padding: 0 8px 8px 0;
@@ -702,13 +707,13 @@ nav.active{
 }
 /*font*/
 .small{
-	font-size: 12px;
+	font-size: 12px !important;
 }
 .normal{
-	font-size: 14px;
+	font-size: 14px !important;
 }
 .big{
-	font-size: 18px;
+	font-size: 18px !important;
 }
 .low{
 	color: var(--gray) !important;
@@ -741,15 +746,15 @@ nav.active{
 	display: flex;
 	flex-wrap: wrap;
 	font-size: 14px;
-	border: 1px solid;
-	border-color: var(--gray-light);
-	min-height: 48px;
-
+	/*min-height: 48px;*/
 	/*thanks to css-tricks, should add fixed width into parents*/
-	min-width: 0;
+	/*min-width: 0;
 	white-space: nowrap;
 	overflow: hidden;
-	text-overflow: ellipsis;
+	text-overflow: ellipsis;*/
+}
+.list-item.bordered{
+	border: 1px solid var(--gray-light);
 }
 /*wrapper items components (there are 2)*/
 .list-item > *{
@@ -762,14 +767,34 @@ nav.active{
 }
 /*image or icon or text as thumbnail*/
 .list-item > *:nth-child(1) > *:nth-child(1){
-	width: 80px !important;
+	max-width: 80px !important;
 	max-height: 80px !important;
 	padding: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.list-item > *:nth-child(1) > i:nth-child(1){
+.list-item.item-small > *:nth-child(1) > *:nth-child(1){
+	width: 32px;
+	height: 32px;
+}
+.list-item.item-medium > *:nth-child(1) > *:nth-child(1){
+	width: 48px;
+	height: 48px;
+}
+.list-item.item-large > *:nth-child(1) > *:nth-child(1){
+	width: 80px;
+	height: 80px;
+}
+.list-item > *:nth-child(1) > *:nth-child(1) > img{
+	max-width: inherit;
+	max-height: inherit;
+	object-fit: contain;
+}
+/*.list-item > *:nth-child(1) > i:nth-child(1){
 	font-size: 24px;
 	text-align: center;
-}
+}*/
 /*main text*/
 .list-item > *:nth-child(1) > *:nth-child(2){
 	display: flex;
@@ -781,12 +806,9 @@ nav.active{
 	flex: 1 0 20%;
 	justify-content: center;
 	align-self: center;
-	min-width: 32px;
+	/*min-width: 32px;*/
 }
 /*every element inside child's wrapper*/
-.list-item > * > *{
-	padding: 4px 0;
-}
 .list-item > * > * > *{
 	/*thanks to css-tricks (cont)*/
 	white-space: nowrap;
@@ -796,8 +818,6 @@ nav.active{
 .pulldown{
 	flex-basis: 100%;
 	min-height: 48px;
-	background-color: var(--gray-light);
-
 	display: none;
 	flex-direction: row;
 }
@@ -888,7 +908,9 @@ input[name="promocode"]{
 }
 .bg-main{
 	background-color: var(--main) !important;
-	color: #000;
+}
+.bg-main-light{
+	background-color: var(--main-light) !important;
 }
 .bg-main-dark{
 	background-color: var(--main-dark) !important;
@@ -926,6 +948,9 @@ input[name="promocode"]{
 }
 .bg-gray{
 	background-color: var(--gray) !important;
+}
+.bg-gray-light{
+	background-color: var(--gray-light) !important;
 }
 .bg-gray-dark{
 	background-color: var(--gray-dark) !important;
@@ -1348,7 +1373,7 @@ input[name="promocode"]{
 	justify-content: center;
 	align-items: center;
 	position: fixed;
-	z-index: 101;
+	z-index: 101 ;
 	top: 0;
 	left: 0;
 	opacity: 0;
@@ -1360,7 +1385,7 @@ input[name="promocode"]{
 	background-color: var(--white-light);
 	display: none;
 	flex-direction: column;
-	max-width: 100vw;
+	max-width: calc(100vw - 16px);
 	max-height: 100vh;
 	border-radius: 5px;
 	position: relative;
@@ -1505,8 +1530,7 @@ input[name="promocode"]{
 /*filter's title*/
 .filter > * > *:first-child{
 	padding: 0 4px;
-	color: var(--black);
-	font-weight: 500;
+	color: var(--gray);
 }
 .filter > * select{
 	width: 100%;
@@ -1515,7 +1539,6 @@ input[name="promocode"]{
 	border-radius: 0;
 	border-bottom: 1px solid var(--gray-light);
 	flex: 1;
-	color: var(--gray-dark);
 }
 /*range slider*/
 /*https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/*/
@@ -1623,8 +1646,16 @@ input[type=range]::-webkit-slider-runnable-track {
 .searchbar input[type=search]:last-child{
 	border-left: 0;
 }
+/*listing*/
 .list{
 	display: flex;
+}
+.list > *{
+	min-height: 24px;
+	line-height: 2em;
+}
+.list > * *{
+	line-height: normal;
 }
 .list.column{
 	flex-direction: column !important;
@@ -1632,20 +1663,19 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 .list.row{
 	flex-direction: row !important;
-	margin: 8px 0;
+	padding: 8px 0;
 }
 .list.column > *{
-	padding: 4px;
-	margin: 0 0 8px 0;
+	margin: 0 0 4px 0;
 }
 .list.column > *:first-child{
-	margin: 8px 0;
+	margin: 4px 0;
 }
 .list.row > *{
-	margin: 0 8px 0 0;
+	margin: 0 4px 0 0;
 }
 .list.row > *:first-child{
-	margin: 0 8px;
+	margin: 0 4px;
 }
 .list label{
 	display: inline-block;
@@ -1665,8 +1695,6 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 .filter-row{
 	font-size: 12px;
-	height: auto;
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -1691,6 +1719,10 @@ input[type=range]::-webkit-slider-runnable-track {
 	from {transform: translateY(-48px);}
 	to {transform: translateY(0);}
 }
+@keyframes slide-up{
+	from {transform: translateY(48px);}
+	to {transform: translateY(0);}
+}
 @keyframes fade{
 	from {opacity: 0;}
 	to {opacity: 1;}
@@ -1710,6 +1742,10 @@ input[type=range]::-webkit-slider-runnable-track {
 .ani-slide-down{
 	-webkit-animation: slide-down .175s;
 	animation: slide-down .175s;
+}
+.ani-slide-up{
+	-webkit-animation: slide-up .175s;
+	animation: slide-up .175s;
 }
 .ani-fade{
 	-webkit-animation: fade .175s;
@@ -1765,7 +1801,10 @@ input[type=range]::-webkit-slider-runnable-track {
 	align-items: center;
 }
 .pp > img{
-	width: 56px;
-	height: 56px;
-	border-radius: 100%;
+	width: 48px !important;
+	height: 48px !important;
+	max-height: none;
+	max-width: none;
+	border-radius: 50%;
+	object-fit: cover !important;
 }

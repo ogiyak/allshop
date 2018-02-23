@@ -25,6 +25,7 @@
 		<ul class="navigation">
 			<li class="icon icon-48" onclick="sidenavOpen()">
 				<i class="fa fa-bars"></i>
+				<span id="notif-indicator" class="active"><b>13</b></span>
 			</li>
 			<!-- search -->
 			<li id="searchwrap">
@@ -114,28 +115,198 @@
 		<div onclick="sidenavClose()" class="icon icon-48 close">
 			<i class="fa fa-times" aria-hidden="true"></i>
 		</div>
-		<a href="index.html">
-			<div id="logo">
-				<img src="img/icon.png">
-				<h2>allshop</h2>
-			</div>
-		</a>
+		<!-- sidebar content -->
 		<div>
-			<a href="category.html"><i class="fa fa-mobile-phone main-dark" aria-hidden="true"></i> Elektronik</a>
-			<a href="category.html"><i class="fa fa-wrench main-dark" aria-hidden="true"></i> Perkakas</a>
-			<a href="category.html"><i class="fa fa-male main-dark" aria-hidden="true"></i> Pria</a>
-			<a href="category.html"><i class="fa fa-female main-dark" aria-hidden="true"></i> Wanita</a>
-			<a href="category.html"><i class="fa fa-child main-dark" aria-hidden="true"></i> Anak-anak</a>
-			<a href="category.html"><i class="fa fa-shower main-dark" aria-hidden="true"></i> Mebel</a>
-			<a href="category.html"><i class="fa fa-book main-dark" aria-hidden="true"></i> Buku dll</a>
+			<div class="list-item bg-main-dark formal-large">
+				<div>
+					<div class="pp">
+						<img src="img/pp.jpg">	
+					</div>
+					<div>
+						<h2>Lilypichu <i class="fa fa-check-circle verified"></i></h2>
+						<span class="normal low">Rp 50.000</span>
+					</div>
+				</div>
+				<div>
+					<div class="icon icon-32">
+						<i class="fa fa-external-link-square"></i>
+					</div>
+				</div>
+			</div>
+			<ul class="formal list column">
+				<a href="order-status.html">
+					<li class="list-item item-small">
+						<div>
+							<div>
+								<i class="fa fa-shopping-bag main-dark"></i>
+							</div>
+							<div>
+								<p>Pesananku</p>
+							</div>
+						</div>
+						<div><div class="icon icon-24 icon-notif"><span>1</span></div></div>
+					</li>
+				</a>
+				<a href="">
+					<li class="list-item item-small">
+						<div>
+							<div>
+								<i class="fa fa-bell main-dark"></i>
+							</div>
+							<div>
+								<p>Notifikasi</p>
+							</div>
+						</div>
+						<div><div class="icon icon-24 icon-notif"><span>3</span></div></div>
+					</li>
+				</a>
+				<a href="">
+					<li class="list-item item-small">
+						<div>
+							<div>
+								<i class="fa fa-bookmark main-dark"></i>
+							</div>
+							<div>
+								<p>Toko Langganan</p>
+							</div>
+						</div>
+						<div><div class="icon icon-24 icon-notif"><span>9</span></div></div>
+					</li>
+				</a>
+			</ul>
 		</div>
 		<div>
-			<hr>
-			<a href="login.html"><i class="fa fa-user-o main-dark" aria-hidden="true"></i> Akunku</a>
-			<a href="order-status.html"><i class="fa fa-shopping-bag main-dark" aria-hidden="true"></i> Pesananku</a>
-			<a href="help.html"><i class="fa fa-question-circle main-dark" aria-hidden="true"></i> Bantuan</a>
-			<hr>
-			<a><i class="fa fa-info-circle main-dark" aria-hidden="true"></i> Tentang <span style="font-family: 'Poiret One', cursive; font-weight: bolder;">allshop</span></a>
+			<ul class="formal list column">
+				<a href="index.html">
+					<li class="list-item item-small">
+						<div>
+							<div>
+								<i class="fa fa-home main-dark"></i>
+							</div>
+							<div>
+								<p>Beranda</p>
+								<div>
+									<span class="promo">HUTRI | 17%</span><span class="promo">KARTINI | 10%</span>
+								</div>
+							</div>
+						</div>
+					</li>
+				</a>
+			</ul>
+			<ul class="formal list column">
+				<a href="category.html">
+					<li class="list-item item-small">
+						<div>
+							<div>
+								<i class="fa fa-desktop main-dark"></i>
+							</div>
+							<div>
+								<p>Elektronik</p>
+							</div>
+						</div>
+					</li>
+				</a>
+				<a href="category.html">
+					<li class="list-item item-small">
+						<div>
+							<div>
+								<i class="fa fa-wrench main-dark"></i>
+							</div>
+							<div>
+								<p>Perkakas</p>
+							</div>
+						</div>
+					</li>
+				</a>
+				<a href="category.html">
+					<li class="list-item item-small">
+						<div>
+							<div>
+								<i class="fa fa-male main-dark"></i>
+							</div>
+							<div>
+								<p>Pria</p>
+							</div>
+						</div>
+					</li>
+				</a>
+				<a href="category.html">
+					<li class="list-item item-small">
+						<div>
+							<div>
+								<i class="fa fa-female main-dark"></i>
+							</div>
+							<div>
+								<p>Wanita</p>
+							</div>
+						</div>
+					</li>
+				</a>
+				<a href="category.html">
+					<li class="list-item item-small">
+						<div>
+							<div>
+								<i class="fa fa-child main-dark"></i>
+							</div>
+							<div>
+								<p>Anak-anak</p>
+							</div>
+						</div>
+					</li>
+				</a>
+				<a href="category.html">
+					<li class="list-item item-small">
+						<div>
+							<div>
+								<i class="fa fa-shower main-dark"></i>
+							</div>
+							<div>
+								<p>Mebel</p>
+							</div>
+						</div>
+					</li>
+				</a>
+				<a href="category.html">
+					<li class="list-item item-small">
+						<div>
+							<div>
+								<i class="fa fa-book main-dark"></i>
+							</div>
+							<div>
+								<p>Buku</p>
+							</div>
+						</div>
+					</li>
+				</a>
+			</ul>
+		</div>
+		<div>
+			<ul class="formal list column">
+				<a href="help.html">
+					<li class="list-item item-small">
+						<div>
+							<div>
+								<i class="fa fa-question-circle main-dark"></i>
+							</div>
+							<div>
+								<p>Bantuan</p>
+							</div>
+						</div>
+					</li>
+				</a>
+				<a href="help.html">
+					<li class="list-item item-small">
+						<div>
+							<div>
+								<i class="fa fa-info-circle main-dark"></i>
+							</div>
+							<div>
+								<p>Tentang <span style="font-family: 'Poiret One', cursive; font-weight: bolder;">allshop</span></p>
+							</div>
+						</div>
+					</li>
+				</a>
+			</ul>
 		</div>
 	</div>
 	<!-- content -->

@@ -17,7 +17,7 @@ function sidenavOpen(){
 }
 function sidenavClose(){
 	sidenav.className = '';
-	sidenav.style.left = '-70vw';
+	sidenav.style.left = '-80vw';
 	shadow.style.display = 'none';
 	sidenavCloseBtn.style.display = 'none';
 
@@ -143,22 +143,26 @@ function popClose(){
 	shadow.style.display = 'none';
 }
 // showmore
-function showMore(e){
-	if(e.innerHTML == "<i class='fa fa-angle-down'></i>"){
-		// button bot animation
-		$('.btn-bot').addClass('ani-slide-down');
+$('.showmore').click(function(){
+	if($(this).prev().css('display') == 'none'){
+		$(this).css({
+			'background-color' : 'var(--gray-light)'
+		});
+		$(this).find('.fa').removeClass('fa-angle-down');
+		$(this).find('.fa').addClass('fa-angle-up');
 
-		setTimeout(function(){
-			e.previousElementSibling.style.display = 'block';
-		}, 200);
-		e.style.backgroundColor = 'var(--gray-light)';
-		e.innerHTML = "<i class='fa fa-angle-up'></i>";
+		$(this).prev().css('display', 'block');
+		$(this).prev().addClass('ani-slide-down');	
 	}else{
-		e.previousElementSibling.style.display = 'none';
-		e.style.backgroundColor = 'transparent';
-		e.innerHTML = "<i class='fa fa-angle-down'></i>";
-	}	
-}
+		$(this).find('.fa').removeClass('fa-angle-up');
+		$(this).find('.fa').addClass('fa-angle-down');
+		$(this).css({
+			'background-color' : 'transparent'
+		});
+		$(this).prev().css('display', 'none');
+	}
+});
+
 // shadow close related function
 $('#shadow').click(function(){
 	sidenavClose();
