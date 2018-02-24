@@ -43,6 +43,13 @@ body{
 	background-color: var(--gray-light);
 	color: var(--black);
 }
+hr{
+	width: 100%;
+	color: var(--gray-light) !important;
+	border: none;
+	border-top: 2px solid var(--gray-light) !important;
+	margin: 2px 0;
+}
 input, select, textarea{
 	font-size: 1em !important;
 	padding: 8px;
@@ -129,20 +136,32 @@ nav .navigation{
 	padding: 0;
 	display: flex; /*caution!*/
 }
-nav .category{
-	overflow-y: hidden;
-	width: 100%;
-	white-space: nowrap;
-	overflow-x: auto;
+.category{
 	padding: 8px 0 0 8px;
 	font-size: 14px;
 }
-nav .category > *{
-	display: inline-block;
-	padding: 8px;
-	background-color: var(--main);
-	height: 32px;
+.category > *{
 	border-radius: 5px;
+	display: inline-block;
+	background-color: var(--main);
+}
+nav .category{
+	white-space: nowrap;
+	overflow-y: hidden;
+	overflow-x: auto;
+}
+nav .category > *{
+	padding: 8px;
+	height: 32px;
+}
+#sidenav .category{
+	width: inherit;
+	white-space: normal;
+}
+#sidenav .category > *{
+	padding: 4px;
+	margin: 2px 0;
+	background-color: var(--gray-light);
 }
 /*search*/
 #searchwrap{
@@ -705,6 +724,10 @@ nav.active{
 	background: var(--gray-light);
 	opacity: .5;
 }
+.icon.inactive{
+	background-color: var(--gray-light);
+	color: var(--gray-dark);
+}
 /*font*/
 .small{
 	font-size: 12px !important;
@@ -755,6 +778,10 @@ nav.active{
 }
 .list-item.bordered{
 	border: 1px solid var(--gray-light);
+}
+/*hide image/thumb*/
+.list-item.text-only > *:first-child > *:first-child{
+	display: none;
 }
 /*wrapper items components (there are 2)*/
 .list-item > *{
@@ -1469,11 +1496,19 @@ input[name="promocode"]{
 	flex-direction: row;
 	justify-content: center;
 	padding: 0;
+	background-color: var(--white-light);
 }
 .split-col > *{
 	flex: 1;
 	max-width: 50vw;
 }
+.split-col.split-menu > *:first-child{
+	max-width: 140px;
+}
+.split-col.split-menu > *:last-child{
+	max-width: 100vw;
+}
+/*settings for detail, spec, thumb-view, rr*/
 .split-col > * .detail > *{
 	width: 100% !important;
 }
@@ -1653,6 +1688,7 @@ input[type=range]::-webkit-slider-runnable-track {
 .list > *{
 	min-height: 24px;
 	line-height: 2em;
+	padding: 2px;
 }
 .list > * *{
 	line-height: normal;
@@ -1663,6 +1699,7 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 .list.row{
 	flex-direction: row !important;
+	flex-wrap: wrap;
 	padding: 8px 0;
 }
 .list.column > *{
@@ -1709,10 +1746,10 @@ input[type=range]::-webkit-slider-runnable-track {
 /*animations*/
 @keyframes zoom-in{
     0% {transform: scale(1, 1);}
-    100% {transform: scale(0, 0);}
+    100% {transform: scale(.3, .3);}
 }
 @keyframes zoom-out{
-    0% {transform: scale(0, 0);}
+    0% {transform: scale(.3, .3);}
     100% {transform: scale(1, 1);}
 }
 @keyframes slide-down{

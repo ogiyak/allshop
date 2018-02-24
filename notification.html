@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notifikasi</title>
+	<meta http-equiv="Cache-control" content="no-cache">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta charset="UTF-8">
+	<meta name="theme-color" content="#005ecb">
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+	<!-- style -->
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/allshop.css">
+	<!-- icon in the highest resolution we need it for -->
+	<link rel="icon" sizes="192x192" href="img/icon.png">
+	<!-- reuse same icon for Safari -->
+	<link rel="apple-touch-icon" href="img/ios-icon.png">
+	<!-- multiple icons for IE -->
+	<meta name="msapplication-square310x310logo" content="img/ie-icon.png">
+</head>
+<body>
+	<section class="content content-full">
+		<div class="btn btn-top">
+			<span>Pesananku</span>
+			<a href="index.html" class="icon icon-48">
+				<i class="fa fa-close"></i>
+			</a>
+		</div>
+		<div class="split-col split-menu">
+		<!-- notification group -->
+			<ul class="list column bg-gray formal">
+				<li class="list-item item-small text-only">
+					<div>
+						<i></i>
+						<div>
+							<p>Semua</p>
+						</div>
+					</div>
+					<div>
+						<div class="icon icon-24 icon-notif">
+							<span>3</span>
+						</div>
+					</div>
+				</li>
+				<li class="list-item item-small text-only">
+					<div>
+						<i></i>
+						<div>
+							<p>Chat toko</p>
+						</div>
+					</div>
+					<div>
+						<div class="icon icon-24 icon-notif">
+							<span>2</span>
+						</div>
+					</div>
+				</li>
+				<li class="list-item item-small text-only">
+					<div>
+						<i></i>
+						<div>
+							<p>Komentar</p>
+						</div>
+					</div>
+					<div>
+						<div class="icon icon-24 icon-notif">
+							<span>1</span>
+						</div>
+					</div>
+				</li>
+				<li class="list-item item-small text-only">
+					<div>
+						<i></i>
+						<div>
+							<p>Forum</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<!-- notification list based on group -->
+			<ul class="">
+				<div class="advance-search formal">
+					<div></div>
+					<div>
+						<div class="btn btn-32 btn-main-outer" onclick="popOpen(this)" id="popopenfilter">
+							<span>Saring</span>
+							<i class="fa fa-filter"></i>
+						</div>
+						<div class="btn btn-32 btn-main-outer">
+							<span>Cari</span>
+							<i class="fa fa-search"></i>
+						</div>
+					</div>
+				</div>
+				<ul>
+					<li class="list-item item-small bordered formal-column">
+						<div>
+							<img src="img/toko.jpg" class="pp">
+							<div>
+								<p>Toko Wijaya <i class="fa fa-check-circle verified"></i></p>
+								<p class="sspan">14 Desember 2017</p>
+							</div>
+						</div>
+						<div></div>
+						<div>
+							<p>Barang <span class="link">iPhone 7 32 GB - Red</span> masih ada silahkan pesan. Terima kasih.</p>
+						</div>
+					</li>
+					<li class="list-item item-small bordered formal-column">
+						<div>
+							<img src="img/toko.jpg" class="pp">
+							<div>
+								<p>Toko Wijaya <i class="fa fa-check-circle verified"></i></p>
+								<p class="sspan">1 Desember 2017</p>
+							</div>
+						</div>
+						<div></div>
+						<div>
+							<p>Mohon konfirmasinya untuk pesanan <span class="link">8191222</span> ya, ditunggu. Terimakasih...</p>
+						</div>
+					</li>
+				</ul>
+			</ul>	
+		</div>
+	</section>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/Clamp.js/clamp.min.js"></script>
+	<script src="js/allshop.js"></script>
+</body>
+</html>
