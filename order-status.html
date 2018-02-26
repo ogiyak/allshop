@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>allshop - Status pesanan</title>
+	<title> Status pesanan</title>
 	<meta http-equiv="Cache-control" content="no-cache">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<meta charset="UTF-8">
+	<meta charset="ISO-8859-1">
 	<meta name="theme-color" content="#005ecb">
 	<!-- font -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
@@ -30,18 +30,18 @@
 		<div class="advance-search">
 			<div></div>
 			<div>
-				<div class="btn btn-32 btn-main-outer" onclick="popOpen(this)" id="popopenfilter">
+				<div class="btn btn-32 btn-main-inverted" onclick="popOpen(this)" id="popopenfilter">
 					<span>Saring</span>
 					<i class="fa fa-filter"></i>
 				</div>
-				<div class="btn btn-32 btn-main-outer">
+				<div class="btn btn-32 btn-main-inverted">
 					<span>Cari</span>
 					<i class="fa fa-search"></i>
 				</div>
 			</div>
 		</div>
 		<!-- daftar pesanan -->
-		<ul class="wrapper">
+		<ul class="wrapper ani-zoom-out">
 			<a href="order-status-end.html">
 				<li class="btn btn-top">
 					<span>
@@ -379,7 +379,7 @@
 	</div>
 	<section class="popup-wrapper">
 		<div class="popup" id="popfilter">
-			<div class="content content-full">
+			<div>
 				<div class="btn btn-top reverse-row">
 					<span>Saring</span>
 					<span onclick="popClose()"><i class="fa fa-arrow-left"></i></span>
@@ -430,7 +430,7 @@
 							<option>Elektronik</option>
 							<option>Pria</option>
 							<option>Wanita</option>
-							<option>Anak-anak</option>
+							<option>Anak</option>
 							<option>Buku</option>
 						</select>
 					</li>
@@ -453,7 +453,7 @@
 			<div style="height: 80px; width: 100%;"></div>
 			<div class="nav-bot center">
 				<a href="order-status.html"><button class="btn">Semula</button></a>
-				<a href="order-status-filtered.html"><button class="btn btn-main"><span>Saring</span><i class="fa fa-filter"></i></button></a>
+				<a href="order-status-filtered.html"><button class="btn btn-main"><span>Saring </span><i class="fa fa-filter"></i></button></a>
 			</div>
 		</div>
 		<div class="popup" id="popseller">
@@ -546,7 +546,7 @@
 							<button class="btn btn-main"><i class="fa fa-phone"></i></button>
 						</li>
 					</ul>
-					<ul class="list-item">
+					<ul class="list-item item-large">
 						<div>
 							<i class="fa fa-map-o"></i>
 							<div>
@@ -617,7 +617,7 @@
 							<button class="btn btn-main"><i class="fa fa-phone"></i></button>
 						</li>
 					</ul>
-					<ul class="list-item">
+					<ul class="list-item item-large">
 						<div>
 							<i class="fa fa-map-o"></i>
 							<div>

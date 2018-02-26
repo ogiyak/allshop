@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>allshop - Kategori</title>
+	<title> Kategori</title>
 	<meta http-equiv="Cache-control" content="no-cache">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<meta charset="UTF-8">
+	<meta charset="ISO-8859-1">
 	<meta name="theme-color" content="#005ecb">
 	<!-- font -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
@@ -117,17 +117,39 @@
 			<div class="list-item bg-main-dark formal-large">
 				<div>
 					<div class="pp">
-						<img src="img/pp.jpg">	
+						<img src="img/persona.png">	
 					</div>
 					<div>
-						<h2>Lilypichu <i class="fa fa-check-circle verified"></i></h2>
+						<h2>Raisa <i class="fa fa-check-circle verified"></i></h2>
 						<span class="green">Saldo Rp 50.000</span>
 					</div>
 				</div>
-				<div>
+				<div class="pulldown-trigger">
 					<div class="icon icon-32">
-						<i class="fa fa-external-link-square"></i>
+						<i class="fa fa-caret-down"></i>
 					</div>
+				</div>
+				<div class="pulldown">
+					<ul class="list column">
+						<li class="list-item item-small">
+							<div>
+								<div><i class="fa fa-credit-card"></i></div>
+								<div>Isi saldo</div>
+							</div>
+						</li>
+						<li class="list-item item-small">
+							<div>
+								<div><i class="fa fa-user"></i></div>
+								<div>Atur akun</div>
+							</div>
+						</li>
+						<li class="list-item item-small">
+							<div>
+								<div><i class="fa fa-power-off"></i></div>
+								<div>Keluar</div>
+							</div>
+						</li>
+					</ul>
 				</div>
 			</div>
 			<ul class="formal list column">
@@ -157,7 +179,7 @@
 						<div><div class="icon icon-24 icon-notif"><span>3</span></div></div>
 					</li>
 				</a>
-				<a href="">
+				<a href="subscribed-shop.html">
 					<li class="list-item item-small">
 						<div>
 							<div>
@@ -183,9 +205,6 @@
 							</div>
 							<div>
 								<p>Beranda</p>
-								<div>
-									<span class="promo">HUTRI | 17%</span><span class="promo">KARTINI | 10%</span>
-								</div>
 							</div>
 						</div>
 					</li>
@@ -293,14 +312,14 @@
 						</div>
 					</li>
 				</a>
-				<a href="help.html">
+				<a href="about.html">
 					<li class="list-item item-small">
 						<div>
 							<div>
 								<i class="fa fa-info-circle main-dark"></i>
 							</div>
 							<div>
-								<p>Tentang <span style="font-family: 'Poiret One', cursive; font-weight: bolder;">allshop</span></p>
+								<p>Tentang allshop</p>
 							</div>
 						</div>
 					</li>
@@ -313,12 +332,12 @@
 		<div class="advance-search">
 			<div></div>
 			<div>
-				<div class="btn btn-32 btn-main-outer" onclick="popOpen(this)" id="popopenfilter">
+				<div class="btn btn-32 btn-main-inverted" onclick="popOpen(this)" id="popopenfilter">
 					<span>Saring</span>
 					<i class="fa fa-filter"></i>
 				</div>
 				<div class="dropdown">
-					<div class="btn btn-32 btn-main-outer">
+					<div class="btn btn-32 btn-main-inverted">
 						<span>Sortir</span>
 						<i class="fa fa-sort"></i>
 					</div>
@@ -340,7 +359,7 @@
 			<li>
 				<a href="product.html">
 					<div>
-						<span class="promo">Free Ongkir</span>
+						<span class="promo">Gratis Ongkir</span>
 						<img src="img/mac4.jpg">	
 					</div>
 					<ul>
@@ -370,7 +389,7 @@
 			<li>
 				<a href="product.html">
 					<div>
-						<span class="promo">Free Ongkir</span>
+						<span class="promo">Gratis Ongkir</span>
 						<img src="img/googlepixel2.jpg">	
 					</div>
 					<ul>
@@ -957,7 +976,7 @@
 	</section>
 	<section class="popup-wrapper">
 		<div class="popup" id="popfilter">
-			<div class="content content-full">
+			<div>
 				<div class="btn btn-top reverse-row">
 					<span>Saring</span>
 					<span onclick="popClose()"><i class="fa fa-arrow-left"></i></span>
@@ -970,7 +989,7 @@
 							<option selected="true">Elektronik</option>
 							<option>Wanita</option>
 							<option>Pria</option>
-							<option>Anak-anak</option>
+							<option>Anak</option>
 						</select>
 					</li>
 					<li>

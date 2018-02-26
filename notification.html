@@ -4,7 +4,7 @@
 	<title>Notifikasi</title>
 	<meta http-equiv="Cache-control" content="no-cache">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<meta charset="UTF-8">
+	<meta charset="ISO-8859-1">
 	<meta name="theme-color" content="#005ecb">
 	<!-- font -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
@@ -22,110 +22,194 @@
 <body>
 	<section class="content content-full">
 		<div class="btn btn-top">
-			<span>Pesananku</span>
+			<span>Notifikasi</span>
 			<a href="index.html" class="icon icon-48">
 				<i class="fa fa-close"></i>
 			</a>
 		</div>
-		<div class="split-col split-menu">
-		<!-- notification group -->
-			<ul class="list column bg-gray formal">
-				<li class="list-item item-small text-only">
-					<div>
-						<i></i>
-						<div>
-							<p>Semua</p>
-						</div>
-					</div>
-					<div>
-						<div class="icon icon-24 icon-notif">
-							<span>3</span>
-						</div>
-					</div>
-				</li>
-				<li class="list-item item-small text-only">
-					<div>
-						<i></i>
-						<div>
-							<p>Chat toko</p>
-						</div>
-					</div>
-					<div>
-						<div class="icon icon-24 icon-notif">
-							<span>2</span>
-						</div>
-					</div>
-				</li>
-				<li class="list-item item-small text-only">
-					<div>
-						<i></i>
-						<div>
-							<p>Komentar</p>
-						</div>
-					</div>
-					<div>
-						<div class="icon icon-24 icon-notif">
-							<span>1</span>
-						</div>
-					</div>
-				</li>
-				<li class="list-item item-small text-only">
-					<div>
-						<i></i>
-						<div>
-							<p>Forum</p>
-						</div>
-					</div>
-				</li>
-			</ul>
-			<!-- notification list based on group -->
-			<ul class="">
-				<div class="advance-search formal">
-					<div></div>
-					<div>
-						<div class="btn btn-32 btn-main-outer" onclick="popOpen(this)" id="popopenfilter">
-							<span>Saring</span>
-							<i class="fa fa-filter"></i>
-						</div>
-						<div class="btn btn-32 btn-main-outer">
-							<span>Cari</span>
-							<i class="fa fa-search"></i>
-						</div>
-					</div>
+		<div class="advance-search">
+			<div></div>
+			<div>
+				<div class="btn btn-32 btn-main-inverted" onclick="popOpen(this)" id="popopenfilter">
+					<span>Saring</span>
+					<i class="fa fa-filter"></i>
 				</div>
-				<ul>
-					<li class="list-item item-small bordered formal-column">
+				<div class="btn btn-32 btn-main-inverted">
+					<span>Cari</span>
+					<i class="fa fa-search"></i>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="list column notification">
+				<!-- notification group -->
+				<a href="">
+					<ul class="category">
+						<li class="justify-item">
+							<p>Semua</p>
+							<div class="icon icon-16 icon-notif">
+								<span>3</span>
+							</div>
+						</li>
+						<li class="justify-item">
+							<p>Chat toko</p>
+							<div class="icon icon-16 icon-notif">
+								<span>2</span>
+							</div>
+						</li>
+						<li class="justify-item">
+							<p>Komentar</p>
+							<div class="icon icon-16 icon-notif">
+								<span>1</span>
+							</div>
+						</li>
+						<li class="justify-item">
+							<p>Forum</p>
+						</li>
+					</ul>
+				</a>
+				<!-- notification list based on group -->		
+				<ul class="notification-content ani-slide-down">
+					<li class="list-item item-medium active">
 						<div>
-							<img src="img/toko.jpg" class="pp">
+							<div class="pp">
+								<img src="img/toko.jpg">
+							</div>
 							<div>
-								<p>Toko Wijaya <i class="fa fa-check-circle verified"></i></p>
+								<h4>Toko Wijaya <i class="fa fa-check-circle verified"></i></h4>
 								<p class="sspan">14 Desember 2017</p>
 							</div>
 						</div>
-						<div></div>
 						<div>
-							<p>Barang <span class="link">iPhone 7 32 GB - Red</span> masih ada silahkan pesan. Terima kasih.</p>
+							<div class="icon icon-32 low">
+								<i class="fa fa-close"></i>
+							</div>
+						</div>
+						<div>
+							<p class="msg">Barang <span class="link">iPhone 7 32 GB - Red</span> masih ada silahkan pesan. Terima kasih.</p>
 						</div>
 					</li>
-					<li class="list-item item-small bordered formal-column">
+					<li class="list-item item-medium active">
 						<div>
-							<img src="img/toko.jpg" class="pp">
+							<div class="pp">
+								<img src="img/toko.jpg">
+							</div>
 							<div>
-								<p>Toko Wijaya <i class="fa fa-check-circle verified"></i></p>
+								<h4>Toko Wijaya <i class="fa fa-check-circle verified"></i></h4>
 								<p class="sspan">1 Desember 2017</p>
 							</div>
 						</div>
-						<div></div>
 						<div>
-							<p>Mohon konfirmasinya untuk pesanan <span class="link">8191222</span> ya, ditunggu. Terimakasih...</p>
+							<div class="icon icon-32 low">
+								<i class="fa fa-close"></i>
+							</div>
+						</div>
+						<div>
+							<p class="msg">Mohon konfirmasinya untuk pesanan <span class="link">8191222</span> ya, ditunggu. Terimakasih...</p>
+						</div>
+					</li>
+					<li class="list-item item-medium active">
+						<div>
+							<div class="pp">
+								<img src="img/pp4.jpg">
+							</div>
+							<div>
+								<h4>Marina</h4>
+								<p class="sspan">11 Januari 2017</p>
+							</div>
+						</div>
+						<div>
+							<div class="icon icon-32 low">
+								<i class="fa fa-close"></i>
+							</div>
+						</div>
+						<div>
+							<p class="msg">Menanggapi komentarmu di <span class="link">"Warnanya gk sesuai gambar..."</span></p>
+						</div>
+					</li>
+					<li class="list-item item-medium">
+						<div>
+							<div class="pp">
+								<img src="img/pp3.jpg">
+							</div>
+							<div>
+								<h4>Hamish <i class="fa fa-check-circle verified"></i></h4>
+								<p class="sspan">1 Maret 2017</p>
+							</div>
+						</div>
+						<div>
+							<div class="icon icon-32 low">
+								<i class="fa fa-close"></i>
+							</div>
+						</div>
+						<div>
+							<p class="msg">Menyukai komentarmu di <span class="link">"Barang rekomended bgt!"</span></p>
+						</div>
+					</li>
+					<li class="list-item item-medium">
+						<div>
+							<div class="pp">
+								<img src="img/toko2.jpg">
+							</div>
+							<div>
+								<h4>Global Teleshop <i class="fa fa-check-circle verified"></i></h4>
+								<p class="sspan">5 April 2017</p>
+							</div>
+						</div>
+						<div>
+							<div class="icon icon-32 low">
+								<i class="fa fa-close"></i>
+							</div>
+						</div>
+						<div>
+							<p class="msg">Mohon konfirmasinya untuk pesanan <span class="link">7181222</span>. Terimakasih</p>
+						</div>
+					</li>
+					<li class="list-item item-medium">
+						<div>
+							<div class="pp">
+								<img src="img/toko.jpg">
+							</div>
+							<div>
+								<h4>Toko Wijaya <i class="fa fa-check-circle verified"></i></h4>
+								<p class="sspan">15 Maret 2017</p>
+							</div>
+						</div>
+						<div>
+							<div class="icon icon-32 low">
+								<i class="fa fa-close"></i>
+							</div>
+						</div>
+						<div>
+							<p class="msg">Mohon konfirmasinya untuk pesanan <span class="link">1115222</span>.</p>
+						</div>
+					</li>
+					<li class="list-item item-medium">
+						<div>
+							<div class="pp">
+								<img src="img/toko2.jpg">
+							</div>
+							<div>
+								<h4>Global Teleshop <i class="fa fa-check-circle verified"></i></h4>
+								<p class="sspan">1 Maret 2017</p>
+							</div>
+						</div>
+						<div>
+							<div class="icon icon-32 low">
+								<i class="fa fa-close"></i>
+							</div>
+						</div>
+						<div>
+							<p class="msg">Pengembalian pesanan <span class="link">199212</span> sudah kami terima dan kami ganti sesuai dengan pesanan baru <span class="link">199213</span>. Kami mohon maaf atas kesalahan pesanan tersebut. Sebagai gantinya kami memberikan bonus voucher Rp 50.000 ke akun anda. Terimakasih.</p>
 						</div>
 					</li>
 				</ul>
-			</ul>	
+			</div>
 		</div>
-	</section>
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/Clamp.js/clamp.min.js"></script>
-	<script src="js/allshop.js"></script>
+	</div>
+</section>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/Clamp.js/clamp.min.js"></script>
+<script src="js/allshop.js"></script>
 </body>
 </html>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>allshop - Status pesanan</title>
+	<title> Status pesanan</title>
 	<meta http-equiv="Cache-control" content="no-cache">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<meta charset="UTF-8">
+	<meta charset="ISO-8859-1">
 	<meta name="theme-color" content="#005ecb">
 	<!-- font -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
@@ -29,17 +29,17 @@
 		</div>
 		<div class="advance-search">
 			<div>
-				<div class="btn btn-32" onclick="vanish(this)">
+				<div class="btn btn-32">
 					<span>Maret</span>
 					<i class="fa fa-times-circle"></i>
 				</div>
 			</div>
 			<div>
-				<div class="btn btn-32 btn-main-outer" onclick="popOpen(this)" id="popopenfilter">
+				<div class="btn btn-32 btn-main-inverted" onclick="popOpen(this)" id="popopenfilter">
 					<span>Saring</span>
 					<i class="fa fa-filter"></i>
 				</div>
-				<div class="btn btn-32 btn-main-outer">
+				<div class="btn btn-32 btn-main-inverted">
 					<span>Cari</span>
 					<i class="fa fa-search"></i>
 				</div>
@@ -83,7 +83,7 @@
 			<li class="list column low">
 				<p>Diperkirakan sampai 18 November 2017</p>
 			</li>
-			<li class="list-item">
+			<li class="list-item bordered">
 				<div>
 					<img src="img/iphonered.jpg">
 					<div>
@@ -106,7 +106,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="list-item">
+			<li class="list-item bordered">
 				<div>
 					<img src="img/rok.jpg">
 					<div>
@@ -129,7 +129,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="list-item">
+			<li class="list-item bordered">
 				<div>
 					<img src="img/iwatch.jpg">
 					<div>
@@ -190,7 +190,7 @@
 			<li class="list column low">
 				<p>Sampai 13 November 2017</p>
 			</li>
-			<li class="list-item">
+			<li class="list-item bordered">
 				<div>
 					<img src="img/switch.jpg">
 					<div>
@@ -249,7 +249,7 @@
 			<li class="list column low">
 				<p>Sampai 10 November 2017</p>
 			</li>
-			<li class="list-item">
+			<li class="list-item bordered">
 				<div>
 					<img src="img/mac2.jpg">
 					<div>
@@ -272,7 +272,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="list-item">
+			<li class="list-item bordered">
 				<div>
 					<img src="img/tas.jpg">
 					<div>
@@ -331,7 +331,7 @@
 			<li class="list column low">
 				<p>Sampai 2 November 2017</p>
 			</li>
-			<li class="list-item">
+			<li class="list-item bordered">
 				<div>
 					<img src="img/tesla-car.jpg">
 					<div>
@@ -354,7 +354,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="list-item">
+			<li class="list-item bordered">
 				<div>
 					<img src="img/lamp.jpg">
 					<div>
@@ -375,14 +375,10 @@
 			</li>
 		</ul>
 	</section>
-	<div style="height: 80px; width: 100%;"></div>
-	<section class="nav-bot center">
-		<button class="btn btn-main-outer">Konfirmasi pesanan</button>
-	</section>
-	<section>
+	<section class="popup-wrapper">
 		<div class="popup" id="popfilter">
-			<div class="content content-full">
-				<div class="btn btn-top">
+			<div>
+				<div class="btn btn-top reverse-row">
 					<span>Saring</span>
 					<span onclick="popClose()"><i class="fa fa-arrow-left"></i></span>
 				</div>
@@ -432,7 +428,7 @@
 							<option>Elektronik</option>
 							<option>Pria</option>
 							<option>Wanita</option>
-							<option>Anak-anak</option>
+							<option>Anak</option>
 							<option>Buku</option>
 						</select>
 					</li>
@@ -446,7 +442,7 @@
 							</div>
 							<div>
 								<span class="range-value" id="minprice">Rp 0</span>
-								<span class="range-value" id="maxprice">10.000.000</span>
+								<span class="range-value" id="maxprice">Rp 10.000.000</span>
 							</div>
 						</div>
 					</li>
@@ -455,10 +451,11 @@
 			<div style="height: 80px; width: 100%;"></div>
 			<div class="nav-bot center">
 				<a href="order-status.html"><button class="btn">Semula</button></a>
-				<a href="order-status-filtered.html"><button class="btn btn-main"><span>Saring</span><i class="fa fa-filter"></i></button></a>
+				<a href="order-status-filtered.html"><button class="btn btn-main"><span>Saring </span><i class="fa fa-filter"></i></button></a>
 			</div>
 		</div>
 	</section>
+	<div id="shadow"></div>
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/Clamp.js/clamp.min.js"></script>
 	<script src="js/allshop.js"></script>

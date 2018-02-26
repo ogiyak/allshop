@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>allshop - Informasi produk</title>
+	<title> Informasi produk</title>
 	<meta http-equiv="Cache-control" content="no-cache">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<meta charset="UTF-8">
+	<meta charset="ISO-8859-1">
 	<meta name="theme-color" content="#005ecb">
 	<!-- font -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
@@ -120,17 +120,39 @@
 			<div class="list-item bg-main-dark formal-large">
 				<div>
 					<div class="pp">
-						<img src="img/pp.jpg">	
+						<img src="img/persona.png">	
 					</div>
 					<div>
-						<h2>Lilypichu <i class="fa fa-check-circle verified"></i></h2>
+						<h2>Raisa <i class="fa fa-check-circle verified"></i></h2>
 						<span class="green">Saldo Rp 50.000</span>
 					</div>
 				</div>
-				<div>
+				<div class="pulldown-trigger">
 					<div class="icon icon-32">
-						<i class="fa fa-external-link-square"></i>
+						<i class="fa fa-caret-down"></i>
 					</div>
+				</div>
+				<div class="pulldown">
+					<ul class="list column">
+						<li class="list-item item-small">
+							<div>
+								<div><i class="fa fa-credit-card"></i></div>
+								<div>Isi saldo</div>
+							</div>
+						</li>
+						<li class="list-item item-small">
+							<div>
+								<div><i class="fa fa-user"></i></div>
+								<div>Atur akun</div>
+							</div>
+						</li>
+						<li class="list-item item-small">
+							<div>
+								<div><i class="fa fa-power-off"></i></div>
+								<div>Keluar</div>
+							</div>
+						</li>
+					</ul>
 				</div>
 			</div>
 			<ul class="formal list column">
@@ -160,7 +182,7 @@
 						<div><div class="icon icon-24 icon-notif"><span>3</span></div></div>
 					</li>
 				</a>
-				<a href="">
+				<a href="subscribed-shop.html">
 					<li class="list-item item-small">
 						<div>
 							<div>
@@ -186,9 +208,6 @@
 							</div>
 							<div>
 								<p>Beranda</p>
-								<div>
-									<span class="promo">HUTRI | 17%</span><span class="promo">KARTINI | 10%</span>
-								</div>
 							</div>
 						</div>
 					</li>
@@ -296,14 +315,14 @@
 						</div>
 					</li>
 				</a>
-				<a href="help.html">
+				<a href="about.html">
 					<li class="list-item item-small">
 						<div>
 							<div>
 								<i class="fa fa-info-circle main-dark"></i>
 							</div>
 							<div>
-								<p>Tentang <span style="font-family: 'Poiret One', cursive; font-weight: bolder;">allshop</span></p>
+								<p>Tentang allshop</p>
 							</div>
 						</div>
 					</li>
@@ -539,17 +558,12 @@
 			</div>
 			<ul class="detail">
 				<li>
-					<img src="img/toko.jpg">
+					<img src="img/toko.jpg" onclick="popOpen(this)" id="popopenshop">
 					<div class="sspan center customer-review">
 						<div>
 							<i class="fa fa-photo"></i>
 							<span class="vanish">Foto</span>
-							<span>5</span>
-						</div>
-						<div>
-							<i class="fa fa-youtube-play"></i>
-							<span class="vanish">Video</span>
-							<span>1</span>
+							<span>4</span>
 						</div>
 					</div>
 				</li>
@@ -1181,6 +1195,37 @@
 				</ul>
 			</li>
 		</ul>
+		<!-- toko -->
+		<ul class="popup pop-full" id="popshop">
+			<li class="btn btn-top reverse-row" onclick="popClose()">
+				<div class="sspan center">
+					<span>4</span>
+					<i class="fa fa-photo"></i>
+					<span>Gambar</span>
+				</div>
+				<span class="icon icon-48">
+					<i class="fa fa-arrow-left"></i>
+				</span>
+			</li>
+			<li>
+				<ul class="content-img">
+					<li>
+						<img src="img/tokoapple.jpg">	
+					</li>
+					<li>
+						<img src="img/tokoapple2.jpg">	
+					</li>
+					<li>
+						<img src="img/tokoapple3.jpg">	
+						<p>Foto terverifikasi</p>
+					</li>
+					<li>
+						<img src="img/tokoapple4.jpg">
+						<p>Foto terverifikasi</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
 		<!-- compare -->
 		<ul class="popup pop-full" id="popcompare">
 			<li class="btn btn-top reverse-row" onclick="popClose()">
@@ -1390,7 +1435,7 @@
 				</span>
 			</li>
 			<li class="chats">
-				<div class="list-item">
+				<div class="list-item formal-column">
 					<div>
 						<div class="pp">
 							<img src="img/toko.jpg">
@@ -1403,11 +1448,11 @@
 					<div></div>
 				</div>
 				<div class="chat-dialog">
-					<p class="sspan center">Belum ada pesan.</p>
+					<p class="inactive">Belum ada pesan.</p>
 				</div>
 				<div class="chat-input">
 					<input type="text" name="user_msg" placeholder="Tuliskan pesan..." autofocus="true">
-					<div class="icon icon-48 bg-main">
+					<div class="icon icon-48 bg-main" id="sendchat">
 						<i class="fa fa-angle-right"></i>
 					</div>
 				</div>
@@ -1418,5 +1463,19 @@
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/Clamp.js/clamp.min.js"></script>
 	<script src="js/allshop.js"></script>
+	<script type="text/javascript">
+		// just for demonstration
+		$('#sendchat').click(function(){
+			if($(this).parent().prev().find('p').hasClass('inactive')){
+				$(this).parent().prev().find('p').html($(this).prev().val());
+				$(this).parent().prev().find('p').removeClass('inactive');
+				$(this).parent().prev().find('p').addClass('ani-slide-up');
+				$(this).prev().val('');
+			}else if($(this).prev().val()){
+				$(this).parent().prev().append("<p class='ani-slide-up'>" + $(this).prev().val() + "</p>");
+				$(this).prev().val('');
+			}
+		})
+	</script>
 </body>
 </html>

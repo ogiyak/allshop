@@ -86,6 +86,7 @@ function popOpen(e){
 	var popcourier = document.getElementById('popcourier');
 	var popshoper = document.getElementById('popshoper');
 	var popchat = document.getElementById('popchat');
+	var popshop = document.getElementById('popshop');
 
 	$('.popup-wrapper').css({
 		'visibility' : 'visible',
@@ -107,6 +108,8 @@ function popOpen(e){
 		popshoper.style.display = 'flex';
 	}else if(e.id == 'popopenchat'){
 		popchat.style.display = 'flex';
+	}else if(e.id == 'popopenshop'){
+		popshop.style.display = 'flex';
 	}
 
 	// disabling background to scroll 
@@ -282,13 +285,13 @@ $('.pulldown-trigger').click(function(){
 	if($(this).next().css('display') == 'none'){
 		$(this).next().css('display', 'flex');
 
-		$(this).html("<i class='fa fa-angle-up'></i>");
+		$(this).html("<i class='fa fa-caret-up'></i>");
 		$(this).prev().find('.sspan').removeClass('ani-fade');
 	}else{
 		$(this).next().css('display', 'none');
 
 		// visual and animation
-		$(this).html("<i class='fa fa-angle-down'></i>");
+		$(this).html("<i class='fa fa-caret-down'></i>");
 		$(this).prev().find('.sspan').addClass('ani-fade');
 
 		// value update
