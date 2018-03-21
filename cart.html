@@ -7,10 +7,10 @@
 	<meta charset="ISO-8859-1">
 	<meta name="theme-color" content="#005ecb">
 	<!-- font -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 	<!-- style -->
-	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link href="fontawesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"></link>
 	<link rel="stylesheet" type="text/css" href="css/allshop.css">
 	<!-- icon in the highest resolution we need it for -->
 	<link rel="icon" sizes="192x192" href="img/icon.png">
@@ -27,12 +27,42 @@
 		</div>
 		<ul class="wrapper">
 			<li class="btn btn-top">
+				<div>Total</div>
+				<span class="dropdown icon icon-48">
+					<div>
+						<i class="fa fa-question-circle-o"></i>
+					</div>
+					<div class="dropdown-content">
+						<span>Total = Pesanan + Jasa kirim</span>
+					</div>
+				</span>
+			</li>
+			<li class="list-item item-large bordered">
+				<div>
+					<div>
+						<img src="img/shoppingbag.svg" style="width: 50px">
+					</div>
+					<!-- Icon made by https://www.flaticon.com/authors/darius-dan from www.flaticon.com  -->
+					<div>
+						<div class="sspan">
+							<span>Rp 17.910.000</span>
+							<span>+</span>
+							<span>Rp 50.000</span>
+						</div>
+						<h2 class="green-dark big">Rp 17.960.000</h2>
+					</div>
+				</div>
+				<div></div>
+			</li>
+		</ul>
+		<ul class="wrapper">
+			<li class="btn btn-top">
 				<span>Daftar Pesanan</span>
 				<span>4 buah</span>
 			</li>
 			<li class="list-item bordered">
 				<div>
-					<img src="img/iphonered.jpg">
+					<img src="img/iphone7red.jpg">
 					<div>
 						<h4>iPhone 7 32 GB - Red</h4>
 						<div class="price">
@@ -159,10 +189,27 @@
 					</div>
 				</div>
 			</li>
-			<li class="list-item bordered">
+			<a href="index.html">
+				<li class="list-item item-medium bg-white text-only">
+					<div>
+						<div>
+							<img src="img/addmore.jpg">
+						</div>
+						<div class="formal">
+							<p>Tambah produk</p>
+						</div>
+					</div>
+					<div>
+						<div class="icon icon-48">
+							<i class="fa fa-plus"></i>
+						</div>
+					</div>
+				</li>
+			</a>
+			<li class="list-item item-medium bordered">
 				<div>
 					<span class="center">Promo</span>
-					<div class="list row">
+					<div>
 						<span class="low small">Tidak ada promo yg diterapkan.</span>
 					</div>
 				</div> 
@@ -185,15 +232,34 @@
 							<option value="volvo">Normal</option>
 							<option value="saab">Kilat</option>
 						</select>
-						<span class="formal-column">Rp 50.000</span>
+						<span class="formal-column green-dark"><b>Rp 50.000</b></span>
 					</div>
 				</div>
 				<div class="btn btn-top">
+					<span>Alamat asal</span>
+						<span class="dropdown icon icon-48">
+						<div>
+							<i class="fa fa-question-circle-o"></i>
+						</div>
+						<div class="dropdown-content">
+							<span>Barang dikirim langsung dari Penjual ini.</span>
+						</div>
+					</span>
+				</div>
+				<div class="address bg-transparent">
+					<h4>Toko Wijaya <i class="fa fa-check-circle verified"></i></h4>
+					<p>Jalan Magelang km 10</p>
+					<p>Kec. Sinduadi</p>
+					<p>Kab. Sleman</p>
+					<p>D.I. Yogyakarta, 55284</p>
+					<p>Telp. (0274) 5304427</p>
+				</div>
+				<div class="btn btn-top">
 					<span>Alamat tujuan</span>
-					<span class="icon icon-32"><i class="fa fa-edit"></i></span>
+					<span class="icon icon-48"><i class="fa fa-edit"></i></span>
 				</div>
 				<div class="address">
-					<h4>Raisa Hamis</h4>
+					<h4>Raisa Hamis <i class="fa fa-check-circle verified"></i></h4>
 					<p>Jalan Letkol Subadri RT/RW 05/06</p>
 					<p>Kec. Mlati</p>
 					<p>Kab. Sleman</p>
@@ -204,32 +270,8 @@
 		</ul>
 		<ul class="wrapper">
 			<li class="btn btn-top">
-				<div>Total</div>
-				<span class="dropdown icon icon-32">
-					<div>
-						<i class="fa fa-question-circle-o"></i>
-					</div>
-					<div class="dropdown-content">
-						<span>Total = Pesanan + Jasa kirim</span>
-					</div>
-				</span>
-			</li>
-			<li class="list-item item-medium bordered">
-				<div>
-					<img src="img/shoppingbag.svg" class="square-48">
-					<!-- Icon made by https://www.flaticon.com/authors/darius-dan from www.flaticon.com  -->
-					<div>
-						<div class="sspan">Rp 17.910.000 + Rp 50.000</div>
-						<h2 class="green-dark">Rp 17.960.000</h2>
-					</div>
-				</div>
-				<div></div>
-			</li>
-		</ul>
-		<ul class="wrapper">
-			<li class="btn btn-top">
 				<span>Kode Promo</span>
-				<span class="dropdown icon icon-32">
+				<span class="dropdown icon icon-48">
 					<div>
 						<i class="fa fa-question-circle-o"></i>
 					</div>

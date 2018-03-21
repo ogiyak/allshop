@@ -7,10 +7,10 @@
 	<meta charset="ISO-8859-1">
 	<meta name="theme-color" content="#005ecb">
 	<!-- font -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 	<!-- style -->
-	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link href="fontawesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"></link>
 	<link rel="stylesheet" type="text/css" href="css/allshop.css">
 	<!-- icon in the highest resolution we need it for -->
 	<link rel="icon" sizes="192x192" href="img/icon.png">
@@ -24,13 +24,15 @@
 	<nav>
 		<ul class="navigation">
 			<li class="icon icon-48" onclick="sidenavOpen()">
-				<i class="fa fa-bars"></i>
-				<span id="notif-indicator" class="active"><b>13</b></span>
+				<div class="pp pp-medium">
+					<img src="img/persona.jpg">	
+				</div>
+				<span id="notif-indicator" class="active"><b>17</b></span>
 			</li>
 			<!-- search -->
 			<li id="searchwrap">
 				<form action="search-result.html">
-					<button type="button" onclick="searchClose()"><i class="fa fa-arrow-left"></i></button>
+					<button type="button" onclick="searchClose()"><i class="fa fa-long-arrow-left"></i></button>
 					<input type="search" placeholder="Temukan di allshop..." onclick="searchOpen()">
 					<button type="submit"><i class="fa fa-search"></i></button>
 				</form>
@@ -62,15 +64,13 @@
 						</li>
 					</ul>
 					<ul id="searchHis">
-						<div class="btn btn-top">
-							<span>Dicari sebelumnya</span>
-							<i class="fa fa-close"></i>
-						</div>
 						<div class="formal-column list column">
-							<a href="search-result.html"><li>Jaket hitam</li>
+							<a href="search-result.html" ><li style="display: flex; justify-content: space-between;"><span>jaket hitam</span><span><i class="fa fa-close"></i></span></li>
 							</a>
-							<a href="search-result.html"><li>Jam tangan rolex</li></a>
-							<a href="search-result.html"><li>Sepatu sport</li></a>
+							<a href="search-result.html" ><li style="display: flex; justify-content: space-between;"><span>tas santai</span><span><i class="fa fa-close"></i></span></li>
+							</a>
+							<a href="search-result.html" ><li style="display: flex; justify-content: space-between;"><span>sepatu adidas</span><span><i class="fa fa-close"></i></span></li>
+							</a>
 						</div>
 					</ul>
 					<ul id="searchSug" class="formal-column list column">
@@ -99,8 +99,8 @@
 				</a>
 			</li>
 		</ul>
-		
 		<ul class="category">
+			<a href="index.html"><li><i class="fa fa-home"></i></li></a>
 			<a href="category.html"><li>Elektronik</li></a>
 			<a href="category.html"><li>Perkakas</li></a>
 			<a href="category.html"><li>Pria</li></a>
@@ -119,12 +119,13 @@
 		<div>
 			<div class="list-item bg-main-dark formal-large">
 				<div>
-					<div class="pp">
+					<div class="pp pp-extra">
 						<img src="img/persona.jpg">	
 					</div>
 					<div>
-						<h2>Raisa <i class="fa fa-check-circle verified"></i></h2>
-						<span class="green">Saldo Rp 50.000</span>
+						<h2>Raisa Hamis <i class="fa fa-check-circle verified"></i></h2>
+						<span class="green small">Saldo <b>Rp 50.000</b></span>
+						<span class="green small">Poin <b>900</b></span>
 					</div>
 				</div>
 				<div class="pulldown-trigger">
@@ -156,6 +157,19 @@
 				</div>
 			</div>
 			<ul class="formal list column">
+				<a href="notification.html">
+					<li class="list-item item-small">
+						<div>
+							<div>
+								<i class="fa fa-bell main-dark"></i>
+							</div>
+							<div>
+								<p>Notifikasi</p>
+							</div>
+						</div>
+						<div><div class="icon icon-24 icon-notif"><span>4</span></div></div>
+					</li>
+				</a>
 				<a href="order-status.html">
 					<li class="list-item item-small">
 						<div>
@@ -167,19 +181,6 @@
 							</div>
 						</div>
 						<div><div class="icon icon-24 icon-notif"><span>1</span></div></div>
-					</li>
-				</a>
-				<a href="notification.html">
-					<li class="list-item item-small">
-						<div>
-							<div>
-								<i class="fa fa-bell main-dark"></i>
-							</div>
-							<div>
-								<p>Notifikasi</p>
-							</div>
-						</div>
-						<div><div class="icon icon-24 icon-notif"><span>3</span></div></div>
 					</li>
 				</a>
 				<a href="subscribed-shop.html">
@@ -195,24 +196,22 @@
 						<div><div class="icon icon-24 icon-notif"><span>9</span></div></div>
 					</li>
 				</a>
-			</ul>
-		</div>
-		<hr>
-		<div>
-			<ul class="list column">
-				<a href="index.html">
+				<a href="whislist.html">
 					<li class="list-item item-small">
 						<div>
 							<div>
-								<i class="fa fa-home main-dark"></i>
+								<i class="fa fa-heart main-dark"></i>
 							</div>
 							<div>
-								<p>Beranda</p>
+								<p>Whislist</p>
 							</div>
 						</div>
+						<div><div class="icon icon-24 icon-notif"><span>3</span></div></div>
 					</li>
 				</a>
 			</ul>
+		</div>
+		<div>
 			<ul class="formal category">
 				<a href="category.html">
 					<li class="list-item item-small">
@@ -278,7 +277,7 @@
 					<li class="list-item item-small">
 						<div>
 							<div>
-								<i class="fa fa-shower main-dark"></i>
+								<i class="fa fa-bed main-dark"></i>
 							</div>
 							<div>
 								<p>Mebel</p>
@@ -300,7 +299,6 @@
 				</a>
 			</ul>
 		</div>
-		<hr>
 		<div>
 			<ul class="formal list column">
 				<a href="help.html">
@@ -322,7 +320,7 @@
 								<i class="fa fa-info-circle main-dark"></i>
 							</div>
 							<div>
-								<p>Tentang allshop</p>
+								<p>Tentang <span style="font-family: 'Poiret One', cursive; font-weight: bolder;">allshop</span></p>
 							</div>
 						</div>
 					</li>
@@ -342,26 +340,26 @@
 				<ul class="wrapper detail">
 					<li>
 						<img src="img/iphone7red.jpg" height="144px" onclick="popOpen(this)" id="popopenimg">
-						<div class="sspan center customer-review">
+						<div class="sspan center customer-stat">
 							<span>
-								<i class="fa fa-photo"></i>
-								<span class="vanish">Foto</span>
 								<span>6</span>
+								<i class="fa fa-image"></i>
+								<span class="vanish">Foto</span>
 							</span>
 							<span>
+								<span>1</span>
 								<i class="fa fa-youtube-play"></i>
 								<span class="vanish">Video</span>
-								<span>1</span>
 							</span>
 							<span>
+								<span>77</span>
 								<i class="fa fa-eye"></i>
 								<span class="vanish">Dilihat</span>
-								<span>77</span>
 							</span>
 							<span>
-								<i class="fa fa-tag"></i>
-								<span class="vanish">Dibeli</span>
 								<span>99</span>
+								<i class="fa fa-cart-arrow-down"></i>
+								<span class="vanish">Dibeli</span>
 							</span>
 						</div>
 					</li>
@@ -386,8 +384,8 @@
 									<div class="main-rate">
 										<span>4,5 <i class="fa fa-star"></i></span>
 									</div>
-									<span><b>777</b> Rating</span>
-									<span><b>999</b> Ulasan</span>
+									<span><b>777</b> <i class="fa fa-star-o"></i></span>
+									<span><b>999</b> <i class="fa fa-comments-o"></i></span>
 								</div>
 								<div class="sspan">
 									<span><b>999</b> Stok Update 2 hari yg lalu
@@ -395,7 +393,7 @@
 								</div>
 								<div class="sspan">
 									<span>
-										<i class="fa fa-truck fa-flip-horizontal"></i> Gratis kirim ke <b>Sleman</b> <i class="fa fa-edit"></i>
+										<i class="fa fa-truck fa-flip-horizontal"></i> Gratis kirim ke <b>Sleman</b>
 									</span>
 								</div>
 								<div class="formal-row">
@@ -403,7 +401,7 @@
 										<span>Tambah</span>
 										<i class="fa fa-cart-plus"></i>
 									</button>
-									<a href="cart.html" class="btn btn-main">Beli</a>
+									<a href="cart.html"><button class="btn btn-main">Beli</button></a>
 								</div>
 							</li>
 						</ul>
@@ -558,11 +556,12 @@
 					<ul class="detail">
 						<li>
 							<img src="img/toko.jpg">
-							<div class="sspan center">
-								<i class="fa fa-photo"></i>
-								<span>19</span>
-								<i class="fa fa-youtube-play"></i>
-								<span>11</span>
+							<div class="sspan center customer-stat">
+								<div>
+									<span>4</span>
+									<i class="fa fa-photo"></i>
+									<span class="vanish">Foto</span>
+								</div>
 							</div>
 						</li>
 						<li>
@@ -576,8 +575,8 @@
 										<div class="main-rate">
 											<span>4,5 <i class="fa fa-star"></i></span>
 										</div>
-										<span><b>777</b> Rating</span>
-										<span><b>999</b> Ulasan</span>
+										<span><b>777</b> <i class="fa fa-star-o"></i></span>
+										<span><b>999</b> <i class="fa fa-comments-o"></i></span>
 									</div>
 									<div class="sspan">
 										<i class="fa fa-map-marker"></i>
@@ -603,7 +602,7 @@
 									<span>99</span>
 								</li>
 								<li>
-									<i class="fa fa-tags"></i>
+									<i class="fa fa-cart-arrow-downs"></i>
 									<span>Total Produk</span>
 									<span>999</span>
 								</li>
@@ -632,15 +631,13 @@
 											<i class="stars fa fa-star"></i>
 											<i class="stars fa fa-star"></i>
 											<i class="stars fa fa-star"></i>
-											<i class="stars fa fa-star-half-empty"></i>
+											<i class="stars fa fa-star-o"></i>
 										</li>
 										<li>
-											<i class="fa fa-user-o"></i>
-											<span>999 Rating</span>
+											<span><b>999</b> Rating</span>
 										</li>
 										<li>
-											<i class="fa fa-comments-o"></i>
-											<span>999 Ulasan</span>
+											<span><b>999</b> Ulasan</span>
 										</li>
 									</ul>
 								</li>
@@ -650,35 +647,35 @@
 											<ul>
 												<li>5</li>
 												<li><i class="stars fa fa-star"></i></li>
-												<li class="bar"><div class="bar-5"></div></li>
+												<li class="bar"><div class="bar-4 bg-green"></div></li>
 											</ul>
 										</li>
 										<li>
 											<ul>
 												<li>4</li>
 												<li><i class="stars fa fa-star"></i></li>
-												<li class="bar"><div class="bar-4"></div></li>
+												<li class="bar"><div class="bar-4 bg-green-light"></div></li>
 											</ul>
 										</li>
 										<li>
 											<ul>
 												<li>3</li>
 												<li><i class="stars fa fa-star"></i></li>
-												<li class="bar"><div class="bar-3"></div></li>
+												<li class="bar"><div class="bar-3 bg-yellow"></div></li>
 											</ul>
 										</li>
 										<li>
 											<ul>
 												<li>2</li>
 												<li><i class="stars fa fa-star"></i></li>
-												<li class="bar"><div class="bar-2"></div></li>
+												<li class="bar"><div class="bar-2 bg-orange"></div></li>
 											</ul>
 										</li>
 										<li>
 											<ul>
 												<li>1</li>
 												<li><i class="stars fa fa-star"></i></li>
-												<li class="bar"><div class="bar-1"></div></li>
+												<li class="bar"><div class="bar-1 bg-red"></div></li>
 											</ul>
 										</li>
 									</ul>
@@ -708,12 +705,10 @@
 											<i class="stars fa fa-star-half-empty"></i>
 										</li>
 										<li>
-											<i class="fa fa-user-o"></i>
-											<span>999 Rating</span>
+											<span><b>999</b> Rating</span>
 										</li>
 										<li>
-											<i class="fa fa-comments-o"></i>
-											<span>999 Ulasan</span>
+											<span><b>999</b> Ulasan</span>
 										</li>
 									</ul>
 								</li>
@@ -723,35 +718,35 @@
 											<ul>
 												<li>5</li>
 												<li><i class="stars fa fa-star"></i></li>
-												<li class="bar"><div class="bar-5"></div></li>
+												<li class="bar"><div class="bar-5 bg-green"></div></li>
 											</ul>
 										</li>
 										<li>
 											<ul>
 												<li>4</li>
 												<li><i class="stars fa fa-star"></i></li>
-												<li class="bar"><div class="bar-4"></div></li>
+												<li class="bar"><div class="bar-4 bg-green-light"></div></li>
 											</ul>
 										</li>
 										<li>
 											<ul>
 												<li>3</li>
 												<li><i class="stars fa fa-star"></i></li>
-												<li class="bar"><div class="bar-3"></div></li>
+												<li class="bar"><div class="bar-3 bg-yellow"></div></li>
 											</ul>
 										</li>
 										<li>
 											<ul>
 												<li>2</li>
 												<li><i class="stars fa fa-star"></i></li>
-												<li class="bar"><div class="bar-2"></div></li>
+												<li class="bar"><div class="bar-2 bg-orange"></div></li>
 											</ul>
 										</li>
 										<li>
 											<ul>
 												<li>1</li>
 												<li><i class="stars fa fa-star"></i></li>
-												<li class="bar"><div class="bar-1"></div></li>
+												<li class="bar"><div class="bar-1 bg-red"></div></li>
 											</ul>
 										</li>
 									</ul>
@@ -766,26 +761,26 @@
 				<ul class="wrapper detail">
 					<li>
 						<img src="img/xiaomi6.jpg" height="144px" onclick="popOpen(this)" id="popopenimg">
-						<div class="sspan center customer-review">
+						<div class="sspan center customer-stat">
 							<span>
-								<i class="fa fa-photo"></i>
-								<span class="vanish">Foto</span>
 								<span>6</span>
+								<i class="fa fa-image"></i>
+								<span class="vanish">Foto</span>
 							</span>
 							<span>
+								<span>1</span>
 								<i class="fa fa-youtube-play"></i>
 								<span class="vanish">Video</span>
-								<span>1</span>
 							</span>
 							<span>
+								<span>55</span>
 								<i class="fa fa-eye"></i>
 								<span class="vanish">Dilihat</span>
-								<span>55</span>
 							</span>
 							<span>
-								<i class="fa fa-tag"></i>
-								<span class="vanish">Dibeli</span>
 								<span>77</span>
+								<i class="fa fa-cart-arrow-down"></i>
+								<span class="vanish">Dibeli</span>
 							</span>
 						</div>
 					</li>
@@ -810,8 +805,8 @@
 									<div class="main-rate">
 										<span>4,5 <i class="fa fa-star"></i></span>
 									</div>
-									<span><b>777</b> Rating</span>
-									<span><b>999</b> Ulasan</span>
+									<span><b>777</b> <i class="fa fa-star-o"></i></span>
+									<span><b>999</b> <i class="fa fa-comments-o"></i></span>
 								</div>
 								<div class="sspan">
 									<span><b>999</b> Stok Update 7 hari yg lalu
@@ -819,7 +814,7 @@
 								</div>
 								<div class="sspan">
 									<span>
-										<i class="fa fa-truck fa-flip-horizontal"></i> Gratis kirim ke <b>Sleman</b> <i class="fa fa-edit"></i>
+										<i class="fa fa-truck fa-flip-horizontal"></i> Gratis kirim ke <b>Sleman</b>
 									</span>
 								</div>
 								<div class="formal-row">
@@ -827,7 +822,7 @@
 										<span>Tambah</span>
 										<i class="fa fa-cart-plus"></i>
 									</button>
-									<a href="cart.html" class="btn btn-main">Beli</a>
+									<a href="cart.html"><button class="btn btn-main">Beli</button></a>
 								</div>
 							</li>
 						</ul>
@@ -982,11 +977,12 @@
 					<ul class="detail">
 						<li>
 							<img src="img/toko2.jpg">
-							<div class="sspan center">
-								<i class="fa fa-photo"></i>
-								<span>19</span>
-								<i class="fa fa-youtube-play"></i>
-								<span>11</span>
+							<div class="sspan center customer-stat">
+								<div>
+									<i class="fa fa-photo"></i>
+									<span class="vanish">Foto</span>
+									<span>4</span>
+								</div>
 							</div>
 						</li>
 						<li>
@@ -1000,12 +996,12 @@
 										<div class="main-rate">
 											<span>4,5 <i class="fa fa-star"></i></span>
 										</div>
-										<span><b>777</b> Rating</span>
-										<span><b>999</b> Ulasan</span>
+										<span><b>777</b> <i class="fa fa-star-o"></i></span>
+										<span><b>999</b> <i class="fa fa-comments-o"></i></span>
 									</div>
 									<div class="sspan">
 										<i class="fa fa-map-marker"></i>
-										<span>Jakarta Pusat, Menteng 10230</span>
+										<span>Jakarta, Menteng 10230</span>
 									</div>
 									<div class="formal-row">
 										<button class="btn btn-main-outer" id="subscribe2">1,5k Pelanggan</button>
@@ -1027,7 +1023,7 @@
 									<span>500</span>
 								</li>
 								<li>
-									<i class="fa fa-tags"></i>
+									<i class="fa fa-cart-arrow-downs"></i>
 									<span>Total Produk</span>
 									<span>1k</span>
 								</li>
@@ -1054,16 +1050,14 @@
 											<i class="stars fa fa-star"></i>
 											<i class="stars fa fa-star"></i>
 											<i class="stars fa fa-star"></i>
-											<i class="stars fa fa-star"></i>
-											<i class="stars fa fa-star-half-empty"></i>
+											<i class="stars fa fa-star-o"></i>
+											<i class="stars fa fa-star-o"></i>
 										</li>
 										<li>
-											<i class="fa fa-user-o"></i>
-											<span>999 Rating</span>
+											<span><b>999</b> Rating</span>
 										</li>
 										<li>
-											<i class="fa fa-comments-o"></i>
-											<span>999 Ulasan</span>
+											<span><b>999</b> Ulasan</span>
 										</li>
 									</ul>
 								</li>
@@ -1073,35 +1067,35 @@
 											<ul>
 												<li>5</li>
 												<li><i class="stars fa fa-star"></i></li>
-												<li class="bar"><div class="bar-5"></div></li>
+												<li class="bar"><div class="bar-3 bg-green"></div></li>
 											</ul>
 										</li>
 										<li>
 											<ul>
 												<li>4</li>
 												<li><i class="stars fa fa-star"></i></li>
-												<li class="bar"><div class="bar-4"></div></li>
+												<li class="bar"><div class="bar-3 bg-green-light"></div></li>
 											</ul>
 										</li>
 										<li>
 											<ul>
 												<li>3</li>
 												<li><i class="stars fa fa-star"></i></li>
-												<li class="bar"><div class="bar-3"></div></li>
+												<li class="bar"><div class="bar-3 bg-yellow"></div></li>
 											</ul>
 										</li>
 										<li>
 											<ul>
 												<li>2</li>
 												<li><i class="stars fa fa-star"></i></li>
-												<li class="bar"><div class="bar-2"></div></li>
+												<li class="bar"><div class="bar-2 bg-orange"></div></li>
 											</ul>
 										</li>
 										<li>
 											<ul>
 												<li>1</li>
 												<li><i class="stars fa fa-star"></i></li>
-												<li class="bar"><div class="bar-1"></div></li>
+												<li class="bar"><div class="bar-1 bg-red"></div></li>
 											</ul>
 										</li>
 									</ul>
@@ -1128,15 +1122,13 @@
 											<i class="stars fa fa-star"></i>
 											<i class="stars fa fa-star"></i>
 											<i class="stars fa fa-star"></i>
-											<i class="stars fa fa-star-half-empty"></i>
+											<i class="stars fa fa-star"></i>
 										</li>
 										<li>
-											<i class="fa fa-user-o"></i>
-											<span>999 Rating</span>
+											<span><b>999</b> Rating</span>
 										</li>
 										<li>
-											<i class="fa fa-comments-o"></i>
-											<span>999 Ulasan</span>
+											<span><b>999</b> Ulasan</span>
 										</li>
 									</ul>
 								</li>
@@ -1146,35 +1138,35 @@
 											<ul>
 												<li>5</li>
 												<li><i class="stars fa fa-star"></i></li>
-												<li class="bar"><div class="bar-5"></div></li>
+												<li class="bar"><div class="bar-5 bg-green"></div></li>
 											</ul>
 										</li>
 										<li>
 											<ul>
 												<li>4</li>
 												<li><i class="stars fa fa-star"></i></li>
-												<li class="bar"><div class="bar-4"></div></li>
+												<li class="bar"><div class="bar-5 bg-green-light"></div></li>
 											</ul>
 										</li>
 										<li>
 											<ul>
 												<li>3</li>
 												<li><i class="stars fa fa-star"></i></li>
-												<li class="bar"><div class="bar-3"></div></li>
+												<li class="bar"><div class="bar-1 bg-yellow"></div></li>
 											</ul>
 										</li>
 										<li>
 											<ul>
 												<li>2</li>
 												<li><i class="stars fa fa-star"></i></li>
-												<li class="bar"><div class="bar-2"></div></li>
+												<li class="bar"><div class="bar-1 bg-orange"></div></li>
 											</ul>
 										</li>
 										<li>
 											<ul>
 												<li>1</li>
 												<li><i class="stars fa fa-star"></i></li>
-												<li class="bar"><div class="bar-1"></div></li>
+												<li class="bar"><div class="bar-1 bg-red"></div></li>
 											</ul>
 										</li>
 									</ul>
@@ -1200,16 +1192,31 @@
 					<span>Video</span>
 				</div>
 				<span class="icon icon-48">
-					<i class="fa fa-close"></i>
+					<i class="fa fa-long-arrow-left"></i>
 				</span>
 			</li>
 			<li>
 				<ul class="content-img">
 					<li>
-						<img src="img/iphone1.jpg">	
+						<img src="img/iphone7red.jpg">
 					</li>
 					<li>
 						<img src="img/iphone2.jpg">	
+					</li>
+					<!-- photo from reviewer -->
+					<li>
+						<img src="img/iphone7red-handson3.jpg">
+						<div class="caption">
+							<p>Foto review oleh <b>Disguisedtoast</b>.</p>
+							<p>Diambil pada 17 November 2015</p>
+						</div>
+					</li>
+					<li>
+						<img src="img/iphone7red-handson.jpg">
+						<div class="caption">
+							<p>Foto review oleh <b>Lilypichu</b>.</p>
+							<p>Diambil pada 1 November 2015</p>
+						</div>	
 					</li>
 					<li>
 						<img src="img/iphone3.jpg">	
@@ -1217,24 +1224,14 @@
 					<li>
 						<img src="img/iphone4.jpg">	
 					</li>
-					<li>
-						<img src="img/iphone5.jpg">	
-					</li>
-					<li>
-						<img src="img/iphone6.png">	
-					</li>
-					<li>
-						<video controls>
-							<source src="img/iphonevid.mp4" type="video/mp4">
-						</video>
-					</li>
-				</ul>
-			</li>
-		</ul>
-	</section>
-	<div id="shadow"></div>
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/Clamp.js/clamp.min.js"></script>
-	<script src="js/allshop.js"></script>
-</body>
-</html>
+					<li style="flex: 0 100%"><video controls poster="img/iphoneposter.png"><source src="img/iphonevid.mp4" type="video/mp4"></video></li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<div id="shadow"></div>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/Clamp.js/clamp.min.js"></script>
+		<script src="js/allshop.js"></script>
+	</body>
+	</html>

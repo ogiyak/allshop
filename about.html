@@ -7,10 +7,10 @@
 	<meta charset="ISO-8859-1">
 	<meta name="theme-color" content="#fff">
 	<!-- font -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 	<!-- style -->
-	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link href="fontawesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"></link>
 	<link rel="stylesheet" type="text/css" href="css/allshop.css">
 	<!-- icon in the highest resolution we need it for -->
 	<link rel="icon" sizes="192x192" href="img/icon.png">
@@ -25,6 +25,7 @@
 			left: 50%;
 			-webkit-transform: translate(-50%, -50%);
 			transform: translate(-50%, -50%);
+			width: 90vw;
 		}
 		#about-bg{
 			position: absolute;
@@ -32,7 +33,7 @@
 			left: 0;
 			width: 100vw;
 			height: 100vh;
-			background: linear-gradient(-45deg, var(--white) 30%, var(--red-light) 100%, var(--red) 100%);
+			background: linear-gradient(-45deg, var(--red-light) 30%, var(--main-light) 100%, var(--main) 100%);
 			opacity: .5;
 		}
 		#about-pp{
@@ -42,8 +43,7 @@
 		.wrapper{
 			border-radius: 8px;
 			box-shadow: none;
-			opacity: .9;
-			background-color: rgba(255,255,255,.5);
+			background-color: rgba(255,255,255,.3);
 		}
 	</style>
 </head>
@@ -62,7 +62,7 @@
 			<p class="formal center ani-slide-up" style="font-size : 14px;line-height: 16px; animation-delay: .1s; animation-duration: 1s; color: var(--black-ligth)"><span style="font-family: 'Poiret One', cursive; font-weight: bold;">allshop</span> adalah prototipe <i>user interface</i> web e-commerce tipe <i>business-to-consumer</i> (B2C) yang dikembangkan oleh <a href="https://ogiyak.github.io/">Ogi Yak</a> pada 2016 - 2018 menggunakan Adobe XD Beta, HTML 5, CSS, JavaScript, serta Jquery berbasis <i>user-centered-design</i> (UCD) dan <i>agile-development-software</i> (ADS).</p>
 			<div class="list-item formal ani-zoom-out" id="about-pp">
 				<div>
-					<div class="pp">
+					<div class="pp pp-large">
 						<img src="img/ogiyak.jpg">	
 					</div>
 					<div>

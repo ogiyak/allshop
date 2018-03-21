@@ -7,10 +7,10 @@
 	<meta charset="ISO-8859-1">
 	<meta name="theme-color" content="#005ecb">
 	<!-- font -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 	<!-- style -->
-	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link href="fontawesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"></link>
 	<link rel="stylesheet" type="text/css" href="css/allshop.css">
 	<!-- icon in the highest resolution we need it for -->
 	<link rel="icon" sizes="192x192" href="img/icon.png">
@@ -26,12 +26,12 @@
 			<a href="product.html"><i class="fa fa-close"></i></a>
 		</div>
 		<div class="wrapper wrapper-transparent">
-			<div class="timeline">
+			<div class="timeline timeline-small">
 				<div>
 					<div class="active">Cara bayar</div>
 					<div class="tl" id="stat1">
 						<div class="hidden"></div>
-						<div class="bg-green"></div>
+						<div class="bg-main"></div>
 						<div></div>
 					</div>
 				</div>
@@ -65,7 +65,7 @@
 		</div>
 		<ul class="wrapper">
 			<header>Transfer Bank</header>
-			<li class="list-item bordered" onclick="itemSelected(this)">
+			<li class="list-item bordered" onclick="itemSelect(this)">
 				<div>
 					<img src="img/bni.png">
 					<div>
@@ -76,7 +76,7 @@
 					<i class="fa fa-check"></i>
 				</div>
 			</li>
-			<li class="list-item bordered" onclick="itemSelected(this)">
+			<li class="list-item bordered" onclick="itemSelect(this)">
 				<div>
 					<img src="img/bri.png">
 					<div>
@@ -87,7 +87,7 @@
 					<i class="fa fa-check"></i>
 				</div>
 			</li>
-			<li class="list-item bordered" onclick="itemSelected(this)">
+			<li class="list-item bordered" onclick="itemSelect(this)">
 				<div>
 					<img src="img/bca.png">
 					<div>
@@ -98,7 +98,7 @@
 					<i class="fa fa-check"></i>
 				</div>
 			</li>
-			<li class="list-item bordered" onclick="itemSelected(this)">
+			<li class="list-item bordered" onclick="itemSelect(this)">
 				<div>
 					<img src="img/mandiri.png">
 					<div>
@@ -112,7 +112,7 @@
 		</ul>
 		<ul class="wrapper">
 			<header>Gerai Retail</header>
-			<li class="list-item bordered" onclick="itemSelected(this)">
+			<li class="list-item bordered" onclick="itemSelect(this)">
 				<div>
 					<img src="img/Indomaret.png">
 					<div>
@@ -123,7 +123,7 @@
 					<i class="fa fa-check"></i>
 				</div>
 			</li>
-			<li class="list-item bordered" onclick="itemSelected(this)">
+			<li class="list-item bordered" onclick="itemSelect(this)">
 				<div>
 					<img src="img/alfamart.png">
 					<div>
@@ -134,7 +134,7 @@
 					<i class="fa fa-check"></i>
 				</div>
 			</li>
-			<li class="list-item bordered" onclick="itemSelected(this)">
+			<li class="list-item bordered" onclick="itemSelect(this)">
 				<div>
 					<img src="img/pos.png">
 					<div>
@@ -156,7 +156,7 @@
 	<script src="js/Clamp.js/clamp.min.js"></script>
 	<script src="js/allshop.js"></script>
 	<script type="text/javascript">
-		function itemSelected(e){
+		function itemSelect(e){
 			$(".list-item").css("background-color", "#fff");
 			$(".list-item .sign").css("visibility", "hidden");
 			$('.nav-bot').find('button.inactive').removeClass('inactive').addClass('btn-main');

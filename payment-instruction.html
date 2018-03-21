@@ -7,10 +7,10 @@
 	<meta charset="ISO-8859-1">
 	<meta name="theme-color" content="#005ecb">
 	<!-- font -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 	<!-- style -->
-	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link href="fontawesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"></link>
 	<link rel="stylesheet" type="text/css" href="css/allshop.css">
 	<!-- icon in the highest resolution we need it for -->
 	<link rel="icon" sizes="192x192" href="img/icon.png">
@@ -26,20 +26,20 @@
 			<a href="product.html"><i class="fa fa-close"></i></a>
 		</div>
 		<div class="wrapper wrapper-transparent">
-			<div class="timeline">
+			<div class="timeline timeline-small">
 				<div>
 					<div>Cara bayar</div>
 					<div class="tl" id="stat1">
 						<div class="hidden"></div>
-						<div class="bg-green"></div>
-						<div class="bg-green"></div>
+						<div class="bg-main"></div>
+						<div class="bg-main"></div>
 					</div>
 				</div>
 				<div>
 					<div class="active">Identitas</div>
 					<div class="tl" id="stat2">
-						<div class="bg-green"></div>
-						<div class="bg-green"></div>
+						<div class="bg-main"></div>
+						<div class="bg-main"></div>
 						<div></div>
 					</div>
 				</div>
@@ -63,19 +63,19 @@
 				</div>
 			</li>
 			<li class="formal-large">
-				<p>Silahkan masukkan Nama dan Nomor rekening sesuai dengan yang tertera pada buku tabungan Anda.</p>
+				<p>Silahkan masukkan Nama dan Nomor Rekening sesuai dengan yang tertera pada buku tabungan Anda.</p>
 			</li>
 			<li>
-				<form action="payment-wait.html" class="form-group full-width">
+				<form action="payment-wait.html" class="form-group full-width" autocomplete="off">
 					<label for="account_name">Nama Pemilik Rekening</label>
-					<input type="text" name="account" id="account_name" placeholder="Cth. Budi Hartanto">
+					<input type="text" name="account" id="account_name" placeholder="Contoh Budi Hartanto">
 					<label for="account_number">Nomor Rekening</label>
-					<input type="number" name="account" id="account_number" placeholder="Cth. 012345678910">
+					<input type="number" name="account" id="account_number" placeholder="Contoh 0123456789" onclick="itemSelect(this)">
 					<div class="nav-bot center">
 						<a href="payment.html">
 							<button type="button" class="btn">Kembali</button>
 						</a>
-						<button type="submit" class="btn btn-main">Bayar</button>
+						<button type="submit" class="btn inactive">Bayar</button>
 					</div>
 				</form>
 			</li>
@@ -85,5 +85,10 @@
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/Clamp.js/clamp.min.js"></script>
 	<script src="js/allshop.js"></script>
+	<script type="text/javascript">
+		function itemSelect(e){
+			$('.nav-bot').find('button.inactive').removeClass('inactive').addClass('btn-main');
+		}
+	</script>
 </body>
 </html>

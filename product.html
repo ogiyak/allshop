@@ -7,10 +7,10 @@
 	<meta charset="ISO-8859-1">
 	<meta name="theme-color" content="#005ecb">
 	<!-- font -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 	<!-- style -->
-	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link href="fontawesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"></link>
 	<link rel="stylesheet" type="text/css" href="css/allshop.css">
 	<!-- icon in the highest resolution we need it for -->
 	<link rel="icon" sizes="192x192" href="img/icon.png">
@@ -24,13 +24,15 @@
 	<nav>
 		<ul class="navigation">
 			<li class="icon icon-48" onclick="sidenavOpen()">
-				<i class="fa fa-bars"></i>
-				<span id="notif-indicator" class="active"><b>13</b></span>
+				<div class="pp pp-medium">
+					<img src="img/persona.jpg">	
+				</div>
+				<span id="notif-indicator" class="active"><b>17</b></span>
 			</li>
 			<!-- search -->
 			<li id="searchwrap">
 				<form action="search-result.html">
-					<button type="button" onclick="searchClose()"><i class="fa fa-arrow-left"></i></button>
+					<button type="button" onclick="searchClose()"><i class="fa fa-long-arrow-left"></i></button>
 					<input type="search" placeholder="Temukan di allshop..." onclick="searchOpen()">
 					<button type="submit"><i class="fa fa-search"></i></button>
 				</form>
@@ -62,15 +64,13 @@
 						</li>
 					</ul>
 					<ul id="searchHis">
-						<div class="btn btn-top">
-							<span>Dicari sebelumnya</span>
-							<i class="fa fa-close"></i>
-						</div>
 						<div class="formal-column list column">
-							<a href="search-result.html"><li>Jaket hitam</li>
+							<a href="search-result.html" ><li style="display: flex; justify-content: space-between;"><span>jaket hitam</span><span><i class="fa fa-close"></i></span></li>
 							</a>
-							<a href="search-result.html"><li>Jam tangan rolex</li></a>
-							<a href="search-result.html"><li>Sepatu sport</li></a>
+							<a href="search-result.html" ><li style="display: flex; justify-content: space-between;"><span>tas santai</span><span><i class="fa fa-close"></i></span></li>
+							</a>
+							<a href="search-result.html" ><li style="display: flex; justify-content: space-between;"><span>sepatu adidas</span><span><i class="fa fa-close"></i></span></li>
+							</a>
 						</div>
 					</ul>
 					<ul id="searchSug" class="formal-column list column">
@@ -98,16 +98,16 @@
 					<span id="cart-indicator">0</span>
 				</a>
 			</li>
-		</ul>
-		
+		</ul>	
 		<ul class="category">
+			<a href="index.html"><li><i class="fa fa-home"></i></li></a>
 			<a href="category.html"><li>Elektronik</li></a>
-			<a href="category.html"><li>Smartphone</li></a>
-			<a href="category.html"><li>Laptop</li></a>
-			<a href="category.html"><li>Gadget</li></a>
-			<a href="category.html"><li>Kamera</li></a>
-			<a href="category.html"><li>Aksesoris</li></a>
-			<a href="category.html"><li>Lainnya</li></a>
+			<a href="category.html"><li>Perkakas</li></a>
+			<a href="category.html"><li>Pria</li></a>
+			<a href="category.html"><li>Wanita</li></a>
+			<a href="category.html"><li>Anak</li></a>
+			<a href="category.html"><li>Mebel</li></a>
+			<a href="category.html"><li>Buku</li></a>
 		</ul>
 	</nav>
 	<!-- sidebar -->
@@ -119,12 +119,13 @@
 		<div>
 			<div class="list-item bg-main-dark formal-large">
 				<div>
-					<div class="pp">
+					<div class="pp pp-extra">
 						<img src="img/persona.jpg">	
 					</div>
 					<div>
-						<h2>Raisa <i class="fa fa-check-circle verified"></i></h2>
-						<span class="green">Saldo Rp 50.000</span>
+						<h2>Raisa Hamis <i class="fa fa-check-circle verified"></i></h2>
+						<span class="green small">Saldo <b>Rp 50.000</b></span>
+						<span class="green small">Poin <b>900</b></span>
 					</div>
 				</div>
 				<div class="pulldown-trigger">
@@ -156,6 +157,19 @@
 				</div>
 			</div>
 			<ul class="formal list column">
+				<a href="notification.html">
+					<li class="list-item item-small">
+						<div>
+							<div>
+								<i class="fa fa-bell main-dark"></i>
+							</div>
+							<div>
+								<p>Notifikasi</p>
+							</div>
+						</div>
+						<div><div class="icon icon-24 icon-notif"><span>4</span></div></div>
+					</li>
+				</a>
 				<a href="order-status.html">
 					<li class="list-item item-small">
 						<div>
@@ -167,19 +181,6 @@
 							</div>
 						</div>
 						<div><div class="icon icon-24 icon-notif"><span>1</span></div></div>
-					</li>
-				</a>
-				<a href="notification.html">
-					<li class="list-item item-small">
-						<div>
-							<div>
-								<i class="fa fa-bell main-dark"></i>
-							</div>
-							<div>
-								<p>Notifikasi</p>
-							</div>
-						</div>
-						<div><div class="icon icon-24 icon-notif"><span>3</span></div></div>
 					</li>
 				</a>
 				<a href="subscribed-shop.html">
@@ -195,24 +196,22 @@
 						<div><div class="icon icon-24 icon-notif"><span>9</span></div></div>
 					</li>
 				</a>
-			</ul>
-		</div>
-		<hr>
-		<div>
-			<ul class="list column">
-				<a href="index.html">
+				<a href="whislist.html">
 					<li class="list-item item-small">
 						<div>
 							<div>
-								<i class="fa fa-home main-dark"></i>
+								<i class="fa fa-heart main-dark"></i>
 							</div>
 							<div>
-								<p>Beranda</p>
+								<p>Whislist</p>
 							</div>
 						</div>
+						<div><div class="icon icon-24 icon-notif"><span>3</span></div></div>
 					</li>
 				</a>
 			</ul>
+		</div>
+		<div>
 			<ul class="formal category">
 				<a href="category.html">
 					<li class="list-item item-small">
@@ -278,7 +277,7 @@
 					<li class="list-item item-small">
 						<div>
 							<div>
-								<i class="fa fa-shower main-dark"></i>
+								<i class="fa fa-bed main-dark"></i>
 							</div>
 							<div>
 								<p>Mebel</p>
@@ -300,7 +299,6 @@
 				</a>
 			</ul>
 		</div>
-		<hr>
 		<div>
 			<ul class="formal list column">
 				<a href="help.html">
@@ -322,7 +320,7 @@
 								<i class="fa fa-info-circle main-dark"></i>
 							</div>
 							<div>
-								<p>Tentang allshop</p>
+								<p>Tentang <span style="font-family: 'Poiret One', cursive; font-weight: bolder;">allshop</span></p>
 							</div>
 						</div>
 					</li>
@@ -336,30 +334,33 @@
 		<ul class="wrapper detail">
 			<li>
 				<img src="img/iphone7red.jpg" onclick="popOpen(this)" id="popopenimg">
-				<div class="sspan center customer-review">
+				<div class="sspan center customer-stat">
 					<span>
+						<span>6</span>
 						<i class="fa fa-photo"></i>
 						<span class="vanish">Foto</span>
-						<span>6</span>
 					</span>
 					<span>
+						<span>1</span>
 						<i class="fa fa-youtube-play"></i>
 						<span class="vanish">Video</span>
-						<span>1</span>
 					</span>
 					<span>
+						<span>77</span>
 						<i class="fa fa-eye"></i>
 						<span class="vanish">Dilihat</span>
-						<span>77</span>
 					</span>
 					<span>
-						<i class="fa fa-tag"></i>
+						<span>9</span>
+						<i class="fa fa-cart-arrow-down"></i>
 						<span class="vanish">Dibeli</span>
-						<span>99</span>
 					</span>
 				</div>
 			</li>
 			<li>
+				<div id="whislist">
+					<i class="fa fa-heart-o"></i>
+				</div>
 				<ul>
 					<li>
 						<div class="truncate">
@@ -410,7 +411,7 @@
 		<ul class="wrapper spec">
 			<li class="btn btn-top">
 				<span>Spesifikasi</span>
-				<span onclick="popOpen(this)" id="popopencompare">Bandingkan</span>
+				<span onclick="popOpen(this)" id="popopencompare" class="btn btn-main-inverted btn-32">Bandingkan</span>
 			</li>
 			<li>
 				<ul class="thumb-view">
@@ -546,24 +547,24 @@
 					</li>
 				</ul>
 			</li>
-			<li class="btn btn-bot showmore"><i class='fa fa-angle-down'></i></li>
+			<li class="btn btn-bot showmore"><i class='fa fa-angle-down fa-bold'></i></li>
 		</ul>
 		<!-- seller -->
 		<div class="wrapper">
 			<div class="btn btn-top">
 				<span>Penjual</span>
-				<span class="icon icon-48" onclick="popOpen(this)" id="popopenchat">
-					<i class="fa fa-comment"></i>
+				<span onclick="popOpen(this)" id="popopenchat">
+					<div class="icon icon-32 main"><i class="fa fa-comment"></i></div>
 				</span>
 			</div>
-			<ul class="detail">
+			<ul class="detail detail-seller">
 				<li>
 					<img src="img/toko.jpg" onclick="popOpen(this)" id="popopenshop">
-					<div class="sspan center customer-review">
+					<div class="sspan center customer-stat">
 						<div>
 							<i class="fa fa-photo"></i>
+							<span>6</span>
 							<span class="vanish">Foto</span>
-							<span>4</span>
 						</div>
 					</div>
 				</li>
@@ -586,7 +587,7 @@
 								<span>Yogyakarta, Sleman 55288</span>
 							</div>
 							<div class="formal-row">
-								<button class="btn btn-main-outer" id="subscribe">999 Pelanggan</button>
+								<button class="btn btn-main-outer" id="subscribe">Berlangganan 999</button>
 							</div>
 						</li>
 					</ul>
@@ -750,35 +751,35 @@
 									<ul>
 										<li>5</li>
 										<li><i class="stars fa fa-star"></i></li>
-										<li class="bar"><div class="bar-5"></div></li>
+										<li class="bar"><div class="bar-5 bg-green"></div></li>
 									</ul>
 								</li>
 								<li>
 									<ul>
 										<li>4</li>
 										<li><i class="stars fa fa-star"></i></li>
-										<li class="bar"><div class="bar-4"></div></li>
+										<li class="bar"><div class="bar-4 bg-green-light"></div></li>
 									</ul>
 								</li>
 								<li>
 									<ul>
 										<li>3</li>
 										<li><i class="stars fa fa-star"></i></li>
-										<li class="bar"><div class="bar-3"></div></li>
+										<li class="bar"><div class="bar-3 bg-yellow"></div></li>
 									</ul>
 								</li>
 								<li>
 									<ul>
 										<li>2</li>
 										<li><i class="stars fa fa-star"></i></li>
-										<li class="bar"><div class="bar-2"></div></li>
+										<li class="bar"><div class="bar-2 bg-orange"></div></li>
 									</ul>
 								</li>
 								<li>
 									<ul>
 										<li>1</li>
 										<li><i class="stars fa fa-star"></i></li>
-										<li class="bar"><div class="bar-1"></div></li>
+										<li class="bar"><div class="bar-1 bg-red"></div></li>
 									</ul>
 								</li>
 							</ul>
@@ -860,15 +861,15 @@
 						</li>
 					</ul>
 				</li>
-				<li class="btn btn-bot showmore"><i class="fa fa-angle-down"></i></li>
+				<li class="btn btn-bot showmore"><i class="fa fa-angle-down fa-bold"></i></li>
 			</ul>
 		</div>
 		<!-- Rating -->
 		<div class="wrapper">
 			<div class="btn btn-top">
 				<span>Rating</span>
-				<span class="icon icon-48">
-					<i class="fa fa-plus"></i>
+				<span>
+					<div class="icon icon-32 main"><i class="fa fa-plus"></i></div>
 				</span>
 			</div>
 			<ul>
@@ -900,35 +901,35 @@
 									<ul>
 										<li>5</li>
 										<li><i class="stars fa fa-star"></i></li>
-										<li class="bar"><div class="bar-5"></div></li>
+										<li class="bar"><div class="bar-5 bg-green"></div></li>
 									</ul>
 								</li>
 								<li>
 									<ul>
 										<li>4</li>
 										<li><i class="stars fa fa-star"></i></li>
-										<li class="bar"><div class="bar-4"></div></li>
+										<li class="bar"><div class="bar-4 bg-green-light"></div></li>
 									</ul>
 								</li>
 								<li>
 									<ul>
 										<li>3</li>
 										<li><i class="stars fa fa-star"></i></li>
-										<li class="bar"><div class="bar-3"></div></li>
+										<li class="bar"><div class="bar-3 bg-yellow"></div></li>
 									</ul>
 								</li>
 								<li>
 									<ul>
 										<li>2</li>
 										<li><i class="stars fa fa-star"></i></li>
-										<li class="bar"><div class="bar-2"></div></li>
+										<li class="bar"><div class="bar-2 bg-orange"></div></li>
 									</ul>
 								</li>
 								<li>
 									<ul>
 										<li>1</li>
 										<li><i class="stars fa fa-star"></i></li>
-										<li class="bar"><div class="bar-1"></div></li>
+										<li class="bar"><div class="bar-1 bg-red"></div></li>
 									</ul>
 								</li>
 							</ul>
@@ -1145,9 +1146,173 @@
 						</li>
 					</ul>
 				</li>
-				<li class="btn btn-bot showmore"><i class="fa fa-angle-down"></i></li>
+				<li class="btn btn-bot showmore"><i class="fa fa-angle-down fa-bold"></i></li>
 			</ul>
 		</div>
+		<!-- products suggestion -->
+		<div class="items-header">
+			<span>Produk sejenis lainnya...</span>
+			<span class="icon icon-32">
+				<i class="fa fa-ellipsis-v"></i>
+			</span>
+		</div>
+		<ul class="items items-row portrait">
+			<li>
+				<a href="product.html">
+					<div>
+						<span class="promo">Bonus Case</span>
+						<img src="img/iphone7silver.jpg">
+					</div>
+					<ul>
+						<li>
+							<h4>iPhone 7 32 GB - Silver</h4>
+						</li>
+						<li class="price">
+							<div class="disc">
+								<span>-10%</span>
+								<span>Rp 9.500.000</span>
+							</div>
+							<div>
+								<span>Rp 8.350.000</span>
+							</div>
+						</li>
+						<li>
+							<div class="main-rate">
+								<span>4 <i class="fa fa-star"></i></span>
+							</div>
+							<div>
+								<span>15 <i class="fa fa-comments-o"></i></span>
+							</div>
+						</li>
+					</ul>
+				</a>
+			</li>
+			<li>
+				<a href="product.html">
+					<div>
+						<span class="promo">Bonus Case</span>
+						<img src="img/iphonex.jpg">
+					</div>
+					<ul>
+						<li>
+							<h4>iPhone X 128 GB</h4>
+						</li>
+						<li class="price">
+							<div class="disc vanish">
+								<span>-10%</span>
+								<span>Rp 21.500.000</span>
+							</div>
+							<div>
+								<span>Rp 20.350.000</span>
+							</div>
+						</li>
+						<li>
+							<div class="main-rate">
+								<span>4 <i class="fa fa-star"></i></span>
+							</div>
+							<div>
+								<span>15 <i class="fa fa-comments-o"></i></span>
+							</div>
+						</li>
+					</ul>
+				</a>
+			</li>
+			<li>
+				<a href="product.html">
+					<div>
+						<span class="promo">Bonus Case</span>
+						<img src="img/iphone7black.png">
+					</div>
+					<ul>
+						<li>
+							<h4>iPhone 7 32 GB - Black</h4>
+						</li>
+						<li class="price">
+							<div class="disc">
+								<span>-10%</span>
+								<span>Rp 10.500.000</span>
+							</div>
+							<div>
+								<span>Rp 9.350.000</span>
+							</div>
+						</li>
+						<li>
+							<div class="main-rate">
+								<span>4 <i class="fa fa-star"></i></span>
+							</div>
+							<div>
+								<span>15 <i class="fa fa-comments-o"></i></span>
+							</div>
+						</li>
+					</ul>
+				</a>
+			</li>
+			<li>
+				<a href="product.html">
+					<div>
+						<span class="promo">Bonus Case</span>
+						<img src="img/iphone7black2.png">
+					</div>
+					<ul>
+						<li>
+							<h4>iPhone 7 32 GB - Black</h4>
+						</li>
+						<li class="price">
+							<div class="disc">
+								<span>-15%</span>
+								<span>Rp 10.500.000</span>
+							</div>
+							<div>
+								<span>Rp 9.000.000</span>
+							</div>
+						</li>
+						<li>
+							<div class="main-rate">
+								<span>4 <i class="fa fa-star"></i></span>
+							</div>
+							<div>
+								<span>15 <i class="fa fa-comments-o"></i></span>
+							</div>
+						</li>
+					</ul>
+				</a>
+			</li>
+			<li>
+				<a href="product.html">
+					<div>
+						<span class="promo">Bonus Case</span>
+						<img src="img/iphone7gold.jpg">
+					</div>
+					<ul>
+						<li>
+							<h4>iPhone 7 16 GB - Gold</h4>
+						</li>
+						<li class="price">
+							<div class="disc vanish">
+								<span>-20%</span>
+								<span>Rp 10.500.000</span>
+							</div>
+							<div>
+								<span>Rp 9.350.000</span>
+							</div>
+						</li>
+						<li>
+							<div class="main-rate">
+								<span>4 <i class="fa fa-star"></i></span>
+							</div>
+							<div>
+								<span>15 <i class="fa fa-comments-o"></i></span>
+							</div>
+						</li>
+					</ul>
+				</a>
+			</li>
+			<li class="items-last">
+				<a href="category.html" class="icon icon-48">
+					<i class="fa fa-angle-right"></i>
+				</a>
+			</li>
+		</ul>
 	</section>
 	<!-- pop up menu -->
 	<section class="popup-wrapper">
@@ -1163,16 +1328,31 @@
 					<span>Video</span>
 				</div>
 				<span class="icon icon-48">
-					<i class="fa fa-arrow-left"></i>
+					<i class="fa fa-long-arrow-left"></i>
 				</span>
 			</li>
 			<li>
 				<ul class="content-img">
 					<li>
-						<img src="img/iphone1.jpg">	
+						<img src="img/iphone7red.jpg">
 					</li>
 					<li>
 						<img src="img/iphone2.jpg">	
+					</li>
+					<!-- photo from reviewer -->
+					<li>
+						<img src="img/iphone7red-handson3.jpg">
+						<div class="caption">
+							<p>Foto review oleh <b>Disguisedtoast</b>.</p>
+							<p>Diambil pada 17 November 2015</p>
+						</div>
+					</li>
+					<li>
+						<img src="img/iphone7red-handson.jpg">
+						<div class="caption">
+							<p>Foto review oleh <b>Lilypichu</b>.</p>
+							<p>Diambil pada 1 November 2015</p>
+						</div>	
 					</li>
 					<li>
 						<img src="img/iphone3.jpg">	
@@ -1180,290 +1360,285 @@
 					<li>
 						<img src="img/iphone4.jpg">	
 					</li>
-					<!-- photo from reviewer -->
-					<li>
-						<img src="img/iphone5.jpg">
-						<p>Foto review oleh <b>Disguisedtoast</b></p>
-					</li>
-					<li>
-						<img src="img/iphone7red-handson2.jpg">	
-						<p>Foto review oleh <b>Lilypichu</b></p>
-					</li>
-					<li style="flex: 0 100%">
-						<video controls><source src="img/iphonevid.mp4" type="video/mp4"></video>
-					</li>
-				</ul>
-			</li>
-		</ul>
-		<!-- toko -->
-		<ul class="popup pop-full" id="popshop">
-			<li class="btn btn-top reverse-row" onclick="popClose()">
-				<div class="sspan center">
-					<span>4</span>
-					<i class="fa fa-photo"></i>
-					<span>Gambar</span>
-				</div>
-				<span class="icon icon-48">
-					<i class="fa fa-arrow-left"></i>
-				</span>
-			</li>
-			<li>
-				<ul class="content-img">
-					<li>
-						<img src="img/tokoapple.jpg">	
-					</li>
-					<li>
-						<img src="img/tokoapple2.jpg">	
-					</li>
-					<li>
-						<img src="img/tokoapple3.jpg">	
-						<p>Foto terverifikasi</p>
-					</li>
-					<li>
-						<img src="img/tokoapple4.jpg">
-						<p>Foto terverifikasi</p>
-					</li>
-				</ul>
-			</li>
-		</ul>
-		<!-- compare -->
-		<ul class="popup pop-full" id="popcompare">
-			<li class="btn btn-top reverse-row" onclick="popClose()">
-				<span>Bandingkan dengan...</span>
-				<span class="icon icon-48">
-					<i class="fa fa-arrow-left"></i>
-				</span>
-			</li>
-			<li class="content-item content-full">
-				<form action="compare-search.html" class="searchbar formal-row">
-					<input type="search" placeholder="Cari disini...">
-					<input class="btn btn-main" type="submit" value="Cari">
-				</form>
-				<div class="items-header low">
-					<span>Terakhir dicari</span>
-				</div>
-				<ul class="items items-col portrait">
-					<li>
-						<a href="compare-result.html">
-							<div>
-								<span class="promo">Bonus Case</span>
-								<img src="img/iphoneblue.jpg">
-							</div>
-							<ul>
-								<li>
-									<h4>iPhone 7 32 GB - Blue</h4>
-								</li>
-								<li class="price">
-									<div class="disc">
-										<span>-10%</span>
-										<span>Rp 11.500.000</span>
-									</div>
-									<div>
-										<span>Rp 10.350.000</span>
-									</div>
-								</li>
-								<li>
-									<div class="main-rate">
-										<span>4,5 <i class="fa fa-star"></i></span>
-									</div>
-									<div>
-										<span>312 <i class="fa fa-comments-o"></i></span>
-									</div>
-								</li>
-							</ul>
-						</a>
-					</li>
-					<li>
-						<a href="compare-result.html">
-							<div>
-								<span class="promo">Bonus Case</span>
-								<img src="img/iphonex.jpg">
-							</div>
-							<ul>
-								<li>
-									<h4>iPhone X 32 GB - Blue</h4>
-								</li>
-								<li class="price">
-									<div class="disc">
-										<span>-10%</span>
-										<span>Rp 11.500.000</span>
-									</div>
-									<div>
-										<span>Rp 10.350.000</span>
-									</div>
-								</li>
-								<li>
-									<div class="main-rate">
-										<span>4,5 <i class="fa fa-star"></i></span>
-									</div>
-									<div>
-										<span>312 <i class="fa fa-comments-o"></i></span>
-									</div>
-								</li>
-							</ul>
-						</a>
-					</li>
-					<li>
-						<a href="compare-result.html">
-							<div>
-								<span class="promo">Bonus Case</span>
-								<img src="img/iphoneblue.jpg">
-							</div>
-							<ul>
-								<li>
-									<h4>iPhone 7 32 GB - Blue</h4>
-								</li>
-								<li class="price">
-									<div class="disc">
-										<span>-10%</span>
-										<span>Rp 11.500.000</span>
-									</div>
-									<div>
-										<span>Rp 10.350.000</span>
-									</div>
-								</li>
-								<li>
-									<div class="main-rate">
-										<span>4,5 <i class="fa fa-star"></i></span>
-									</div>
-									<div>
-										<span>312 <i class="fa fa-comments-o"></i></span>
-									</div>
-								</li>
-							</ul>
-						</a>
-					</li>
-					<li>
-						<a href="compare-result.html">
-							<div>
-								<span class="promo">Bonus Case</span>
-								<img src="img/iphone7red.jpg">
-							</div>
-							<ul>
-								<li>
-									<h4>iPhone 7 32 GB - Red</h4>
-								</li>
-								<li class="price">
-									<div class="disc">
-										<span>-10%</span>
-										<span>Rp 11.500.000</span>
-									</div>
-									<div>
-										<span>Rp 10.350.000</span>
-									</div>
-								</li>
-								<li>
-									<div class="main-rate">
-										<span>4,5 <i class="fa fa-star"></i></span>
-									</div>
-									<div>
-										<span>312 <i class="fa fa-comments-o"></i></span>
-									</div>
-								</li>
-							</ul>
-						</a>
-					</li>
-					<li>
-						<a href="compare-result.html">
-							<div>
-								<span class="promo">Bonus Case</span>
-								<img src="img/iphone7gold.jpg">
-							</div>
-							<ul>
-								<li>
-									<h4>iPhone 7 32 GB - Gold</h4>
-								</li>
-								<li class="price">
-									<div class="disc">
-										<span>-10%</span>
-										<span>Rp 11.500.000</span>
-									</div>
-									<div>
-										<span>Rp 10.350.000</span>
-									</div>
-								</li>
-								<li>
-									<div class="main-rate">
-										<span>4,5 <i class="fa fa-star"></i></span>
-									</div>
-									<div>
-										<span>312 <i class="fa fa-comments-o"></i></span>
-									</div>
-								</li>
-							</ul>
-						</a>
-					</li>
-					<li>
-						<a href="compare-result.html">
-							<div>
-								<span class="promo">Bonus Case</span>
-								<img src="img/iphoneblack1.jpg">
-							</div>
-							<ul>
-								<li>
-									<h4>iPhone 7 32 GB - Black</h4>
-								</li>
-								<li class="price">
-									<div class="disc">
-										<span>-10%</span>
-										<span>Rp 11.500.000</span>
-									</div>
-									<div>
-										<span>Rp 10.350.000</span>
-									</div>
-								</li>
-								<li>
-									<div class="main-rate">
-										<span>4,5 <i class="fa fa-star"></i></span>
-									</div>
-									<div>
-										<span>312 <i class="fa fa-comments-o"></i></span>
-									</div>
-								</li>
-							</ul>
-						</a>
-					</li>
-				</ul>
-			</li>
-		</ul>
-		<!-- chat -->
-		<ul class="popup" id="popchat">
-			<li class="btn btn-top reverse-row" onclick="popClose()">
-				<span>Chat Toko</span>
-				<span class="icon icon-48">
-					<i class="fa fa-arrow-left"></i>
-				</span>
-			</li>
-			<li class="chats">
-				<div class="list-item formal-column">
-					<div>
-						<div class="pp">
-							<img src="img/toko.jpg">
-						</div>
+					<li style="flex: 0 100%"><video controls poster="img/iphoneposter.png"><source src="img/iphonevid.mp4" type="video/mp4"></video></li>
+					</ul>
+				</li>
+			</ul>
+			<!-- toko -->
+			<ul class="popup pop-full" id="popshop">
+				<li class="btn btn-top reverse-row" onclick="popClose()">
+					<div class="sspan center">
+						<span>6</span>
+						<i class="fa fa-photo"></i>
+						<span>Gambar</span>
+					</div>
+					<span class="icon icon-48">
+						<i class="fa fa-long-arrow-left"></i>
+					</span>
+				</li>
+				<li>
+					<ul class="content-img">
+						<li>
+							<img src="img/toko.jpg">	
+						</li>
+						<li>
+							<img src="img/tokoapple2.jpg">	
+						</li>
+						<li>
+							<img src="img/tokoapple3.jpg">	
+							<p>Foto terverifikasi</p>
+						</li>
+						<li>
+							<img src="img/tokoapple4.jpg">
+							<p>Foto terverifikasi</p>
+						</li>
+						<li>
+							<img src="img/tokoapple5.jpg">	
+						</li>
+						<li>
+							<img src="img/tokoapple.jpg">	
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<!-- compare -->
+			<ul class="popup pop-full" id="popcompare">
+				<li class="btn btn-top reverse-row" onclick="popClose()">
+					<span>Bandingkan dengan...</span>
+					<span class="icon icon-48">
+						<i class="fa fa-long-arrow-left"></i>
+					</span>
+				</li>
+				<li class="content-item content-full">
+					<form action="compare-search.html" class="searchbar formal-row">
+						<input type="search" placeholder="Cari disini...">
+						<input class="btn btn-main" type="submit" value="Cari">
+					</form>
+					<div class="items-header">
+						<span>Terakhir dicari</span>
+					</div>
+					<ul class="items items-col portrait">
+						<li>
+							<a href="compare-result.html">
+								<div>
+									<span class="promo">Bonus Case</span>
+									<img src="img/iphoneblue.jpg">
+								</div>
+								<ul>
+									<li>
+										<h4>iPhone 7 32 GB - Blue</h4>
+									</li>
+									<li class="price">
+										<div class="disc">
+											<span>-10%</span>
+											<span>Rp 11.500.000</span>
+										</div>
+										<div>
+											<span>Rp 10.350.000</span>
+										</div>
+									</li>
+									<li>
+										<div class="main-rate">
+											<span>4,5 <i class="fa fa-star"></i></span>
+										</div>
+										<div>
+											<span>312 <i class="fa fa-comments-o"></i></span>
+										</div>
+									</li>
+								</ul>
+							</a>
+						</li>
+						<li>
+							<a href="compare-result.html">
+								<div>
+									<span class="promo">Bonus Case</span>
+									<img src="img/iphonex.jpg">
+								</div>
+								<ul>
+									<li>
+										<h4>iPhone X 32 GB - Blue</h4>
+									</li>
+									<li class="price">
+										<div class="disc">
+											<span>-10%</span>
+											<span>Rp 11.500.000</span>
+										</div>
+										<div>
+											<span>Rp 10.350.000</span>
+										</div>
+									</li>
+									<li>
+										<div class="main-rate">
+											<span>4,5 <i class="fa fa-star"></i></span>
+										</div>
+										<div>
+											<span>312 <i class="fa fa-comments-o"></i></span>
+										</div>
+									</li>
+								</ul>
+							</a>
+						</li>
+						<li>
+							<a href="compare-result.html">
+								<div>
+									<span class="promo">Bonus Case</span>
+									<img src="img/iphoneblue.jpg">
+								</div>
+								<ul>
+									<li>
+										<h4>iPhone 7 32 GB - Blue</h4>
+									</li>
+									<li class="price">
+										<div class="disc">
+											<span>-10%</span>
+											<span>Rp 11.500.000</span>
+										</div>
+										<div>
+											<span>Rp 10.350.000</span>
+										</div>
+									</li>
+									<li>
+										<div class="main-rate">
+											<span>4,5 <i class="fa fa-star"></i></span>
+										</div>
+										<div>
+											<span>312 <i class="fa fa-comments-o"></i></span>
+										</div>
+									</li>
+								</ul>
+							</a>
+						</li>
+						<li>
+							<a href="compare-result.html">
+								<div>
+									<span class="promo">Bonus Case</span>
+									<img src="img/iphone7red.jpg">
+								</div>
+								<ul>
+									<li>
+										<h4>iPhone 7 32 GB - Red</h4>
+									</li>
+									<li class="price">
+										<div class="disc">
+											<span>-10%</span>
+											<span>Rp 11.500.000</span>
+										</div>
+										<div>
+											<span>Rp 10.350.000</span>
+										</div>
+									</li>
+									<li>
+										<div class="main-rate">
+											<span>4,5 <i class="fa fa-star"></i></span>
+										</div>
+										<div>
+											<span>312 <i class="fa fa-comments-o"></i></span>
+										</div>
+									</li>
+								</ul>
+							</a>
+						</li>
+						<li>
+							<a href="compare-result.html">
+								<div>
+									<span class="promo">Bonus Case</span>
+									<img src="img/iphone7gold.jpg">
+								</div>
+								<ul>
+									<li>
+										<h4>iPhone 7 32 GB - Gold</h4>
+									</li>
+									<li class="price">
+										<div class="disc">
+											<span>-10%</span>
+											<span>Rp 11.500.000</span>
+										</div>
+										<div>
+											<span>Rp 10.350.000</span>
+										</div>
+									</li>
+									<li>
+										<div class="main-rate">
+											<span>4,5 <i class="fa fa-star"></i></span>
+										</div>
+										<div>
+											<span>312 <i class="fa fa-comments-o"></i></span>
+										</div>
+									</li>
+								</ul>
+							</a>
+						</li>
+						<li>
+							<a href="compare-result.html">
+								<div>
+									<span class="promo">Bonus Case</span>
+									<img src="img/iphoneblack1.jpg">
+								</div>
+								<ul>
+									<li>
+										<h4>iPhone 7 32 GB - Black</h4>
+									</li>
+									<li class="price">
+										<div class="disc">
+											<span>-10%</span>
+											<span>Rp 11.500.000</span>
+										</div>
+										<div>
+											<span>Rp 10.350.000</span>
+										</div>
+									</li>
+									<li>
+										<div class="main-rate">
+											<span>4,5 <i class="fa fa-star"></i></span>
+										</div>
+										<div>
+											<span>312 <i class="fa fa-comments-o"></i></span>
+										</div>
+									</li>
+								</ul>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<!-- chat -->
+			<ul class="popup" id="popchat">
+				<li class="btn btn-top reverse-row" onclick="popClose()">
+					<span>Chat Toko</span>
+					<span class="icon icon-48">
+						<i class="fa fa-long-arrow-left"></i>
+					</span>
+				</li>
+				<li class="chats">
+					<div class="list-item formal-column">
 						<div>
-							<h4>Toko Wijaya <i class="verified fa fa-check-circle"></i></h4>
-							<span class="sspan">Terakhir aktif 4 jam yg lalu</span>
+							<div class="pp pp-large">
+								<img src="img/toko.jpg">
+							</div>
+							<div>
+								<h4>Toko Wijaya <i class="verified fa fa-check-circle"></i></h4>
+								<span class="sspan">Terakhir aktif 4 jam yg lalu</span>
+							</div>
+						</div>
+						<div></div>
+					</div>
+					<div class="chat-dialog">
+						<p class="inactive">Belum ada pesan.</p>
+					</div>
+					<div class="chat-input">
+						<input type="text" name="user_msg" placeholder="Tuliskan pesan..." autofocus="true">
+						<div class="icon icon-48 bg-main" id="sendchat">
+							<i class="fa fa-angle-right"></i>
 						</div>
 					</div>
-					<div></div>
-				</div>
-				<div class="chat-dialog">
-					<p class="inactive">Belum ada pesan.</p>
-				</div>
-				<div class="chat-input">
-					<input type="text" name="user_msg" placeholder="Tuliskan pesan..." autofocus="true">
-					<div class="icon icon-48 bg-main" id="sendchat">
-						<i class="fa fa-angle-right"></i>
-					</div>
-				</div>
-			</li>
-		</ul>
-	</section>
-	<div id="shadow"></div>
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/Clamp.js/clamp.min.js"></script>
-	<script src="js/allshop.js"></script>
-	<script type="text/javascript">
+				</li>
+			</ul>
+		</section>
+		<div id="shadow"></div>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/Clamp.js/clamp.min.js"></script>
+		<script src="js/allshop.js"></script>
+		<script type="text/javascript">
 		// just for demonstration
 		$('#sendchat').click(function(){
 			if($(this).parent().prev().find('p').hasClass('inactive')){

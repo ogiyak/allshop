@@ -24,6 +24,7 @@ function sidenavClose(){
 	// enabling background to scroll 
 	$('body').css('overflow', 'auto');
 }
+
 // search
 function searchOpen(){
 	if(searchContent.style.display !== 'block'){
@@ -37,7 +38,10 @@ function searchOpen(){
 		// radius bottom to zero + margin to 0 8px
 		searchWrap.style.borderRadius = '2px 2px 0 0';
 		searchWrap.style.margin = '0 8px';
-
+		
+		// enabling button submit
+		$('#searchwrap form i.fa-search').replaceWith("<button type='submit'><i class='fa fa-search'></i></button>");
+		
 		// pulldown helper
 		var inputChecker = setInterval(function(){checker()}, 1);
 		function checker(){
@@ -60,6 +64,7 @@ function searchOpen(){
 	$('#search-content').addClass('ani-slide-down');
 	$('body').css('overflow', 'hidden');
 }
+
 function searchClose() {
 	document.querySelectorAll('nav .icon')[0].style.display = 'flex';
 	document.querySelectorAll('nav .icon')[1].style.display = 'flex';
@@ -76,7 +81,11 @@ function searchClose() {
 	// radius bottom + margin to normal
 	searchWrap.style.borderRadius = '2px';
 	searchWrap.style.margin = '0';
+
+	// disabling button submit
+	$("#searchwrap form button[type='submit']").replaceWith("<i class='fa fa-search' onclick='searchOpen()'></i>");
 }
+
 // popup
 function popOpen(e){
 	var popimg = document.getElementById('popimg');
@@ -119,6 +128,7 @@ function popOpen(e){
 	$('.popup').removeClass('ani-zoom-in');
 	$('.popup').addClass('ani-zoom-out');
 
+	// adding shadow
 	shadow.style.display = 'block';
 }
 function popClose(){
@@ -143,8 +153,14 @@ function popClose(){
 	$('.popup').removeClass('ani-zoom-out');
 	$('.popup').addClass('ani-zoom-in');
 
+	// removing shadow
 	shadow.style.display = 'none';
 }
+// https://stackoverflow.com/questions/9183381/how-to-have-click-event-only-fire-on-parent-div-not-children
+$('.popup-wrapper').on('click', function(e){
+	if(e.target !== this) return;
+	popClose();
+});
 // showmore
 $('.showmore').click(function(){
 	if($(this).prev().css('display') == 'none'){
@@ -186,20 +202,24 @@ $('.dropdown > *:first-child').click(function(){
 
 // range slider
 // https://codepen.io/ATC-test/pen/myPNqW
-// var minRange = $('#minrange'),
-// 	maxRange = $('#maxrange'),
-// 	minVal = $('#minprice'),
-// 	maxVal = $('#maxprice');
+// try{
+// 	var minRange = $('#minrange'),
+// 		maxRange = $('#maxrange'),
+// 		minVal = $('#minprice'),
+// 		maxVal = $('#maxprice');
 
-// minVal.html(minRange.attr('value'));
-// maxVal.html(maxRange.attr('value'));
-
-// minRange.on('input', function(){
 // 	minVal.html(minRange.attr('value'));
-// });
-// maxRange.on('input', function(){
 // 	maxVal.html(maxRange.attr('value'));
-// });
+
+// 	minRange.on('input', function(){
+// 		minVal.html(minRange.attr('value'));
+// 	});
+// 	maxRange.on('input', function(){
+// 		maxVal.html(maxRange.attr('value'));
+// 	});
+// }catch(err){
+// 	console.log(err);
+// }
 
 // adding product to cart
 $('#addtoCart').click(function(event){
@@ -244,21 +264,25 @@ $('#addtoCart2').click(function(event){
 
 // btn main outer inactive animation
 $('#subscribe').click(function(){
-	$(this).html('Berlangganan');
+	$(this).addClass('ani-fade');
+	$(this).html("Berlangganan <i class='fa fa-check'></i>");
 	$(this).removeClass('btn-main-outer');
 	$(this).addClass('inactive');
 });
 $('#subscribe2').click(function(){
-	$(this).html('Berlangganan');
+	$(this).addClass('ani-fade');
+	$(this).html("Berlangganan <i class='fa fa-check'></i>");
 	$(this).removeClass('btn-main-outer');
 	$(this).addClass('inactive');
 });
 $('#subscribe-mini').click(function(){
+	$(this).addClass('ani-fade');
 	$(this).html("<i class='fa fa-check'></i>");
 	$(this).removeClass('btn-main-outer');
 	$(this).addClass('inactive');
 });
 $('#confirm').click(function(){
+	$(this).addClass('ani-fade');
 	$(this).html('Terkonfirmasi');
 	$(this).removeClass('btn-main-outer');
 	$(this).addClass('inactive');
@@ -266,16 +290,29 @@ $('#confirm').click(function(){
 	$('#confirmationStatus').html('Selesai');
 	$('#confirmationStatus').css('color', 'var(--green)');
 });
-
-// navigation shrink
-$(document).on('scroll', function(){
-	if($(document).scrollTop() > 104){
-		$('nav').css('padding', '0');
-		$('nav .category').addClass('shrink');
+$('#whislist').click(function(){
+	if($(this).hasClass('active')){
+		$(this).removeClass('ani-fade');
+		$(this).removeClass('active');
 	}else{
-		$('nav .category').removeClass('shrink');
+		$(this).addClass('active');
+		$(this).addClass('ani-fade');
+		$(this).html("<i class='fa fa-heart'></i>");
+	}
+})
+// navigation shrink
+// https://stackoverflow.com/questions/4326845/how-can-i-determine-the-direction-of-a-jquery-scroll-event
+var lastScrollTop = 0;
+$(window).scroll(function(event){
+	var st = $(this).scrollTop();
+	if (st > lastScrollTop){
+		$('nav').css('padding', '0');
+		$('nav .category').addClass('vanish');
+	} else {
+		$('nav .category').removeClass('vanish');
 		$('nav').css('padding', '8px 0');
 	}
+	lastScrollTop = st;
 });
 
 // pulldown in list-items
@@ -300,22 +337,22 @@ $('.pulldown-trigger').click(function(){
 	}
 });
 
-// customer-review statistic (in product img)
-$('.customer-review').click(function(){
+// customer-stat statistic (in product img)
+$('.customer-stat').click(function(){
 	if($(this).css('flex-direction') != 'column'){
 		$(this).css({
 			'height' : '100%', 
 			'flex-direction' : 'column',
-			'background-color' : 'rgba(0,0,0,.5)'
+			borderRadius : '3px'
 		});
 		$(this).children().css('padding' , '8px 0');
 		$(this).addClass('ani-strech-h');
 		$(this).find('.vanish').removeClass('vanish').addClass('unvanish');
 	}else{
 		$(this).css({
-			'height' : 'auto',
+			'height' : '24px',
 			'flex-direction' : 'row',
-			'background-color' : 'rgba(0,0,0,.2)'
+			borderRadius : '0 0 3px 3px'
 		});
 		$(this).children().css('padding' , '0');
 		$(this).removeClass('ani-strech-h');
@@ -324,38 +361,45 @@ $('.customer-review').click(function(){
 });
 
 // media popup click function
-$('.content-img > li').click(function(){
+$('.content-img > *').click(function(){
 	if($(this).find('img').length){
-		if($(this).find('img').css('position') != 'fixed'){
+		if($(this).css('position') != 'fixed'){
 			$('.content-img > li').css('visibility', 'hidden');
+			$(this).css('visibility', 'visible');
+			$(this).addClass('active');
+			
 			$(this).find('img').css({
-				position : 'fixed',
-				top : '50%',
-				left : '50%',
-				transform : 'translate(-50%, -50%)',
-				width : 'inherit',
+				position : 'absolute',
+				width : 'auto',
 				height : '100%',
 				objectFit : 'contain',
 			});
-			$(this).css('visibility', 'visible');
-			$(this).find('p').css({
+			$(this).find('.caption').css({
 				'position' : 'fixed',
-				'top' : '50%',
+				'bottom' : '50%',
 				'left' : '50%',
 				'transform' : 'translate(-50%, -50%)'
 			});
+
+			// image position to middle and animation
+			$(this).scrollLeft(0);
+			var tomid = $(this).find('img').offset().left + $(this).find('img').width()/2 - $(this).find('img').width()/4;
+			$(this).animate({
+				scrollLeft : tomid,
+				opacity : '1'
+			}, 175);
 		}else{
 			$('.content-img > li').css('visibility', 'visible');
+			$(this).removeClass('active');
 			$(this).find('img').css({
 				position : 'static',
-				transform : 'translate(0, 0)',
 				width : '100%',
 				height : '192px',
 				objectFit : 'cover',
 			});
-			$(this).find('p').css({
+			$(this).find('.caption').css({
 				'position': 'absolute',
-				'top' : '0',
+				'bottom' : '8px',
 				'left' : '0',
 				'transform' : 'translate(0, 0)'
 			});

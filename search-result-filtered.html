@@ -7,10 +7,10 @@
 	<meta charset="ISO-8859-1">
 	<meta name="theme-color" content="#005ecb">
 	<!-- font -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 	<!-- style -->
-	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link href="fontawesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"></link>
 	<link rel="stylesheet" type="text/css" href="css/allshop.css">
 	<!-- icon in the highest resolution we need it for -->
 	<link rel="icon" sizes="192x192" href="img/icon.png">
@@ -24,13 +24,15 @@
 	<nav>
 		<ul class="navigation">
 			<li class="icon icon-48" onclick="sidenavOpen()">
-				<i class="fa fa-bars"></i>
-				<span id="notif-indicator" class="active"><b>13</b></span>
+				<div class="pp pp-medium">
+						<img src="img/persona.jpg">	
+					</div>
+				<span id="notif-indicator" class="active"><b>17</b></span>
 			</li>
 			<!-- search -->
 			<li id="searchwrap">
 				<form action="search-result.html">
-					<button type="button" onclick="searchClose()"><i class="fa fa-arrow-left"></i></button>
+					<button type="button" onclick="searchClose()"><i class="fa fa-long-arrow-left"></i></button>
 					<input type="search" placeholder="Cari disini..." onclick="searchOpen()" value="iphone 7 32 GB">
 					<button type="submit"><i class="fa fa-search"></i></button>
 				</form>
@@ -98,13 +100,14 @@
 			</li>
 		</ul>
 		<ul class="category">
+			<a href="index.html"><li><i class="fa fa-home"></i></li></a>
 			<a href="category.html"><li>Elektronik</li></a>
-			<a href="category.html"><li>Smartphone</li></a>
-			<a href="category.html"><li>Laptop</li></a>
-			<a href="category.html"><li>Gadget</li></a>
-			<a href="category.html"><li>Kamera</li></a>
-			<a href="category.html"><li>Aksesoris</li></a>
-			<a href="category.html"><li>Lainnya</li></a>
+			<a href="category.html"><li>Perkakas</li></a>
+			<a href="category.html"><li>Pria</li></a>
+			<a href="category.html"><li>Wanita</li></a>
+			<a href="category.html"><li>Anak</li></a>
+			<a href="category.html"><li>Mebel</li></a>
+			<a href="category.html"><li>Buku</li></a>
 		</ul>
 	</nav>
 	<!-- sidebar -->
@@ -116,12 +119,13 @@
 		<div>
 			<div class="list-item bg-main-dark formal-large">
 				<div>
-					<div class="pp">
+					<div class="pp pp-extra">
 						<img src="img/persona.jpg">	
 					</div>
 					<div>
-						<h2>Raisa <i class="fa fa-check-circle verified"></i></h2>
-						<span class="green">Saldo Rp 50.000</span>
+						<h2>Raisa Hamis <i class="fa fa-check-circle verified"></i></h2>
+						<span class="green small">Saldo <b>Rp 50.000</b></span>
+						<span class="green small">Poin <b>900</b></span>
 					</div>
 				</div>
 				<div class="pulldown-trigger">
@@ -153,6 +157,19 @@
 				</div>
 			</div>
 			<ul class="formal list column">
+				<a href="notification.html">
+					<li class="list-item item-small">
+						<div>
+							<div>
+								<i class="fa fa-bell main-dark"></i>
+							</div>
+							<div>
+								<p>Notifikasi</p>
+							</div>
+						</div>
+						<div><div class="icon icon-24 icon-notif"><span>4</span></div></div>
+					</li>
+				</a>
 				<a href="order-status.html">
 					<li class="list-item item-small">
 						<div>
@@ -164,19 +181,6 @@
 							</div>
 						</div>
 						<div><div class="icon icon-24 icon-notif"><span>1</span></div></div>
-					</li>
-				</a>
-				<a href="notification.html">
-					<li class="list-item item-small">
-						<div>
-							<div>
-								<i class="fa fa-bell main-dark"></i>
-							</div>
-							<div>
-								<p>Notifikasi</p>
-							</div>
-						</div>
-						<div><div class="icon icon-24 icon-notif"><span>3</span></div></div>
 					</li>
 				</a>
 				<a href="subscribed-shop.html">
@@ -192,24 +196,22 @@
 						<div><div class="icon icon-24 icon-notif"><span>9</span></div></div>
 					</li>
 				</a>
-			</ul>
-		</div>
-		<hr>
-		<div>
-			<ul class="list column">
-				<a href="index.html">
+				<a href="whislist.html">
 					<li class="list-item item-small">
 						<div>
 							<div>
-								<i class="fa fa-home main-dark"></i>
+								<i class="fa fa-heart main-dark"></i>
 							</div>
 							<div>
-								<p>Beranda</p>
+								<p>Whislist</p>
 							</div>
 						</div>
+						<div><div class="icon icon-24 icon-notif"><span>3</span></div></div>
 					</li>
 				</a>
 			</ul>
+		</div>
+		<div>
 			<ul class="formal category">
 				<a href="category.html">
 					<li class="list-item item-small">
@@ -275,7 +277,7 @@
 					<li class="list-item item-small">
 						<div>
 							<div>
-								<i class="fa fa-shower main-dark"></i>
+								<i class="fa fa-bed main-dark"></i>
 							</div>
 							<div>
 								<p>Mebel</p>
@@ -297,7 +299,6 @@
 				</a>
 			</ul>
 		</div>
-		<hr>
 		<div>
 			<ul class="formal list column">
 				<a href="help.html">
@@ -319,7 +320,7 @@
 								<i class="fa fa-info-circle main-dark"></i>
 							</div>
 							<div>
-								<p>Tentang allshop</p>
+								<p>Tentang <span style="font-family: 'Poiret One', cursive; font-weight: bolder;">allshop</span></p>
 							</div>
 						</div>
 					</li>
@@ -345,7 +346,7 @@
 				</div>
 				<div class="dropdown">
 					<div class="btn btn-32 btn-main-inverted">
-						<span>Sortir</span>
+						<span>Urutkan</span>
 						<i class="fa fa-sort"></i>
 					</div>
 					<ul class="dropdown-content">
@@ -480,7 +481,7 @@
 			<li>
 				<a href="product.html">
 					<div>
-						<img src="img/iphone7red2.jpg">
+						<img src="img/iphone4.jpg">
 					</div>
 					<ul>
 						<li>
@@ -542,7 +543,7 @@
 		<ul class="popup pop-full" id="popfilter">
 			<li class="btn btn-top reverse-row">
 				<span>Saring</span>
-				<span onclick="popClose()"><i class="fa fa-arrow-left"></i></span>
+				<span onclick="popClose()"><i class="fa fa-long-arrow-left"></i></span>
 			</li>
 			<li class="content content-full">
 				<ul class="filter">
