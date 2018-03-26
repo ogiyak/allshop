@@ -28,8 +28,8 @@ function sidenavClose(){
 // search
 function searchOpen(){
 	if(searchContent.style.display !== 'block'){
-		document.querySelectorAll('nav .icon')[0].style.display = 'none';
-		document.querySelectorAll('nav .icon')[1].style.display = 'none';
+		document.querySelectorAll('.navigation > .icon')[0].style.display = 'none';
+		document.querySelectorAll('.navigation > .icon')[1].style.display = 'none';
 		searchContent.style.display = 'block';
 		shadow.style.display = 'block';
 		searchBackBtn.style.display = 'block';
@@ -66,8 +66,8 @@ function searchOpen(){
 }
 
 function searchClose() {
-	document.querySelectorAll('nav .icon')[0].style.display = 'flex';
-	document.querySelectorAll('nav .icon')[1].style.display = 'flex';
+	document.querySelectorAll('.navigation > .icon')[0].style.display = 'flex';
+	document.querySelectorAll('.navigation > .icon')[1].style.display = 'flex';
 	searchContent.style.display = 'none';
 	shadow.style.display = 'none';
 	searchBackBtn.style.display = 'none';
@@ -96,6 +96,7 @@ function popOpen(e){
 	var popshoper = document.getElementById('popshoper');
 	var popchat = document.getElementById('popchat');
 	var popshop = document.getElementById('popshop');
+	var poppromo = document.getElementById('poppromo');
 
 	$('.popup-wrapper').css({
 		'visibility' : 'visible',
@@ -119,6 +120,8 @@ function popOpen(e){
 		popchat.style.display = 'flex';
 	}else if(e.id == 'popopenshop'){
 		popshop.style.display = 'flex';
+	}else if(e.id == 'popopenpromo'){
+		poppromo.style.display = 'flex';
 	}
 
 	// disabling background to scroll 
@@ -202,24 +205,46 @@ $('.dropdown > *:first-child').click(function(){
 
 // range slider
 // https://codepen.io/ATC-test/pen/myPNqW
-// try{
-// 	var minRange = $('#minrange'),
-// 		maxRange = $('#maxrange'),
-// 		minVal = $('#minprice'),
-// 		maxVal = $('#maxprice');
+try{
+	var minRange = $('#minrange'),
+		maxRange = $('#maxrange'),
+		minVal = $('#minprice'),
+		maxVal = $('#maxprice');
 
-// 	minVal.html(minRange.attr('value'));
-// 	maxVal.html(maxRange.attr('value'));
+	minVal.html('Rp ' + rupiahSparator(minRange.val()));
+	maxVal.html('Rp ' + rupiahSparator(maxRange.val()));
 
-// 	minRange.on('input', function(){
-// 		minVal.html(minRange.attr('value'));
-// 	});
-// 	maxRange.on('input', function(){
-// 		maxVal.html(maxRange.attr('value'));
-// 	});
-// }catch(err){
-// 	console.log(err);
-// }
+	minRange.on('change', function(){
+		minVal.html('Rp ' + rupiahSparator(minRange.val()));
+	});
+	maxRange.on('change', function(){
+		maxVal.html('Rp ' + rupiahSparator(maxRange.val()));
+	});
+}catch(err){
+	console.log(err);
+}
+
+function rupiahSparator(e){
+	var str = e.toString(), 
+		newStr = "", 
+		l = str.length - 1;
+
+	try{
+		while(Math.floor(l/3)){
+			for(var i = 3; i > 0; i--){
+				newStr = str[l] + newStr;
+				l -= 1;
+			}
+			newStr = "." + newStr;
+		}
+	}catch(err){
+		console.log(err.message)
+	}
+
+	newStr = str.slice(0, l+1) + newStr;
+
+	return newStr;
+}
 
 // adding product to cart
 $('#addtoCart').click(function(event){
@@ -444,3 +469,13 @@ try{
 }catch(err){
 	console.log(err);
 }
+
+// cut promo code
+$('.items-promo').click(function(){
+	if($(this).find('*:first-child').children().length == 2){
+		$(this).addClass('ani-fade promo-disable');
+		$(this).find('*:nth-child(1) > *:nth-child(2)').css({
+			display : 'none'
+		});
+	}
+})

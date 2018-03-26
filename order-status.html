@@ -1,582 +1,582 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Status pesanan</title>
-	<meta http-equiv="Cache-control" content="no-cache">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<meta charset="ISO-8859-1">
-	<meta name="theme-color" content="#005ecb">
-	<!-- font -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-	<!-- style -->
-	<link href="fontawesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"></link>
-	<link rel="stylesheet" type="text/css" href="css/allshop.css">
-	<!-- icon in the highest resolution we need it for -->
-	<link rel="icon" sizes="192x192" href="img/icon.png">
-	<!-- reuse same icon for Safari -->
-	<link rel="apple-touch-icon" href="img/ios-icon.png">
-	<!-- multiple icons for IE -->
-	<meta name="msapplication-square310x310logo" content="img/ie-icon.png">
+<title>Status pesanan</title>
+<meta http-equiv="Cache-control" content="no-cache">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta charset="ISO-8859-1">
+<meta name="theme-color" content="#005ecb">
+<!-- font -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+<!-- style -->
+<link href="fontawesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"></link>
+<link rel="stylesheet" type="text/css" href="css/allshop.css">
+<!-- icon in the highest resolution we need it for -->
+<link rel="icon" sizes="192x192" href="img/icon.png">
+<!-- reuse same icon for Safari -->
+<link rel="apple-touch-icon" href="img/ios-icon.png">
+<!-- multiple icons for IE -->
+<meta name="msapplication-square310x310logo" content="img/ie-icon.png">
 </head>
 <body>
-	<section class="content content-full">
-		<div class="btn btn-top">
-			<span>Pesananku</span>
-			<a href="index.html" class="icon icon-48">
-				<i class="fa fa-close"></i>
-			</a>
-		</div>
-		<div class="advance-search">
-			<div></div>
-			<div>
-				<div class="btn btn-32 btn-main-inverted" onclick="popOpen(this)" id="popopenfilter">
-					<span>Saring</span>
-					<i class="fa fa-filter"></i>
-				</div>
-				<div class="btn btn-32 btn-main-inverted">
-					<span>Cari</span>
-					<i class="fa fa-search"></i>
-				</div>
+<section class="content content-full">
+	<div class="btn btn-top">
+		<span>Pesananku</span>
+		<a href="index.html" class="icon icon-48">
+			<i class="fa fa-close"></i>
+		</a>
+	</div>
+	<div class="advance-search">
+		<div></div>
+		<div>
+			<div class="btn btn-32 btn-main-inverted" onclick="popOpen(this)" id="popopenfilter">
+				<span>Saring</span>
+				<i class="fa fa-filter"></i>
+			</div>
+			<div class="btn btn-32 btn-main-inverted">
+				<span>Cari</span>
+				<i class="fa fa-search"></i>
 			</div>
 		</div>
-		<!-- daftar pesanan -->
-		<ul class="wrapper ani-zoom-out">
-			<a href="order-status-end.html">
-				<li class="btn btn-top">
-					<span>
-						<p class="gantle link">Pesanan 9191333</p>
-						<p class="small">Diproses</p>
-					</span>
-					<span class="low small">Dipesan 13 November 2017</span>
-				</li>
-			</a>
-			<li class="timeline">
-				<div onclick="popOpen(this)" id="popopenseller">
-					<span class="active">Pengemasan</span>
-					<span class="tl" id="stat1">
-						<div class="hidden"></div>
-						<div class="bg-main"><i class="fa fa-comment"></i></div>
-						<div></div>
-					</span>
-				</div>
-				<div onclick="popOpen(this)" id="popopencourier">
-					<span class="active">Pengiriman</span>
-					<span class="tl" id="stat2">
-						<div></div>
-						<div class="bg-main"><i class="fa fa-truck fa-flip-horizontal"></i></div>
-						<div></div>
-					</span>
-				</div>
-				<div onclick="popOpen(this)" id="popopenshoper">
-					<span>Penerimaan</span>
-					<span class="tl" id="stat3">
-						<div></div>
-						<div><i class="fa fa-check"></i></div>
-						<div class="hidden"></div>
-					</span>
-				</div>
-			</li>
-			<li class="formal low small">
-				<p>Diperkirakan sampai 18 November 2017</p>
-			</li>
-			<li class="list-item item-medium bordered">
-				<div>
-					<img src="img/iphone7red.jpg">
-					<div>
-						<h4>iPhone 7 32 GB - Red</h4>
-						<div class="sspan">
-							<span id="product-qty">1</span>
-							<span>buah</span>
-							<span>-</span>
-							<span id="product-color">Red</span>
-						</div>
-					</div>
-				</div>
-			</li>
-			<li class="list-item item-medium bordered">
-				<div>
-					<img src="img/rok.jpg">
-					<div>
-						<h4>Interstellar Skirt</h4>
-						<div class="sspan">
-							<span id="product-qty">2</span>
-							<span>buah</span>
-							<span>-</span>
-							<span id="product-color">Blue</span>
-						</div>
-					</div>
-				</div>
-			</li>
-			<li class="list-item item-medium bordered">
-				<div>
-					<img src="img/iwatch.jpg">
-					<div>
-						<h4>iWatch</h4>
-						<div class="sspan">
-							<span id="product-qty">1</span>
-							<span>buah</span>
-							<span>-</span>
-							<span id="product-color">Brown</span>
-						</div>
-					</div>
-				</div>
-			</li>
-		</ul>
-		<ul class="wrapper">
-			<a href="order-status-confirmation.html">
-				<li class="btn btn-top">
-					<span>
-						<p class="gantle link">Pesanan 8191222</p>
-						<p class="small">Belum dikonfirmasi</p>
-					</span>
-					<span class="low small">Dipesan 6 November 2017</span>
-				</li>
-			</a>
-			<li class="timeline">
-				<div>
-					<span class="active">Pengemasan</span>
-					<span class="tl" id="stat1">
-						<div class="hidden"></div>
-						<div class="bg-main"><i class="fa fa-comment"></i></div>
-						<div class="bg-main"></div>
-					</span>
-				</div>
-				<div>
-					<span class="active">Pengiriman</span>
-					<span class="tl" id="stat2">
-						<div class="bg-main"></div>
-						<div class="bg-main"><i class="fa fa-truck fa-flip-horizontal"></i></div>
-						<div class="bg-main"></div>
-					</span>
-				</div>
-				<div>
-					<span class="active">Penerimaan</span>
-					<span class="tl" id="stat3">
-						<div class="bg-main"></div>
-						<div class="bg-main"><i class="fa fa-check"></i></div>
-						<div class="hidden"></div>
-					</span>
-				</div>
-			</li>
-			<li class="formal low small">
-				<p>Sampai 13 November 2017</p>
-			</li>
-			<li class="list-item item-medium bordered">
-				<div>
-					<img src="img/switch.jpg">
-					<div>
-						<h4>Nintendo Switch</h4>
-						<div class="sspan">
-							<span id="product-qty">1</span>
-							<span>buah</span>
-						</div>
-					</div>
-				</div>
-			</li>
-		</ul>
-		<ul class="wrapper inactive">
-			<li class="btn btn-top">
-				<span>
-					<p class="link">Pesanan 8181555</p>
-					<p class="green small">Selesai</p>
-				</span>
-				<span class="low small">Dipesan 13 November 2016</span>
-			</li>
-			<li class="timeline">
-				<div>
-					<span class="active">Pengemasan</span>
-					<span class="tl" id="stat1">
-						<div class="hidden"></div>
-						<div class="bg-main"><i class="fa fa-comment"></i></div>
-						<div class="bg-main"></div>
-					</span>
-				</div>
-				<div>
-					<span class="active">Pengiriman</span>
-					<span class="tl" id="stat2">
-						<div class="bg-main"></div>
-						<div class="bg-main"><i class="fa fa-truck fa-flip-horizontal"></i></div>
-						<div class="bg-main"></div>
-					</span>
-				</div>
-				<div>
-					<span class="active">Penerimaan</span>
-					<span class="tl" id="stat3">
-						<div class="bg-main"></div>
-						<div class="bg-main"><i class="fa fa-check"></i></div>
-						<div class="hidden"></div>
-					</span>
-				</div>
-			</li>
-			<li class="formal low small">
-				<p>Sampai 10 November 2017</p>
-			</li>
-			<li class="list-item item-medium bordered">
-				<div>
-					<img src="img/mac2.jpg">
-					<div>
-						<h4>MacBook Pro 15"</h4>
-						<div class="sspan">
-							<span>1</span>
-							<span>Buah</span>
-							<span>-</span>
-							<span>Silver</span>
-						</div>
-					</div>
-				</div>
-			</li>
-			<li class="list-item item-medium bordered">
-				<div>
-					<img src="img/tas.jpg">
-					<div>
-						<h4>Tas Cantik</h4>
-						<div class="sspan">
-							<span>1</span>
-							<span>Buah</span>
-							<span>-</span>
-							<span>Pink</span>
-						</div>
-					</div>
-				</div>
-			</li>
-		</ul>
-		<ul class="wrapper inactive">
-			<li class="btn btn-top">
-				<span>
-					<p class="link">Pesanan 8181345</p>
-					<p class="red small">Dikembalikan</p>
-				</span>
-				<span class="low small">Dipesan 13 November 2016</span>
-			</li>
-			<li class="timeline">
-				<div>
-					<span class="active">Pengemasan</span>
-					<span class="tl" id="stat1">
-						<div class="hidden"></div>
-						<div class="bg-main"><i class="fa fa-comment"></i></div>
-						<div class="bg-main"></div>
-					</span>
-				</div>
-				<div>
-					<span class="active">Pengiriman</span>
-					<span class="tl" id="stat2">
-						<div class="bg-main"></div>
-						<div class="bg-main"><i class="fa fa-truck fa-flip-horizontal"></i></div>
-						<div class="bg-main"></div>
-					</span>
-				</div>
-				<div>
-					<span class="active">Penerimaan</span>
-					<span class="tl" id="stat3">
-						<div class="bg-main"></div>
-						<div class="bg-red"><i class="fa fa-close"></i></div>
-						<div class="hidden"></div>
-					</span>
-				</div>
-			</li>
-			<li class="formal low small">
-				<p>Sampai 2 November 2017</p>
-			</li>
-			<li class="list-item item-medium bordered">
-				<div>
-					<img src="img/tesla-car.jpg">
-					<div>
-						<h4>Tesla Model C</h4>
-						<div class="sspan">
-							<span>1</span>
-							<span>Buah</span>
-							<span>-</span>
-							<span>Merah</span>
-						</div>
-					</div>
-				</div>
-			</li>
-			<li class="list-item item-medium bordered">
-				<div>
-					<img src="img/lamp.jpg">
-					<div>
-						<h4>Lampu Ruang TV</h4>
-						<div class="sspan">
-							<span>1</span>
-							<span>Buah</span>
-						</div>
-					</div>
-				</div>
-			</li>
-		</ul>
-	</section>
-	<div class="center formal-row">
-		<i class="fa fa-refresh fa-spin low"></i>
 	</div>
-	<section class="popup-wrapper">
-		<div class="popup" id="popfilter">
+	<!-- daftar pesanan -->
+	<ul class="wrapper ani-zoom-out">
+		<a href="order-status-end.html">
+			<li class="btn btn-top">
+				<span>
+					<p class="gantle link">Pesanan 9191333</p>
+					<p class="small">Diproses</p>
+				</span>
+				<span class="low small">Dipesan 13 November 2017</span>
+			</li>
+		</a>
+		<li class="timeline">
+			<div onclick="popOpen(this)" id="popopenseller">
+				<span class="active">Pengemasan</span>
+				<span class="tl" id="stat1">
+					<div class="hidden"></div>
+					<div class="bg-main"><i class="fa fa-comment"></i></div>
+					<div class="bg-main"></div>
+				</span>
+			</div>
+			<div onclick="popOpen(this)" id="popopencourier">
+				<span class="active">Pengiriman</span>
+				<span class="tl" id="stat2">
+					<div class="bg-main"></div>
+					<div class="bg-main"><i class="fa fa-truck fa-flip-horizontal"></i></div>
+					<div></div>
+				</span>
+			</div>
+			<div onclick="popOpen(this)" id="popopenshoper">
+				<span>Penerimaan</span>
+				<span class="tl" id="stat3">
+					<div></div>
+					<div><i class="fa fa-check"></i></div>
+					<div class="hidden"></div>
+				</span>
+			</div>
+		</li>
+		<li class="formal low small">
+			<p>Diperkirakan sampai 18 November 2017</p>
+		</li>
+		<li class="list-item item-medium bordered">
 			<div>
-				<div class="btn btn-top reverse-row">
-					<span>Saring</span>
-					<span onclick="popClose()"><i class="fa fa-long-arrow-left"></i></span>
+				<img src="img/iphone7red.jpg">
+				<div>
+					<h4>iPhone 7 32 GB - Red</h4>
+					<div class="sspan">
+						<span id="product-qty">1</span>
+						<span>buah</span>
+						<span>-</span>
+						<span id="product-color">Red</span>
+					</div>
 				</div>
-				<ul class="filter">
-					<li>
-						<label for="filter-month">Bulan</label>
-						<select id="filter-month">
-							<option class="low">Semua</option>
-							<option>Januari</option>
-							<option>Februari</option>
-							<option>Maret</option>
-							<option>April</option>
-							<option>Mei</option>
-							<option>Juni</option>
-							<option>Juli</option>
-							<option>Agustus</option>
-							<option>September</option>
-							<option>Oktober</option>
-							<option>November</option>
-							<option>Desember</option>
-						</select>
-					</li>
-					<li>
-						<label for="year">Tahun</label>
-						<select id="filter-year">
-							<option class="low">Semua</option>
-							<option>2018</option>
-							<option>2017</option>
-							<option>2016</option>
-							<option>2015</option>
-						</select>
-					</li>
-					<li>
-						<label for="filter-courier">Pengiriman</label>
-						<select id="filter-courier">
-							<option class="low">Semua</option>
-							<option>JNE</option>
-							<option>Wahana</option>
-							<option>Pos Indonesia</option>
-							<option>Kilat</option>
-						</select>
-					</li>
-					<li>
-						<label for="filter-category">Kategori</label>
-						<select id="filter-category">
-							<option class="low">Semua</option>
-							<option>Elektronik</option>
-							<option>Pria</option>
-							<option>Wanita</option>
-							<option>Anak</option>
-							<option>Buku</option>
-						</select>
-					</li>
-					<li>
-						<label>Harga</label>
-						<div class="range-slider">
-							<div>
-								<input type="range" name="minprice" min="0" max="5000000" step="100000" value="0" orient="horizontal" class="input-range" id="minrange">
-								
-								<input type="range" name="maxprice" min="5000000" max="10000000" step="100000" value="10000000" orient="horizontal" class="input-range" id="maxrange">
-							</div>
-							<div>
-								<span class="range-value" id="minprice">Rp 0</span>
-								<span class="range-value" id="maxprice">Rp 10.000.000</span>
-							</div>
+			</div>
+		</li>
+		<li class="list-item item-medium bordered">
+			<div>
+				<img src="img/rok.jpg">
+				<div>
+					<h4>Interstellar Skirt</h4>
+					<div class="sspan">
+						<span id="product-qty">2</span>
+						<span>buah</span>
+						<span>-</span>
+						<span id="product-color">Blue</span>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="list-item item-medium bordered">
+			<div>
+				<img src="img/iwatch.jpg">
+				<div>
+					<h4>iWatch</h4>
+					<div class="sspan">
+						<span id="product-qty">1</span>
+						<span>buah</span>
+						<span>-</span>
+						<span id="product-color">Brown</span>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<ul class="wrapper">
+		<a href="order-status-confirmation.html">
+			<li class="btn btn-top">
+				<span>
+					<p class="gantle link">Pesanan 8191222</p>
+					<p class="small">Belum dikonfirmasi</p>
+				</span>
+				<span class="low small">Dipesan 6 November 2017</span>
+			</li>
+		</a>
+		<li class="timeline">
+			<div>
+				<span class="active">Pengemasan</span>
+				<span class="tl" id="stat1">
+					<div class="hidden"></div>
+					<div class="bg-main"><i class="fa fa-comment"></i></div>
+					<div class="bg-main"></div>
+				</span>
+			</div>
+			<div>
+				<span class="active">Pengiriman</span>
+				<span class="tl" id="stat2">
+					<div class="bg-main"></div>
+					<div class="bg-main"><i class="fa fa-truck fa-flip-horizontal"></i></div>
+					<div class="bg-main"></div>
+				</span>
+			</div>
+			<div>
+				<span class="active">Penerimaan</span>
+				<span class="tl" id="stat3">
+					<div class="bg-main"></div>
+					<div class="bg-main"><i class="fa fa-check"></i></div>
+					<div class="hidden"></div>
+				</span>
+			</div>
+		</li>
+		<li class="formal low small">
+			<p>Sampai 13 November 2017</p>
+		</li>
+		<li class="list-item item-medium bordered">
+			<div>
+				<img src="img/switch.jpg">
+				<div>
+					<h4>Nintendo Switch</h4>
+					<div class="sspan">
+						<span id="product-qty">1</span>
+						<span>buah</span>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<ul class="wrapper inactive">
+		<li class="btn btn-top">
+			<span>
+				<p class="link">Pesanan 8181555</p>
+				<p class="green small">Selesai</p>
+			</span>
+			<span class="low small">Dipesan 13 November 2016</span>
+		</li>
+		<li class="timeline">
+			<div>
+				<span class="active">Pengemasan</span>
+				<span class="tl" id="stat1">
+					<div class="hidden"></div>
+					<div class="bg-main"><i class="fa fa-comment"></i></div>
+					<div class="bg-main"></div>
+				</span>
+			</div>
+			<div>
+				<span class="active">Pengiriman</span>
+				<span class="tl" id="stat2">
+					<div class="bg-main"></div>
+					<div class="bg-main"><i class="fa fa-truck fa-flip-horizontal"></i></div>
+					<div class="bg-main"></div>
+				</span>
+			</div>
+			<div>
+				<span class="active">Penerimaan</span>
+				<span class="tl" id="stat3">
+					<div class="bg-main"></div>
+					<div class="bg-main"><i class="fa fa-check"></i></div>
+					<div class="hidden"></div>
+				</span>
+			</div>
+		</li>
+		<li class="formal low small">
+			<p>Sampai 10 November 2017</p>
+		</li>
+		<li class="list-item item-medium bordered">
+			<div>
+				<img src="img/mac2.jpg">
+				<div>
+					<h4>MacBook Pro 15"</h4>
+					<div class="sspan">
+						<span>1</span>
+						<span>Buah</span>
+						<span>-</span>
+						<span>Silver</span>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="list-item item-medium bordered">
+			<div>
+				<img src="img/tas.jpg">
+				<div>
+					<h4>Tas Cantik</h4>
+					<div class="sspan">
+						<span>1</span>
+						<span>Buah</span>
+						<span>-</span>
+						<span>Pink</span>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<ul class="wrapper inactive">
+		<li class="btn btn-top">
+			<span>
+				<p class="link">Pesanan 8181345</p>
+				<p class="red small">Dikembalikan</p>
+			</span>
+			<span class="low small">Dipesan 13 November 2016</span>
+		</li>
+		<li class="timeline">
+			<div>
+				<span class="active">Pengemasan</span>
+				<span class="tl" id="stat1">
+					<div class="hidden"></div>
+					<div class="bg-main"><i class="fa fa-comment"></i></div>
+					<div class="bg-main"></div>
+				</span>
+			</div>
+			<div>
+				<span class="active">Pengiriman</span>
+				<span class="tl" id="stat2">
+					<div class="bg-main"></div>
+					<div class="bg-main"><i class="fa fa-truck fa-flip-horizontal"></i></div>
+					<div class="bg-main"></div>
+				</span>
+			</div>
+			<div>
+				<span class="active">Penerimaan</span>
+				<span class="tl" id="stat3">
+					<div class="bg-main"></div>
+					<div class="bg-red"><i class="fa fa-close"></i></div>
+					<div class="hidden"></div>
+				</span>
+			</div>
+		</li>
+		<li class="formal low small">
+			<p>Sampai 2 November 2017</p>
+		</li>
+		<li class="list-item item-medium bordered">
+			<div>
+				<img src="img/tesla-car.jpg">
+				<div>
+					<h4>Tesla Model C</h4>
+					<div class="sspan">
+						<span>1</span>
+						<span>Buah</span>
+						<span>-</span>
+						<span>Merah</span>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="list-item item-medium bordered">
+			<div>
+				<img src="img/lamp.jpg">
+				<div>
+					<h4>Lampu Ruang TV</h4>
+					<div class="sspan">
+						<span>1</span>
+						<span>Buah</span>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</section>
+<div class="center formal-row">
+	<i class="fa fa-refresh fa-spin low"></i>
+</div>
+<section class="popup-wrapper">
+	<div class="popup" id="popfilter">
+		<div>
+			<div class="btn btn-top reverse-row">
+				<span>Saring</span>
+				<span onclick="popClose()"><i class="fa fa-long-arrow-left"></i></span>
+			</div>
+			<ul class="filter">
+				<li>
+					<label for="filter-month">Bulan</label>
+					<select id="filter-month">
+						<option class="low">Semua</option>
+						<option>Januari</option>
+						<option>Februari</option>
+						<option>Maret</option>
+						<option>April</option>
+						<option>Mei</option>
+						<option>Juni</option>
+						<option>Juli</option>
+						<option>Agustus</option>
+						<option>September</option>
+						<option>Oktober</option>
+						<option>November</option>
+						<option>Desember</option>
+					</select>
+				</li>
+				<li>
+					<label for="year">Tahun</label>
+					<select id="filter-year">
+						<option class="low">Semua</option>
+						<option>2018</option>
+						<option>2017</option>
+						<option>2016</option>
+						<option>2015</option>
+					</select>
+				</li>
+				<li>
+					<label for="filter-courier">Pengiriman</label>
+					<select id="filter-courier">
+						<option class="low">Semua</option>
+						<option>JNE</option>
+						<option>Wahana</option>
+						<option>Pos Indonesia</option>
+						<option>Kilat</option>
+					</select>
+				</li>
+				<li>
+					<label for="filter-category">Kategori</label>
+					<select id="filter-category">
+						<option class="low">Semua</option>
+						<option>Elektronik</option>
+						<option>Pria</option>
+						<option>Wanita</option>
+						<option>Anak</option>
+						<option>Buku</option>
+					</select>
+				</li>
+				<li>
+					<label>Harga</label>
+					<div class="range-slider">
+						<div>
+							<input type="range" name="minprice" min="0" max="5000000" step="100000" value="0" orient="horizontal" class="input-range" id="minrange">
+							
+							<input type="range" name="maxprice" min="5000000" max="10000000" step="100000" value="10000000" orient="horizontal" class="input-range" id="maxrange">
 						</div>
+						<div>
+							<span class="range-value" id="minprice">Rp 0</span>
+							<span class="range-value" id="maxprice">Rp 10.000.000</span>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div style="height: 80px; width: 100%;"></div>
+		<div class="nav-bot center">
+			<a href="order-status.html"><button class="btn">Semula</button></a>
+			<a href="order-status-filtered.html"><button class="btn btn-main"><span>Saring </span><i class="fa fa-filter"></i></button></a>
+		</div>
+	</div>
+	<div class="popup" id="popseller">
+		<div class="content-full">
+			<div class="btn btn-top reverse-row">
+				<span>Posisi Pesanan</span>
+				<span onclick="popClose()"><i class="fa fa-long-arrow-left"></i></span>
+			</div>
+			<div class="wrapper formal-large">
+				<p>Pesanan Anda dengan nomor seri <span class="gantle">9191333</span> sekarang berada di penjual atas nama <span class="gantle">Toko Wijaya</span>.</p>
+			</div>
+			<div class="wrapper">
+				<ul class="list-item">
+					<li>
+						<img src="img/toko.jpg">
+						<ul>
+							<li>
+								<h4>Toko Wijaya <i class="verified fa fa-check-circle"></i></h4>
+								<div class="small low">Aktif 4 jam yang lalu</div>
+							</li>
+							<li>
+								<div class="sspan">
+									<div class="main-rate">
+										<span>4,5 <i class="fa fa-star"></i></span>
+									</div>
+									<span><b>999</b> Rating</span>
+									<span><b>999</b> Ulasan</span>
+								</div>
+								<div class="sspan">
+									<i class="fa fa-map-marker"></i>
+									<span>Yogyakarta, Sleman 55288</span>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<button class="btn btn-main"><i class="fa fa-comment"></i></button>
+					</li>
+				</ul>
+				<ul class="list column">
+					<li>
+						<div>
+							<i class="fa fa-check green"></i>
+							<span>Pesanan telah dikonfirmasi</span>
+						</div>
+						<p class="sspan">13 November 2017</p>
+					</li>
+					<li>
+						<div>
+							<i class="fa fa-check green"></i>
+							<span>Pesanan telah dikemas</span>
+						</div>
+						<p class="sspan">14 November 2017</p>
 					</li>
 				</ul>
 			</div>
-			<div style="height: 80px; width: 100%;"></div>
-			<div class="nav-bot center">
-				<a href="order-status.html"><button class="btn">Semula</button></a>
-				<a href="order-status-filtered.html"><button class="btn btn-main"><span>Saring </span><i class="fa fa-filter"></i></button></a>
-			</div>
 		</div>
-		<div class="popup" id="popseller">
-			<div class="content-full">
-				<div class="btn btn-top reverse-row">
-					<span>Posisi Pesanan</span>
-					<span onclick="popClose()"><i class="fa fa-long-arrow-left"></i></span>
-				</div>
-				<div class="wrapper formal-large">
-					<p>Pesanan Anda dengan nomor seri <span class="gantle">9191333</span> sekarang berada di penjual atas nama <span class="gantle">Toko Wijaya</span>.</p>
-				</div>
-				<div class="wrapper">
-					<ul class="list-item">
-						<li>
-							<img src="img/toko.jpg">
-							<ul>
-								<li>
-									<h4>Toko Wijaya <i class="verified fa fa-check-circle"></i></h4>
-									<div class="small low">Aktif 4 jam yang lalu</div>
-								</li>
-								<li>
-									<div class="sspan">
-										<div class="main-rate">
-											<span>4,5 <i class="fa fa-star"></i></span>
-										</div>
-										<span><b>999</b> Rating</span>
-										<span><b>999</b> Ulasan</span>
-									</div>
-									<div class="sspan">
-										<i class="fa fa-map-marker"></i>
-										<span>Yogyakarta, Sleman 55288</span>
-									</div>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<button class="btn btn-32 btn-main"><i class="fa fa-comment"></i></button>
-						</li>
-					</ul>
-					<ul class="list column">
-						<li>
-							<div>
-								<i class="fa fa-check green"></i>
-								<span>Pesanan telah dikonfirmasi</span>
-							</div>
-							<p class="sspan">13 November 2017</p>
-						</li>
-						<li>
-							<div>
-								<i class="fa fa-check green"></i>
-								<span>Pesanan telah dikemas</span>
-							</div>
-							<p class="sspan">14 November 2017</p>
-						</li>
-					</ul>
-				</div>
+	</div>
+	<div class="popup" id="popcourier">
+		<div class="content-full">
+			<div class="btn btn-top reverse-row">
+				<span>Posisi Pesanan</span>
+				<span onclick="popClose()"><i class="fa fa-long-arrow-left"></i></span>
 			</div>
-		</div>
-		<div class="popup" id="popcourier">
-			<div class="content-full">
-				<div class="btn btn-top reverse-row">
-					<span>Posisi Pesanan</span>
-					<span onclick="popClose()"><i class="fa fa-long-arrow-left"></i></span>
-				</div>
-				<div class="wrapper formal-large">
-					<p>Pesanan Anda dengan nomor seri <span class="gantle">9191333</span> sekarang berada di kurir atas nama <span class="gantle">JNE Jakarta</span>.</p>
-				</div>
-				<div class="wrapper">
-					<ul class="list-item">
-						<li>
-							<img src="img/jne.png">
-							<ul>
-								<li>
-									<h4>JNE Jakarta<i class="verified fa fa-check-circle"></i></h4>
-									<div class="small low">Aktif 10 jam yang lalu</div>
-								</li>
-								<li>
-									<div class="sspan">
-										<i class="fa fa-map-marker"></i>
-										<span>Jakarta, Indonesia</span>
-									</div>
-									<div class="sspan">
-										<i class="fa fa-phone"></i>
-										<span>0274 9119</span>
-									</div>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<button class="btn btn-main"><i class="fa fa-phone"></i></button>
-						</li>
-					</ul>
-					<ul class="list-item item-medium">
-						<div>
-							<div>
-								<i class="fa fa-map-marker red" style="font-size: 32px"></i>
-							</div>
-							<div>
-								<p>Nomor Resi <span class="gantle">13397113397155</span></p>
-								<p class="sspan"><span>Semarang, Jawa Tengah</span></p> 
-								
-							</div>
-						</div>
-					</ul>
-					<ul class="list column">
-						<li>
-							<div>
-								<i class="fa fa-check green"></i>
-								<span>Pesanan diterima kurir</span>
-							</div>
-							<p class="sspan">15 November 2017</p>
-						</li>
-						<li>
-							<div>
-								<i class="fa fa-check green"></i>
-								<span>Pesanan dikirim dengan alamat tujuan</span>
-							</div>
-							<div class="address">
-								<h4>Raisa Hamis</h4>
-								<p>Jalan Letkol Subadri RT/RW 05/06</p>
-								<p>Kec. Mlati</p>
-								<p>Kab. Sleman</p>
-								<p>D.I. Yogyakarta, 55288</p>
-								<p>Telp. 082137896767</p>
-							</div>
-							<p class="sspan">15 November 2017</p>
-						</li>
-					</ul>
-				</div>
+			<div class="wrapper formal-large">
+				<p>Pesanan Anda dengan nomor seri <span class="gantle">9191333</span> sekarang berada di kurir atas nama <span class="gantle">JNE Jakarta</span>.</p>
 			</div>
-		</div>
-		<div class="popup" id="popshoper">
-			<div class="content-full">
-				<div class="btn btn-top reverse-row">
-					<span>Posisi Pesanan</span>
-					<span onclick="popClose()"><i class="fa fa-long-arrow-left"></i></span>
-				</div>
-				<div class="wrapper formal-large">
-					<p>Pesanan Anda dengan nomor seri <span class="gantle">9191333</span> sekarang berada di kurir atas nama <span class="gantle">JNE Cabang Yogyakarta</span>.</p>
-				</div>
-				<div class="wrapper">
-					<ul class="list-item">
-						<li>
-							<img src="img/jne.png">
-							<ul>
-								<li>
-									<h4>JNE Yogyakarta <i class="verified fa fa-check-circle"></i></h4>
-									<div class="small low">Aktif 2 jam yang lalu</div>
-								</li>
-								<li>
-									<div class="sspan">
-										<i class="fa fa-map-marker"></i>
-										<span>Yogyakarta, Indonesia</span>
-									</div>
-									<div class="sspan">
-										<i class="fa fa-phone"></i>
-										<span>0274 8008</span>
-									</div>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<button class="btn btn-main"><i class="fa fa-phone"></i></button>
-						</li>
-					</ul>
-					<ul class="list-item item-medium">
+			<div class="wrapper">
+				<ul class="list-item">
+					<li>
+						<img src="img/jne.png">
+						<ul>
+							<li>
+								<h4>JNE Jakarta<i class="verified fa fa-check-circle"></i></h4>
+								<div class="small low">Aktif 10 jam yang lalu</div>
+							</li>
+							<li>
+								<div class="sspan">
+									<i class="fa fa-map-marker"></i>
+									<span>Jakarta, Indonesia</span>
+								</div>
+								<div class="sspan">
+									<i class="fa fa-phone"></i>
+									<span>0274 9119</span>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<button class="btn btn-main"><i class="fa fa-phone"></i></button>
+					</li>
+				</ul>
+				<ul class="list-item item-medium">
+					<div>
 						<div>
 							<i class="fa fa-map-marker red" style="font-size: 32px"></i>
-							<div>
-								<p>Nomor Resi <span class="gantle">13397113397155</span></p>
-								<p class="sspan"><span>Sleman, D.I Yogyakarta</span></p> 
-								
-							</div>
 						</div>
-					</ul>
-					<ul class="list column">
-						<li>
-							<div>
-								<i class="fa fa-check green"></i>
-								<span>Pesanan tiba di kurir lokal</span>
-							</div>
-							<p class="sspan">18 November 2017</p>
-						</li>
-					</ul>
-				</div>
+						<div>
+							<p>Nomor Resi <span class="gantle">13397113397155</span></p>
+							<p class="sspan"><span>Semarang, Jawa Tengah</span></p> 
+							
+						</div>
+					</div>
+				</ul>
+				<ul class="list column">
+					<li>
+						<div>
+							<i class="fa fa-check green"></i>
+							<span>Pesanan diterima kurir</span>
+						</div>
+						<p class="sspan">15 November 2017</p>
+					</li>
+					<li>
+						<div>
+							<i class="fa fa-check green"></i>
+							<span>Pesanan dikirim dengan alamat tujuan</span>
+						</div>
+						<div class="address">
+							<h4>Raisa Hamis</h4>
+							<p>Jalan Letkol Subadri RT/RW 05/06</p>
+							<p>Kec. Mlati</p>
+							<p>Kab. Sleman</p>
+							<p>D.I. Yogyakarta, 55288</p>
+							<p>Telp. 082137896767</p>
+						</div>
+						<p class="sspan">15 November 2017</p>
+					</li>
+				</ul>
 			</div>
 		</div>
-	</section>
-	<div id="shadow"></div>
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/Clamp.js/clamp.min.js"></script>
-	<script src="js/allshop.js"></script>
+	</div>
+	<div class="popup" id="popshoper">
+		<div class="content-full">
+			<div class="btn btn-top reverse-row">
+				<span>Posisi Pesanan</span>
+				<span onclick="popClose()"><i class="fa fa-long-arrow-left"></i></span>
+			</div>
+			<div class="wrapper formal-large">
+				<p>Pesanan Anda dengan nomor seri <span class="gantle">9191333</span> sekarang berada di kurir atas nama <span class="gantle">JNE Cabang Yogyakarta</span>.</p>
+			</div>
+			<div class="wrapper">
+				<ul class="list-item">
+					<li>
+						<img src="img/jne.png">
+						<ul>
+							<li>
+								<h4>JNE Yogyakarta <i class="verified fa fa-check-circle"></i></h4>
+								<div class="small low">Aktif 2 jam yang lalu</div>
+							</li>
+							<li>
+								<div class="sspan">
+									<i class="fa fa-map-marker"></i>
+									<span>Yogyakarta, Indonesia</span>
+								</div>
+								<div class="sspan">
+									<i class="fa fa-phone"></i>
+									<span>0274 8008</span>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<button class="btn btn-main"><i class="fa fa-phone"></i></button>
+					</li>
+				</ul>
+				<ul class="list-item item-medium">
+					<div>
+						<i class="fa fa-map-marker red" style="font-size: 32px"></i>
+						<div>
+							<p>Nomor Resi <span class="gantle">13397113397155</span></p>
+							<p class="sspan"><span>Sleman, D.I Yogyakarta</span></p> 
+							
+						</div>
+					</div>
+				</ul>
+				<ul class="list column">
+					<li>
+						<div>
+							<i class="fa fa-check green"></i>
+							<span>Pesanan tiba di kurir lokal</span>
+						</div>
+						<p class="sspan">18 November 2017</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+<div id="shadow"></div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/Clamp.js/clamp.min.js"></script>
+<script src="js/allshop.js"></script>
 </body>
 </html>

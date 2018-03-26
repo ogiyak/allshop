@@ -37,32 +37,39 @@
 					<button type="submit"><i class="fa fa-search"></i></button>
 				</form>
 				<div id="search-content">
-					<ul class="list row filter-row">
-						<li>
-							<label for="murah">
-								<input type="radio" name="filter" id="murah">
-								<span>Termurah</span>
-							</label>
-						</li>
-						<li>
-							<label for="baru">
-								<input type="radio" name="filter" id="baru">
-								<span>Terbaru</span>
-							</label>
-						</li>
-						<li>
-							<label for="laris">
-								<input type="radio" name="filter" id="laris">
-								<span>Terlaris</span>
-							</label>
-						</li>
-						<li>
-							<label for="relevan">
-								<input type="radio" name="filter" id="relevan" checked="true">
-								<span>Terelevan</span>
-							</label>
-						</li>
-					</ul>
+					<div class="justify-item">
+						<ul class="list row filter-row">
+							<li>
+								<label for="murah">
+									<input type="radio" name="filter" id="murah">
+									<span>Termurah</span>
+								</label>
+							</li>
+							<li>
+								<label for="baru">
+									<input type="radio" name="filter" id="baru">
+									<span>Terbaru</span>
+								</label>
+							</li>
+							<li>
+								<label for="laris">
+									<input type="radio" name="filter" id="laris">
+									<span>Terlaris</span>
+								</label>
+							</li>
+							<li>
+								<label for="relevan">
+									<input type="radio" name="filter" id="relevan" checked>
+									<span>Terelevan</span>
+								</label>
+							</li>
+						</ul>
+						<div>
+							<div class="icon icon-48">
+								<i class="fa fa-camera"></i>
+							</div>
+						</div>
+					</div>
 					<ul id="searchHis">
 						<div class="formal-column list column">
 							<a href="search-result.html" ><li style="display: flex; justify-content: space-between;"><span>jaket hitam</span><span><i class="fa fa-close"></i></span></li>
@@ -309,6 +316,11 @@
 							</div>
 							<div>
 								<p>Bantuan</p>
+							</div>
+						</div>
+						<div>
+							<div class="icon icon-label">
+								<span>Baru</span>
 							</div>
 						</div>
 					</li>
@@ -980,7 +992,9 @@
 			<div>
 				<div class="btn btn-top reverse-row">
 					<span>Saring</span>
-					<span onclick="popClose()"><i class="fa fa-long-arrow-left"></i></span>
+					<div class="icon icon-48">
+						<span onclick="popClose()"><i class="fa fa-long-arrow-left"></i></span>
+					</div>
 				</div>
 				<ul class="filter">
 					<li>
@@ -1039,13 +1053,12 @@
 						<label>Harga</label>
 						<div class="range-slider">
 							<div>
-								<input type="range" name="minprice" min="0" max="5000000" step="100000" value="0" orient="horizontal" class="input-range">
-								
-								<input type="range" name="maxprice" min="5000000" max="10000000" step="100000" value="10000000" orient="horizontal" class="input-range">
+								<input type="range" name="minprice" min="0" max="5000000" step="100000" value="0" orient="horizontal" class="input-range" id="minrange">
+								<input type="range" name="maxprice" min="5000000" max="10000000" step="100000" value="10000000" orient="horizontal" class="input-range" id="maxrange">
 							</div>
 							<div>
-								<span class="range-value" id="minprice">Rp 0</span>
-								<span class="range-value" id="maxprice">Rp 10.000.000</span>
+								<span class="range-value" id="minprice"></span>
+								<span class="range-value" id="maxprice"></span>
 							</div>
 						</div>
 					</li>

@@ -37,32 +37,39 @@
 					<i class="fa fa-search" onclick="searchOpen()"></i>
 				</form>
 				<div id="search-content">
-					<ul class="list row filter-row">
-						<li>
-							<label for="murah">
-								<input type="radio" name="filter" id="murah">
-								<span>Termurah</span>
-							</label>
-						</li>
-						<li>
-							<label for="baru">
-								<input type="radio" name="filter" id="baru">
-								<span>Terbaru</span>
-							</label>
-						</li>
-						<li>
-							<label for="laris">
-								<input type="radio" name="filter" id="laris">
-								<span>Terlaris</span>
-							</label>
-						</li>
-						<li>
-							<label for="relevan">
-								<input type="radio" name="filter" id="relevan" checked>
-								<span>Terelevan</span>
-							</label>
-						</li>
-					</ul>
+					<div class="justify-item">
+						<ul class="list row filter-row">
+							<li>
+								<label for="murah">
+									<input type="radio" name="filter" id="murah">
+									<span>Termurah</span>
+								</label>
+							</li>
+							<li>
+								<label for="baru">
+									<input type="radio" name="filter" id="baru">
+									<span>Terbaru</span>
+								</label>
+							</li>
+							<li>
+								<label for="laris">
+									<input type="radio" name="filter" id="laris">
+									<span>Terlaris</span>
+								</label>
+							</li>
+							<li>
+								<label for="relevan">
+									<input type="radio" name="filter" id="relevan" checked>
+									<span>Terelevan</span>
+								</label>
+							</li>
+						</ul>
+						<div>
+							<div class="icon icon-48">
+								<i class="fa fa-camera"></i>
+							</div>
+						</div>
+					</div>
 					<ul id="searchHis">
 						<div class="formal-column list column">
 							<a href="search-result.html" ><li style="display: flex; justify-content: space-between;"><span>jaket hitam</span><span><i class="fa fa-close"></i></span></li>
@@ -336,8 +343,11 @@
 	<!-- content -->
 	<section class="content">
 		<!-- landscape -->
-		<div class="items-header items-promo promo-red-light">
-			<span>Promo Hari Kartini</span>
+		<div class="items-header items-promo promo-red-light" onclick="popOpen(this)" id="popopenpromo">
+			<div>
+				<div>Promo Hari Kartini</div>
+				<div><i class="fa fa-cut fa-flip-horizontal"></i></div>
+			</div>
 			<span class="timer">
 				<span id="hours"></span> jam : 
 				<span id="minutes"></span> m : 
@@ -495,7 +505,9 @@
 			</li>
 		</ul>
 		<header class="items-header items-promo promo-blue-light">
-			<span>Diskon Bulan ini</span>
+			<div>
+				<div>Diskon Bulan Ini</div>
+			</div>
 			<span>April</span>
 		</header>
 		<ul class="items items-row landscape">
@@ -1085,7 +1097,7 @@
 				</a>
 			</li>
 			<li class="items-last">
-				<a href="category.html" class="icon icon-48">
+				<a href="" class="icon icon-48">
 					<i class="fa fa-angle-right"></i>
 				</a>
 			</li>
@@ -2376,6 +2388,21 @@
 		</ul>
 		<div class="center formal-row">
 			<i class="fa fa-refresh fa-spin low"></i>
+		</div>
+	</section>
+	<section class="popup-wrapper">
+		<div class="popup" id="poppromo">
+			<div class="btn btn-top reverse-row">
+				<div>Kode Promo</div>
+				<div>
+					<div class="icon icon-48" onclick="popClose()">
+						<i class="fa fa-long-arrow-left"></i>
+					</div>
+				</div>
+			</div>
+			<div class="formal-large">
+				<p><span class="highlight gantle">KODE PROMO 145541</span> telah disalin. Promo hanya berlaku untuk produk tertentu. Silahkan terapkan di keranjang belanja Anda.</p>
+			</div>
 		</div>
 	</section>
 	<div id="shadow"></div>
