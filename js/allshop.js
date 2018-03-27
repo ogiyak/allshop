@@ -134,6 +134,13 @@ function popOpen(e){
 	// adding shadow
 	shadow.style.display = 'block';
 }
+
+$('.chats select').change(function(){
+	if($(this).val() == 'public'){
+		$('.chat-input > *:first-child > *:first-child').css('display', 'flex')
+	}
+})
+
 function popClose(){
 	setTimeout(function(){
 		$('.popup-wrapper').css({
@@ -142,7 +149,7 @@ function popClose(){
 			'display' : 'none'
 		});
 		$('.popup').css('display', 'none');
-	}, 175);
+	}, 150);
 
 	// enabling background to scroll 
 	$('body').css('overflow', 'auto');
@@ -477,5 +484,13 @@ $('.items-promo').click(function(){
 		$(this).find('*:nth-child(1) > *:nth-child(2)').css({
 			display : 'none'
 		});
+	}
+})
+
+// read promo code
+$("input[name='promocode']").on('focus', function(){
+	if(true) {
+		$(this).val("123456");
+		$(this).parent().find('.btn').removeClass('btn-main-outer').addClass('btn-main');
 	}
 })

@@ -27,7 +27,7 @@
 				<div class="pp pp-medium">
 					<img src="img/persona.jpg">	
 				</div>
-				<span id="notif-indicator" class="active"><b>17</b></span>
+				<span id="notif-indicator" class="active"><b>5</b></span>
 			</li>
 			<!-- search -->
 			<li id="searchwrap">
@@ -1643,7 +1643,7 @@
 					</span>
 				</li>
 				<li class="chats">
-					<div class="list-item formal-column">
+					<div class="list-item list-flex">
 						<div>
 							<div class="pp pp-large">
 								<img src="img/toko.jpg">
@@ -1653,13 +1653,32 @@
 								<span class="sspan">Terakhir aktif 4 jam yg lalu</span>
 							</div>
 						</div>
-						<div></div>
+						<div>
+							<select>
+								<option selected="true" value="private">Pribadi</option>
+								<option value="public">Publik</option>
+							</select>
+						</div>
 					</div>
 					<div class="chat-dialog">
 						<p class="inactive">Belum ada pesan.</p>
 					</div>
 					<div class="chat-input">
-						<input type="text" name="user_msg" placeholder="Tuliskan pesan..." autofocus="true">
+						<div>
+							<div class="justify-item">
+								<span>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+								<span class="icon icon-32">
+									<i class="fa fa-camera"></i>
+								</span>
+							</div>
+							<input type="text" name="user_msg" placeholder="Tuliskan pesan..." autofocus="true">
+						</div>
 						<div class="icon icon-48 bg-main" id="sendchat">
 							<i class="fa fa-angle-right"></i>
 						</div>
@@ -1674,15 +1693,16 @@
 		<script type="text/javascript">
 		// just for demonstration
 		$('#sendchat').click(function(){
-			if($(this).parent().prev().find('p').hasClass('inactive')){
-				$(this).parent().prev().find('p').html($(this).prev().val());
-				$(this).parent().prev().find('p').removeClass('inactive');
-				$(this).parent().prev().find('p').addClass('ani-slide-up');
-				$(this).prev().val('');
-			}else if($(this).prev().val()){
-				$(this).parent().prev().append("<p class='ani-slide-up'>" + $(this).prev().val() + "</p>");
-				$(this).prev().val('');
-			}
+			if($('.chat-dialog p').hasClass('inactive')){
+				$('.chat-dialog p').html($(".chat-input input[name='user_msg']").val());
+				$('.chat-dialog p').removeClass('inactive');
+				$('.chat-dialog p').addClass('ani-slide-up');
+				$(".chat-input input[name='user_msg']").val('');
+			}else if($(".chat-input input[name='user_msg']").val()){
+				$('.chat-dialog').append("<p class='ani-slide-up'>" + $(".chat-input input[name='user_msg']").val() + "</p>");
+				$(".chat-input input[name='user_msg']").val('');
+			};
+			$('.chat-dialog').scrollTop($('.chat-dialog').prop("scrollHeight"));
 		})
 	</script>
 </body>

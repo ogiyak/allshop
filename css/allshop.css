@@ -962,6 +962,9 @@ nav.active{
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
+.list-item.list-flex > *{
+	flex: 1 auto !important;
+}
 .list-item .sign{
 	visibility: hidden;
 	color: var(--main-dark);
@@ -1537,7 +1540,7 @@ input[name="promocode"]{
 	justify-content: center;
 	align-items: center;
 	position: fixed;
-	z-index: 101 ;
+	z-index: 101;
 	top: 0;
 	left: 0;
 	opacity: 0;
@@ -2019,10 +2022,20 @@ input[type=range]::-webkit-slider-runnable-track {
 	display: flex;
 	width: 100%;
 	padding: 8px;
+	align-items: flex-end;
 }
 .chat-input > *:first-child{
 	width: 100%;
 	flex: 1;
+	background-color: var(--gray-light);
+	border-radius: 3px;
+}
+.chat-input > *:first-child > *{
+	padding: 0 8px;
+}
+.chat-input > *:first-child > *:first-child{
+	background-color: var(--gray);
+	display: none;
 }
 .chat-input > *:last-child{
 	width: 48px;
@@ -2030,6 +2043,7 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 .chat-input input[type=text]{
 	border-radius: 22px;
+	width: inherit;
 	height: auto;
 }
 .chat-input input[type=text]:focus{
