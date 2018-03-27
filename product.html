@@ -24,9 +24,9 @@
 	<nav>
 		<ul class="navigation">
 			<li class="icon icon-48" onclick="sidenavOpen()">
-				<div class="pp pp-medium">
-					<img src="img/persona.jpg">	
-				</div>
+				<span class="pp pp-medium">
+					<img src="img/persona.jpg">
+				</span>
 				<span id="notif-indicator" class="active"><b>5</b></span>
 			</li>
 			<!-- search -->
@@ -34,7 +34,7 @@
 				<form action="search-result.html">
 					<button type="button" onclick="searchClose()"><i class="fa fa-long-arrow-left"></i></button>
 					<input type="search" placeholder="Temukan di allshop..." onclick="searchOpen()">
-					<button type="submit"><i class="fa fa-search"></i></button>
+					<i class="fa fa-search" onclick="searchOpen()"></i>
 				</form>
 				<div id="search-content">
 					<div class="justify-item">
@@ -102,10 +102,10 @@
 			<li class="icon icon-48">
 				<a href="cart.html">
 					<i class="fa fa-shopping-cart"></i>
-					<span id="cart-indicator">0</span>
+					<span id="cart-indicator"><b>0</b></span>
 				</a>
 			</li>
-		</ul>	
+		</ul>
 		<ul class="category">
 			<a href="index.html"><li><i class="fa fa-home"></i></li></a>
 			<a href="category.html"><li>Elektronik</li></a>
@@ -202,14 +202,14 @@
 						</div>
 					</li>
 				</a>
-				<a href="whislist.html">
+				<a href="wishlist.html">
 					<li class="list-item item-small">
 						<div>
 							<div>
 								<i class="fa fa-heart main-dark"></i>
 							</div>
 							<div>
-								<p>Whislist</p>
+								<p>Wishlist</p>
 							</div>
 						</div>
 					</li>
