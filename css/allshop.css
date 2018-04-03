@@ -2116,3 +2116,6 @@ input[type=range]::-webkit-slider-runnable-track {
 .forum-digest > * > *:last-child{
 	padding: 8px 0;
 }
+#cart-indicator{
+	font-weight: bolder;
+}
