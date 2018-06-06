@@ -382,7 +382,7 @@ $('.customer-stat').click(function(){
 		$(this).find('.vanish').removeClass('vanish').addClass('unvanish');
 	}else{
 		$(this).css({
-			'height' : '24px',
+			'height' : '32px',
 			'flex-direction' : 'row',
 			borderRadius : '0 0 3px 3px'
 		});
